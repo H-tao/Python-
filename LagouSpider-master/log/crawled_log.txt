@@ -1,0 +1,960 @@
+2020-03-18 21:59:32 ================================================================================
+销售
+	全国	Positions: 500+
+			Failed Store:  4 14 https://www.lagou.com/jobs/6910758.html 
+				SQL:  insert into t_xiaoshou (keywords,detail_url,position,tags,salary,job_type,city,district,street,education,work_experience,release_date,description,company_name,company_scale,company_field,company_type,company_benefits) value ("销售","https://www.lagou.com/jobs/6910758.html","销售","电商|即时通讯","7k-12k","全职","西安","高新技术产业开发区","泰华金贸国际6号楼1302","大专及以上","3-5年","2020-03-18","任职​资格：​一、​年龄28-50周​岁，​学历、​性别不限；​二、身体健康，​沟通表达良好，​有营销及团​队管理经​验优​先；​三、至少有​所在城市三​年工作与​生​活经历。​岗位​职​责：一、负责​公司西安​各区/的市场​开发​与​管理，以​及当地门店​系统​管理，​维持良好的合作关​系；二、负​责所属县区的市​场开发，协​助开店选址、装​修、商​品上架等门​店标准化​的​落地执行；​三、根据公​司代理商​合作政策，​与意​向客户沟通项目优势，​分析​公司平台项目前​景。​四、与客​户进行​合作协议​细节沟通、反馈及​落​实，进行业务​对接并​提供优质高效的​服​务。五、完​成领​导安排的其他工​作。","深圳市点购电子商务控股股份有限公司西安分公司","2000人以上","电商、社交","D轮及以上","电商领头羊|o2o|高收入");
+			Failed Store:  4 8 https://www.lagou.com/jobs/3610446.html 
+				SQL:  insert into t_xiaoshou (keywords,detail_url,position,tags,salary,job_type,city,district,street,education,work_experience,release_date,description,company_name,company_scale,company_field,company_type,company_benefits) value ("销售","https://www.lagou.com/jobs/3610446.html","销售","销售","6k-8k","全职","太原","小店区","山西省太原市小店区许坦东街紫藤苑小区8号楼","学历不限","不限","2020-03-18","职位描述一、岗位职责：1、负责客户的接待、咨询工作，为客户提供专业的房地产置业咨询服务。2、陪同客户看房，促成一二手房买卖或租赁业务。3、负责公司房源开发与积累，并与业主和客户建立良好的业务协作关系。二、任职资格：1、诚实守信，吃苦耐劳，具有良好的团队精神。2、能承受较强的工作压力，愿意挑战高薪。3、普通话流利，会一些简单的电脑操作。4、有无经验均可。工作时间：早9：00-12：00下午2：30-5：00休息时间【周一到周末双休】三、薪资待遇：经纪人:业绩＜8000，无提成底薪3000，工资3000业绩＞8000，提成10%底薪3000，工资3800+业绩＞15000，提成20%底薪3000，工资6000+业绩＞20000，提成30%底薪3000，工资9000+业绩＞30000，提成40%底薪3000，工资15000+***年终奖全年总业绩过5万者，奖全年总业绩的5%***客户经理:业绩小于10000提成80%工资8000+业绩小于30000大于10000提成85%工资25500+业绩大于30000提成90%提成90%工资27000+四、员工福利：1、有无底薪者均享受由店经理组织的单位聚餐+KTV娱乐（此福利由店经理视总业绩而定）。2、业绩卓越者或有重大贡献者可享受国内国外旅游机会（此福利最终由店经理决定）。","昊升地产","http://www.lagou.com/gong...","其他","500-2000人","升值空间大老板人大方准时发工资");
+			Failed Store:  8 14 https://www.lagou.com/jobs/6903047.html 
+				SQL:  insert into t_xiaoshou (keywords,detail_url,position,tags,salary,job_type,city,district,street,education,work_experience,release_date,description,company_name,company_scale,company_field,company_type,company_benefits) value ("销售","https://www.lagou.com/jobs/6903047.html","销售","销售","4k-8k","全职","广州","黄埔区","裕丰围丰乐南路98号","学历不限","不限","2020-03-18","工作内容：1、针对生活服务类型商户洽谈移动支付平台合作；2、根据公司战略，建立和维护高价值合作渠道的合作关系；3、负责和合作伙伴进行商务谈判，确保获得最优惠的商务条件；任职要求：1、执行力超强，学习能力强并且极度勤奋；2、沟通、协调、推动能力强，具备丰富谈判技巧；；3、心理素质足够强并有较强的进取心，渴望快速成长；","广州市乐有家房产经纪有限公司丰乐南路分公司","2000人以上","房产家居 广告营销","上市公司","基础底薪四千一|外加高额提成");
+			Failed Store:  10 14 https://www.lagou.com/jobs/6908316.html 
+				SQL:  insert into t_xiaoshou (keywords,detail_url,position,tags,salary,job_type,city,district,street,education,work_experience,release_date,description,company_name,company_scale,company_field,company_type,company_benefits) value ("销售","https://www.lagou.com/jobs/6908316.html","销售","企业服务|移动互联网","6k-12k","全职","广州","黄埔区","裕丰围丰乐南路98号","学历不限","不限","2020-03-18","岗位职责：1.利用网络发帖、电话开发等多渠道寻找客户，并开发更多销售渠道；2.通过电话与客户进行有效沟通了解客户需求,寻找销售机会并完成销售业绩；3.负责客户接待、咨询工作，为客户提供专业的咨询服务；4.为客户提供恰当的专业资讯以帮助客户做出明智的决策；5.负责客户跟踪、维护，建立良好的长期合作关系；任职资格：1.学历不限，专业不限；2.有1年销售或市场开拓相关经验；愿意在销售领域发展；3.具有高度的团队合作精神和高昂的工作热情；4.语言表达能力强，具有良好的人际交往及维系客户关系能力；福利待遇1.高收入：底薪4000～8000元+提成（55～80%提成，大部分年薪10万起无上限，从事3年以上人员保守20万起；3.快成长：人才是我们最大的竞争优势，为全员提供专业系统化的岗前培训、岗中训练及管理力提升训练是我们的日常工作；4.好发展：业务序列—实习顾问，初级顾问，中级顾问，高级顾问；管理序列—顾问，主管助理主管分公司经理大区总监5.同欢庆：月度、季度、年度销售团团建活动及奖励拿到手软、年度公司集体团建及年会活动要多high有多high。6.导师制：无经验的小鲜肉：导师制，一带一；团队总结分享会助力快速成长。有经验的老腊肉：业绩提成，快速晋升，最快3个月当店长7.旅游奖：优秀者享受一年2次：国内旅游以及国外豪华游。","广州市乐有家房产经纪有限公司丰乐南路分公司","2000人以上","房产家居 广告营销","上市公司","基底四千一|外加55～80%的高额提成");
+		Total Failed: 4
+		Total Crawled: 450	Finished-Point: Page 30 Number 14
+
+2020-03-24 11:57:47 ================================================================================
+爬虫工程师
+	全国	Positions: 173
+		Total Failed: 0
+		Total Crawled: 175	Finished-Point: Page 12 Number 9
+2020-03-24 12:26:22  Crawled-Finished  ================================================================================
+
+数据挖掘
+	全国	Positions: 500+
+
+2020-03-24 17:14:06 ================================================================================
+爬虫工程师
+	全国	Positions: 174
+
+2020-03-24 17:23:36 ================================================================================
+爬虫工程师
+	全国	Positions: 174
+
+2020-03-24 17:27:19 ================================================================================
+爬虫工程师
+	全国	Positions: 174
+
+2020-03-24 17:27:57 ================================================================================
+爬虫工程师
+	全国	Positions: 174
+
+2020-03-24 17:39:54 ================================================================================
+爬虫工程师
+	全国	Positions: 174
+
+2020-03-24 17:43:34 ================================================================================
+爬虫工程师
+	全国	Positions: 173
+		Total Failed: 0
+		Total Crawled: 1	Finished-Point: Page 12 Number 0
+2020-03-24 17:45:41================================================================================
+
+
+数据挖掘
+	全国	Positions: 500+
+
+2020-03-24 17:53:28 ================================================================================
+爬虫工程师
+	全国	Positions: 173
+		Total Failed: 0
+		Total Crawled: 168	Finished-Point: Page 12 Number 7
+2020-03-24 18:25:04================================================================================
+数据挖掘
+	全国	Positions: 500+
+		Total Failed: 0
+		Total Crawled: 397	Finished-Point: Page 30 Number 14
+
+2020-03-24 20:50:51 ================================================================================
+人工智能
+	全国	Positions: 228
+			Failed to Get Info:  8 13 https://www.lagou.com/jobs/6739984.html
+		Total Failed: 1
+		Total Crawled: 48	Finished-Point: Page 9 Number 14
+2020-03-24 20:56:11================================================================================
+Java工程师
+	全国	Positions: 
+		Total Failed: 0
+		Total Crawled: 0	Finished-Point: Page 1 Number 14
+2020-03-24 20:56:14================================================================================
+
+2020-03-24 20:59:31 ================================================================================
+人工智能
+	全国	Positions: 228
+			Failed Store:  9 4 https://www.lagou.com/jobs/6842816.html 
+				SQL:  insert into test (keywords,detail_url,position,tags,salary,job_type,city,district,street,education,work_experience,release_date,description,company_name,company_scale,company_field,company_type,company_benefits) value ("人工智能","https://www.lagou.com/jobs/6842816.html","人工智能","教育|视频|机器学习|人工智能|深度学习|计算机视觉","30k-60k","全职","北京","朝阳区","东三环亮马桥中国平安金融中心5层503","本科及以上","3-5年","2020-03-07","运用计算机进行课程制作，制作的课程作品呈现，素材声音电脑抓取能力，机器人代替播报功能，","财富涟漪","http://www.lagou.com/gong...","未融资","2000人以上","把你的知识变为财富");
+			Failed to Get Info:  9 13 https://www.lagou.com/jobs/5988854.html
+		Total Failed: 2
+		Total Crawled: 16	Finished-Point: Page 10 Number 14
+2020-03-24 21:01:51================================================================================
+JAVA工程师
+	全国	Positions: 
+		Total Failed: 0
+		Total Crawled: 0	Finished-Point: Page 1 Number 14
+2020-03-24 21:01:54================================================================================
+
+2020-03-24 21:06:39 ================================================================================
+人工智能
+	全国	Positions: 228
+			Failed Store:  9 0 https://www.lagou.com/jobs/6842816.html 
+				SQL:  insert into test (keywords,detail_url,position,tags,salary,job_type,city,district,street,education,work_experience,release_date,description,company_name,company_scale,company_field,company_type,company_benefits) value ("人工智能","https://www.lagou.com/jobs/6842816.html","人工智能","教育|视频|机器学习|人工智能|深度学习|计算机视觉","30k-60k","全职","北京","朝阳区","东三环亮马桥中国平安金融中心5层503","本科及以上","3-5年","2020-03-07","运用计算机进行课程制作，制作的课程作品呈现，素材声音电脑抓取能力，机器人代替播报功能，","财富涟漪","http://www.lagou.com/gong...","未融资","2000人以上","把你的知识变为财富");
+			Failed to Get Info:  12 13 https://www.lagou.com/jobs/6305368.html
+		Total Failed: 2
+		Total Crawled: 47	Finished-Point: Page 13 Number 14
+2020-03-24 21:12:02================================================================================
+JAVA工程师
+	全国	Positions: 
+		Total Failed: 0
+		Total Crawled: 0	Finished-Point: Page 1 Number 14
+2020-03-24 21:12:04================================================================================
+
+2020-03-24 21:17:15 ================================================================================
+人工智能
+	全国	Positions: 228
+		Total Failed: 0
+		Total Crawled: 50	Finished-Point: Page 16 Number 2
+2020-03-24 21:24:08================================================================================
+JAVA工程师
+	全国	Positions: 500+
+
+2020-03-24 21:34:31 ================================================================================
+人工智能
+	全国	Positions: 228
+		Total Failed: 0
+		Total Crawled: 0	Finished-Point: Page 11 Number 0
+2020-03-24 21:35:32================================================================================
+JAVA工程师
+	全国	Positions: 
+		Total Failed: 0
+		Total Crawled: 0	Finished-Point: Page 1 Number 0
+2020-03-24 21:35:35================================================================================
+
+2020-03-24 21:36:28 ================================================================================
+JAVA工程师
+	全国	Positions: 500+
+		Total Failed: 0
+		Total Crawled: 307	Finished-Point: Page 30 Number 14
+2020-03-24 22:13:14================================================================================
+
+2020-03-25 13:18:07 ================================================================================
+JAVA工程师
+	全国	Positions: 500+
+
+2020-03-25 13:19:35 ================================================================================
+JAVA工程师
+	全国	Positions: 500+
+
+2020-03-25 13:22:00 ================================================================================
+JAVA工程师
+	全国	Positions: 500+
+
+2020-03-25 13:22:41 ================================================================================
+JAVA工程师
+	全国	Positions: 500+
+
+2020-03-25 13:23:28 ================================================================================
+JAVA工程师
+	全国	Positions: 500+
+
+2020-03-25 14:02:17 ================================================================================
+JAVA工程师
+	全国	Positions: 500+
+			Failed Store:  https://www.lagou.com/jobs/6472996.html 
+				SQL:  insert into restart (keywords,detail_url,position,tags,salary,job_type,city,district,street,education,work_experience,release_date,description,company_name,company_scale,company_field,company_type,company_benefits) value ("JAVA工程师","https://www.lagou.com/jobs/6472996.html","IT 高级开发工程师（Java）（...","Java","15k-30k","全职","北京","朝阳区","燕莎中心","本科及以上","不限","2020-03-25","工作职责Dutiesandresponsibilities:1.Performscoding,unittestinganddocumentationofsoftwareunitsdefinedbythedesigndocument;执行设计文档中定义的软件单元的编码、单元测试和文档；2.Haveabilitytoresearchonnewtechnologytosolveproblemsduringdevelopment;通过开发新技术解决开发过程中出现的问题；3.Makeclearandreasonableworkplanforgiventask;根据任务制定明确合理的工作计划；4.Developefficientsoftwarewithingiventimeframe;在规定的时间内保证高效开发；5.Activelycooperateswithteamtoworkonprojects;积极与团队合作完成项目；6.Solvetheproductionissuesreportedfromuser.解决用户反馈的产品问题。任职资格Requirements:1.BachelordegreeoraboveinInformationTechnologyorcomparableeducation;计算机,信息技术相关专业，本科及以上学历；2.Morethan5years’workexperienceofenterprisesoftwaredevelopmentincommercialcompany;五年以上软件开发工作经验；3.ProficientinJava,solidknowledgewithJava,JVM;精通java，扎实的Java、JVM知识；4.Solidexperienceinfrond-enddevelopmentwithCSS/JavaScript/jQuery/Ajax,J/MandmoregoodforFrontendseparationexperiencewithCSS3,HTML5,andmoregoodforReactorVue;丰富的CSS/JavaScript/jQuery/Ajax前端开发经验,有前后端分离开发经验，React或者Vue经验优先；5.Back-enddevelopmentwithMVCframeworksuchasspring,anddatapersistenceframeworksuchasMyBatisorHibernate,andmoregoodformicroservicedevelopmentexperience,suchasSpringcloud,SpringBoot;后端开发经验有使用过MVC框架如Spring，以及数据持久框架如MyBatis或者Hibernate,有微服务开发经验，如Springcloud，SpringBoot优先；6.GoodknowledgefortheOOP,andmoregoodforsolidthinkingwithDesignPatternsknowledge;有很好的面向对象的知识，有扎实的设计模式思想的优先；7.PL-SQLskillsinOracle;掌握OraclePL-SQL技能；8.MoregoodforNo-SQLexperience,suchasMongoDB,Redis;有No-SQL经验，如MongoDB,Redis优先；9.ReadingandwritingEnglishcanbeusedasworkinglanguage,oralEnglishgoodisaplus;英文读写可作为工作语言,听说流利优先考虑；10.Stronganalysis,design,codingandtroubleshootingskills;较强的分析、设计、编码和解决问题的能力；11.TeamworkwithsolidEnglishandcommunicationskills;良好的英语和沟通能力，具备良好的团队合作能力；12.Wellorganizedwithpassionandsenseofresponsibility.具备良好的工作热情和责任感。员工福利StaffWelfare:1.Afteronboarding,providingsupplementarycommercialinsurancebesidesthestate-stipulatedinsuranceandhousingfund;入职即为员工缴纳六险一金；2.Fastandtransparentpromotionchannelandbroaddevelopmentopportunities;快速透明的晋升渠道，广阔的发展空间；3.5-15dayspaidannualleaveand5dayspaidsickleave.Freeannualphysicalcheck-up;每年5-15天带薪年休假，5天带薪病假，年度免费员工体检；4.Attractiveemployeeactivities.有吸引力的员工活动。","捷信消费金融有限公司","2000人以上","金融","不需要融资","五险一金|带薪年假|补充医疗保险");
+			Failed Store:  https://www.lagou.com/jobs/6754558.html 
+				SQL:  insert into restart (keywords,detail_url,position,tags,salary,job_type,city,district,street,education,work_experience,release_date,description,company_name,company_scale,company_field,company_type,company_benefits) value ("JAVA工程师","https://www.lagou.com/jobs/6754558.html","Java开发工程师(J22867)","Java","15k-30k","全职","天津","红桥区","陆家嘴广场","本科及以上","5-10年","2020-03-25","工作职责Dutiesandresponsibilities:1.Performscoding,unittestinganddocumentationofsoftwareunitsdefinedbythedesigndocument;执行设计文档中定义的软件单元的编码、单元测试和文档；2.Haveabilitytoresearchonnewtechnologytosolveproblemsduringdevelopment;通过开发新技术解决开发过程中出现的问题；3.Makeclearandreasonableworkplanforgiventask;根据任务制定明确合理的工作计划；4.Developefficientsoftwarewithingiventimeframe;在规定的时间内保证高效开发；5.Activelycooperateswithteamtoworkonprojects;积极与团队合作完成项目；6.Solvetheproductionissuesreportedfromuser.解决用户反馈的产品问题。任职资格Requirements:1.BachelordegreeoraboveinInformationTechnologyorcomparableeducation;计算机,信息技术相关专业，本科及以上学历；2.Morethan5years’workexperienceofenterprisesoftwaredevelopmentincommercialcompany;五年以上软件开发工作经验；3.ProficientinJava,solidknowledgewithJava,JVM;精通java，扎实的Java、JVM知识；4.Solidexperienceinfrond-enddevelopmentwithCSS/JavaScript/jQuery/Ajax,J/MandmoregoodforFrontendseparationexperiencewithCSS3,HTML5,andmoregoodforReactorVue;丰富的CSS/JavaScript/jQuery/Ajax前端开发经验,有前后端分离开发经验，React或者Vue经验优先；5.Back-enddevelopmentwithMVCframeworksuchasspring,anddatapersistenceframeworksuchasMyBatisorHibernate,andmoregoodformicroservicedevelopmentexperience,suchasSpringcloud,SpringBoot;后端开发经验有使用过MVC框架如Spring，以及数据持久框架如MyBatis或者Hibernate,有微服务开发经验，如Springcloud，SpringBoot优先；6.GoodknowledgefortheOOP,andmoregoodforsolidthinkingwithDesignPatternsknowledge;有很好的面向对象的知识，有扎实的设计模式思想的优先；7.PL-SQLskillsinOracle;掌握OraclePL-SQL技能；8.MoregoodforNo-SQLexperience,suchasMongoDB,Redis;有No-SQL经验，如MongoDB,Redis优先；9.ReadingandwritingEnglishcanbeusedasworkinglanguage,oralEnglishgoodisaplus;英文读写可作为工作语言,听说流利优先考虑；10.Stronganalysis,design,codingandtroubleshootingskills;较强的分析、设计、编码和解决问题的能力；11.TeamworkwithsolidEnglishandcommunicationskills;良好的英语和沟通能力，具备良好的团队合作能力；12.Wellorganizedwithpassionandsenseofresponsibility.具备良好的工作热情和责任感。员工福利StaffWelfare:1.Afteronboarding,providingsupplementarycommercialinsurancebesidesthestate-stipulatedinsuranceandhousingfund;入职即为员工缴纳六险一金；2.Fastandtransparentpromotionchannelandbroaddevelopmentopportunities;快速透明的晋升渠道，广阔的发展空间；3.5-15dayspaidannualleaveand5dayspaidsickleave.Freeannualphysicalcheck-up;每年5-15天带薪年休假，5天带薪病假，年度免费员工体检；4.Attractiveemployeeactivities.有吸引力的员工活动。","捷信消费金融有限公司","2000人以上","金融","不需要融资","六险一金|补充医疗保险|带薪年假");
+			Failed Store:  https://www.lagou.com/jobs/6472960.html 
+				SQL:  insert into restart (keywords,detail_url,position,tags,salary,job_type,city,district,street,education,work_experience,release_date,description,company_name,company_scale,company_field,company_type,company_benefits) value ("JAVA工程师","https://www.lagou.com/jobs/6472960.html","IT 高级开发工程师（Java）（...","Java","15k-30k","全职","天津","红桥区","陆家嘴广场","本科及以上","不限","2020-03-25","工作职责Dutiesandresponsibilities:1.Performscoding,unittestinganddocumentationofsoftwareunitsdefinedbythedesigndocument;执行设计文档中定义的软件单元的编码、单元测试和文档；2.Haveabilitytoresearchonnewtechnologytosolveproblemsduringdevelopment;通过开发新技术解决开发过程中出现的问题；3.Makeclearandreasonableworkplanforgiventask;根据任务制定明确合理的工作计划；4.Developefficientsoftwarewithingiventimeframe;在规定的时间内保证高效开发；5.Activelycooperateswithteamtoworkonprojects;积极与团队合作完成项目；6.Solvetheproductionissuesreportedfromuser.解决用户反馈的产品问题。任职资格Requirements:1.BachelordegreeoraboveinInformationTechnologyorcomparableeducation;计算机,信息技术相关专业，本科及以上学历；2.Morethan5years’workexperienceofenterprisesoftwaredevelopmentincommercialcompany;五年以上软件开发工作经验；3.ProficientinJava,solidknowledgewithJava,JVM;精通java，扎实的Java、JVM知识；4.Solidexperienceinfrond-enddevelopmentwithCSS/JavaScript/jQuery/Ajax,J/MandmoregoodforFrontendseparationexperiencewithCSS3,HTML5,andmoregoodforReactorVue;丰富的CSS/JavaScript/jQuery/Ajax前端开发经验,有前后端分离开发经验，React或者Vue经验优先；5.Back-enddevelopmentwithMVCframeworksuchasspring,anddatapersistenceframeworksuchasMyBatisorHibernate,andmoregoodformicroservicedevelopmentexperience,suchasSpringcloud,SpringBoot;后端开发经验有使用过MVC框架如Spring，以及数据持久框架如MyBatis或者Hibernate,有微服务开发经验，如Springcloud，SpringBoot优先；6.GoodknowledgefortheOOP,andmoregoodforsolidthinkingwithDesignPatternsknowledge;有很好的面向对象的知识，有扎实的设计模式思想的优先；7.PL-SQLskillsinOracle;掌握OraclePL-SQL技能；8.MoregoodforNo-SQLexperience,suchasMongoDB,Redis;有No-SQL经验，如MongoDB,Redis优先；9.ReadingandwritingEnglishcanbeusedasworkinglanguage,oralEnglishgoodisaplus;英文读写可作为工作语言,听说流利优先考虑；10.Stronganalysis,design,codingandtroubleshootingskills;较强的分析、设计、编码和解决问题的能力；11.TeamworkwithsolidEnglishandcommunicationskills;良好的英语和沟通能力，具备良好的团队合作能力；12.Wellorganizedwithpassionandsenseofresponsibility.具备良好的工作热情和责任感。员工福利StaffWelfare:1.Afteronboarding,providingsupplementarycommercialinsurancebesidesthestate-stipulatedinsuranceandhousingfund;入职即为员工缴纳六险一金；2.Fastandtransparentpromotionchannelandbroaddevelopmentopportunities;快速透明的晋升渠道，广阔的发展空间；3.5-15dayspaidannualleaveand5dayspaidsickleave.Freeannualphysicalcheck-up;每年5-15天带薪年休假，5天带薪病假，年度免费员工体检；4.Attractiveemployeeactivities.有吸引力的员工活动。","捷信消费金融有限公司","2000人以上","金融","不需要融资","五险一金|带薪年假|补充医疗保险");
+			Failed Store:  https://www.lagou.com/jobs/6754549.html 
+				SQL:  insert into restart (keywords,detail_url,position,tags,salary,job_type,city,district,street,education,work_experience,release_date,description,company_name,company_scale,company_field,company_type,company_benefits) value ("JAVA工程师","https://www.lagou.com/jobs/6754549.html","Java开发工程师（天津）(J22867)","Java","15k-30k","全职","北京","朝阳区","燕莎中心","本科及以上","5-10年","2020-03-25","工作职责Dutiesandresponsibilities:1.Performscoding,unittestinganddocumentationofsoftwareunitsdefinedbythedesigndocument;执行设计文档中定义的软件单元的编码、单元测试和文档；2.Haveabilitytoresearchonnewtechnologytosolveproblemsduringdevelopment;通过开发新技术解决开发过程中出现的问题；3.Makeclearandreasonableworkplanforgiventask;根据任务制定明确合理的工作计划；4.Developefficientsoftwarewithingiventimeframe;在规定的时间内保证高效开发；5.Activelycooperateswithteamtoworkonprojects;积极与团队合作完成项目；6.Solvetheproductionissuesreportedfromuser.解决用户反馈的产品问题。任职资格Requirements:1.BachelordegreeoraboveinInformationTechnologyorcomparableeducation;计算机,信息技术相关专业，本科及以上学历；2.Morethan5years’workexperienceofenterprisesoftwaredevelopmentincommercialcompany;五年以上软件开发工作经验；3.ProficientinJava,solidknowledgewithJava,JVM;精通java，扎实的Java、JVM知识；4.Solidexperienceinfrond-enddevelopmentwithCSS/JavaScript/jQuery/Ajax,J/MandmoregoodforFrontendseparationexperiencewithCSS3,HTML5,andmoregoodforReactorVue;丰富的CSS/JavaScript/jQuery/Ajax前端开发经验,有前后端分离开发经验，React或者Vue经验优先；5.Back-enddevelopmentwithMVCframeworksuchasspring,anddatapersistenceframeworksuchasMyBatisorHibernate,andmoregoodformicroservicedevelopmentexperience,suchasSpringcloud,SpringBoot;后端开发经验有使用过MVC框架如Spring，以及数据持久框架如MyBatis或者Hibernate,有微服务开发经验，如Springcloud，SpringBoot优先；6.GoodknowledgefortheOOP,andmoregoodforsolidthinkingwithDesignPatternsknowledge;有很好的面向对象的知识，有扎实的设计模式思想的优先；7.PL-SQLskillsinOracle;掌握OraclePL-SQL技能；8.MoregoodforNo-SQLexperience,suchasMongoDB,Redis;有No-SQL经验，如MongoDB,Redis优先；9.ReadingandwritingEnglishcanbeusedasworkinglanguage,oralEnglishgoodisaplus;英文读写可作为工作语言,听说流利优先考虑；10.Stronganalysis,design,codingandtroubleshootingskills;较强的分析、设计、编码和解决问题的能力；11.TeamworkwithsolidEnglishandcommunicationskills;良好的英语和沟通能力，具备良好的团队合作能力；12.Wellorganizedwithpassionandsenseofresponsibility.具备良好的工作热情和责任感。员工福利StaffWelfare:1.Afteronboarding,providingsupplementarycommercialinsurancebesidesthestate-stipulatedinsuranceandhousingfund;入职即为员工缴纳六险一金；2.Fastandtransparentpromotionchannelandbroaddevelopmentopportunities;快速透明的晋升渠道，广阔的发展空间；3.5-15dayspaidannualleaveand5dayspaidsickleave.Freeannualphysicalcheck-up;每年5-15天带薪年休假，5天带薪病假，年度免费员工体检；4.Attractiveemployeeactivities.有吸引力的员工活动。","捷信消费金融有限公司","2000人以上","金融","不需要融资","六险一金|补充医疗保险|带薪年假");
+			Failed Store:  https://www.lagou.com/jobs/6815122.html 
+				SQL:  insert into restart (keywords,detail_url,position,tags,salary,job_type,city,district,street,education,work_experience,release_date,description,company_name,company_scale,company_field,company_type,company_benefits) value ("JAVA工程师","https://www.lagou.com/jobs/6815122.html","Java 高级开发工程师","服务器端|后端|J2EE|Java","15k-30k","全职","北京","朝阳区","燕莎中心","本科及以上","5-10年","2020-03-25","工作职责:DutiesandResponsibilities:1.Performscoding,unittestinganddocumentationofsoftwareunitsdefinedbythedesigndocument;执行设计文档中定义的软件单元的编码、单元测试和文档；2.Haveabilitytoresearchonnewtechnologytosolveproblemsduringdevelopment;通过开发新技术解决开发过程中出现的问题；3.Makeclearandreasonableworkplanforgiventask;根据任务制定明确合理的工作计划；4.Developefficientsoftwarewithingiventimeframe;在规定的时间内保证高效开发；5.Activelycooperateswithteamtoworkonprojects;积极与团队合作完成项目；6.Solvetheproductionissuesreportedfromuser.解决用户反馈的产品问题。任职资格:Requirements:1.BachelordegreeoraboveinInformationTechnologyorcomparableeducation;计算机,信息技术相关专业，本科及以上学历；2.Morethan5years’workexperienceofenterprisesoftwaredevelopmentincommercialcompany;五年以上软件开发工作经验；3.ProficientinJava,solidknowledgewithJava,JVM;精通java，扎实的Java、JVM知识；4.Solidexperienceinfrond-enddevelopmentwithCSS/JavaScript/jQuery/Ajax,J/MandmoregoodforFrontendseparationexperiencewithCSS3,HTML5,andmoregoodforReactorVue;丰富的CSS/JavaScript/jQuery/Ajax前端开发经验,有前后端分离开发经验，React或者Vue经验优先；5.Back-enddevelopmentwithMVCframeworksuchasspring,anddatapersistenceframeworksuchasMyBatisorHibernate,andmoregoodformicroservicedevelopmentexperience,suchasSpringcloud,SpringBoot;后端开发经验有使用过MVC框架如Spring，以及数据持久框架如MyBatis或者Hibernate,有微服务开发经验，如Springcloud，SpringBoot优先；6.GoodknowledgefortheOOP,andmoregoodforsolidthinkingwithDesignPatternsknowledge;有很好的面向对象的知识，有扎实的设计模式思想的优先；7.PL-SQLskillsinOracle;掌握OraclePL-SQL技能；8.MoregoodforNo-SQLexperience,suchasMongoDB,Redis;有No-SQL经验，如MongoDB,Redis优先；9.ReadingandwritingEnglishcanbeusedasworkinglanguage,oralEnglishgoodisaplus;英文读写可作为工作语言,听说流利优先考虑；10.Stronganalysis,design,codingandtroubleshootingskills;较强的分析、设计、编码和解决问题的能力；11.TeamworkwithsolidEnglishandcommunicationskills;良好的英语和沟通能力，具备良好的团队合作能力；12.Wellorganizedwithpassionandsenseofresponsibility.具备良好的工作热情和责任感。StaffWelfare员工福利：1.Afteronboarding,providingsupplementarycommercialinsurancebesidesthestate-stipulatedinsuranceandhousingfund;入职即为员工缴纳六险一金；2.Fastandtransparentpromotionchannelandbroaddevelopmentopportunities;快速透明的晋升渠道，广阔的发展空间；3.5-15dayspaidannualleaveand5dayspaidsickleave.Freeannualphysicalcheck-up;每年5-15天带薪年休假，5天带薪病假，年度免费员工体检；4.Attractiveemployeeactivities.有吸引力的员工活动。","捷信消费金融有限公司","2000人以上","金融","不需要融资","Java开发|全栈|六险一金|外企环境");
+		Total Crawled: 388	Finished-Point
+2020-03-25 14:47:54================================================================================
+
+2020-03-25 16:44:06 ================================================================================
+JAVA工程师
+	全国	Positions: 500+
+
+2020-03-25 16:49:36 ================================================================================
+JAVA工程师
+	全国	Positions: 500+
+
+2020-03-25 16:57:03 ================================================================================
+JAVA工程师
+	全国	Positions: 500+
+
+2020-03-25 17:11:46 ================================================================================
+JAVA工程师
+	全国	Positions: 500+
+
+2020-03-25 17:12:44 ================================================================================
+JAVA工程师
+	全国	Positions: 500+
+
+2020-03-25 17:32:59 ================================================================================
+JAVA工程师
+	全国	Positions: 500+
+
+2020-03-25 17:35:09 ================================================================================
+JAVA工程师
+	全国	Positions: 500+
+
+2020-03-25 17:39:16 ================================================================================
+JAVA工程师
+	全国	Positions: 500+
+
+2020-03-25 17:39:47 ================================================================================
+JAVA工程师
+	全国	Positions: 500+
+
+2020-03-27 10:37:58 ================================================================================
+工艺工程师
+	全国	Positions: 500+
+		Total Crawled: 396	Finished-Point
+2020-03-27 11:24:43================================================================================
+		Total Crawled: 396	Finished-Point
+2020-03-27 11:24:50================================================================================
+		Total Crawled: 396	Finished-Point
+2020-03-27 11:24:56================================================================================
+		Total Crawled: 396	Finished-Point
+2020-03-27 11:25:01================================================================================
+		Total Crawled: 396	Finished-Point
+2020-03-27 11:25:07================================================================================
+		Total Crawled: 396	Finished-Point
+2020-03-27 11:25:11================================================================================
+		Total Crawled: 396	Finished-Point
+2020-03-27 11:25:17================================================================================
+		Total Crawled: 396	Finished-Point
+2020-03-27 11:25:22================================================================================
+		Total Crawled: 396	Finished-Point
+2020-03-27 11:25:28================================================================================
+		Total Crawled: 396	Finished-Point
+2020-03-27 11:25:34================================================================================
+		Total Crawled: 396	Finished-Point
+2020-03-27 11:25:40================================================================================
+		Total Crawled: 396	Finished-Point
+2020-03-27 11:25:48================================================================================
+		Total Crawled: 396	Finished-Point
+2020-03-27 11:25:56================================================================================
+		Total Crawled: 396	Finished-Point
+2020-03-27 11:26:01================================================================================
+
+2020-04-04 10:56:42 ================================================================================
+C++工程师
+	全国	Positions: 500+
+		Total Crawled: 442	Finished-Point
+2020-04-04 11:48:26================================================================================
+
+2020-04-06 13:50:53 ================================================================================
+C++工程师
+	全国	Positions: 500+
+
+2020-04-06 14:07:01 ================================================================================
+C++工程师
+	全国	Positions: 500+
+
+2020-04-06 14:07:06 ================================================================================
+工艺工程师
+	全国	Positions: 500+
+			Failed Store:  https://www.lagou.com/jobs/6632054.html 
+				SQL:  insert into process (keywords,detail_url,position,tags,salary,job_type,city,district,street,education,work_experience,release_date,description,company_name,company_scale,company_field,company_type,company_benefits) value ("C++工程师","https://www.lagou.com/jobs/6632054.html","C++开发工程师","C++|Linux/Unix","20k-25k","全职","北京","海淀区","东北旺西路8号中关村软件园, 15号楼方舟大厦","本科及以上","5-10年","2020-04-06","JobDescriptionRefinitivDataPlatformprovidesmulti-pointaccesstofeedsanddatamanagementsolutionsincludingreal-timepricing,referencedata,privateandpubliccompanyinformationandevents,commodity,economic,quantitativeandresearchdata,ReutersNewsandover10,000othernewssources,andsupportstheElektronbusiness,providingpre-trade,tradingandposttradingdataandworkflowincludingcrossassetclassexecutionmanagementsystemsandordermanagementsystemsand,portfolioanalytics.Weareseekingahighlymotivateddeveloperwith5+yearsofexperienceinanassortmentoftechnologiesfromC/C++orJavaprogramming,softwaredesignanddevelopmentwithDevOpsconcept.Joiningourdevelopmentteam,youwillworkcloselywithaverycreativeandexperiencedteamtodeliveryworldleadingfinancialdataproductsonRefinitivDataPlatformonpubliccloud.JobResponsibilitiesAnalyzingnewrequirementsfromtheproductmanagersanddevelopdesign,codeandunittestsoftwaresolutionsadheringtoagilescrumpractices.Collaboratewiththearchitectsanddevelopmentteamsinotherregions.PartnerswithQualityAssurancetoensurehighqualitydeliverables.Cooperatewithdedicatedsupportteamstoresolvetheproductionissues.Compliantwithsoftwaredevelopmentprocessandcontributetothecontinuousprocessimprovement.Contributestowardproductandinternaldocumentation–technicalspecifications,softwaredocumentationandunittestplans.EducationBachelordegreeorhigherinComputerScienceoranyotherrelatedfields.RequiredSkillsMusthave5+yearworkexperienceswithinsoftwaredevelopmentindustry.StrongOOunderstandingandprogrammingcapability.HassolidexperienceinoneormoreprogramminglanguagesC++,Javaand/orotherObjectOrientedprogramminglanguages,softwareengineeringmethodologiesandsoftwaredevelopmenttools.ExperiencewithLinuxoperatingsystems,includingshellscriptingandbasicsystemadministration.Strongtroubleshootingandsoftwaredebuggingskills.Passiontolearnandapplynewtechnologies.Canworkindependentlywithminimalsupervision.Abilitytoworkandcommunicateinamultinationalenvironment.TeamPlayer.WrittenandoralEnglish.DesiredSkillsNicetohaveasaplusFinancialmarketknowledgePubliccloudexperiencePythonDevOps","汤森路透","2000人以上","数据服务","上市公司","外企工作环境|福利好|有班车|扁平化管理");
+
+2020-04-06 14:24:23 ================================================================================
+C++工程师
+	全国	Positions: 500+
+
+2020-04-06 14:24:29 ================================================================================
+工艺工程师
+	全国	Positions: 500+
+			Failed Store:  https://www.lagou.com/jobs/6983294.html 
+				SQL:  insert into process (keywords,detail_url,position,tags,salary,job_type,city,district,street,education,work_experience,release_date,description,company_name,company_scale,company_field,company_type,company_benefits) value ("工艺工程师","https://www.lagou.com/jobs/6983294.html","普工操作工","电子/半导体/集成电路","5k-7k","全职","东莞","东莞市市辖区","大岭山镇大片美村德普特电子有限公司","学历不限","不限","2020-04-05","按照工艺要求按时保质保量完成生产任务。","德普特电子","","http://www.lagou.com/gong...","","底薪2130元|购买五险一金");
+			Failed Store:  https://www.lagou.com/jobs/6632054.html 
+				SQL:  insert into process (keywords,detail_url,position,tags,salary,job_type,city,district,street,education,work_experience,release_date,description,company_name,company_scale,company_field,company_type,company_benefits) value ("C++工程师","https://www.lagou.com/jobs/6632054.html","C++开发工程师","C++|Linux/Unix","20k-25k","全职","北京","海淀区","东北旺西路8号中关村软件园, 15号楼方舟大厦","本科及以上","5-10年","2020-04-06","JobDescriptionRefinitivDataPlatformprovidesmulti-pointaccesstofeedsanddatamanagementsolutionsincludingreal-timepricing,referencedata,privateandpubliccompanyinformationandevents,commodity,economic,quantitativeandresearchdata,ReutersNewsandover10,000othernewssources,andsupportstheElektronbusiness,providingpre-trade,tradingandposttradingdataandworkflowincludingcrossassetclassexecutionmanagementsystemsandordermanagementsystemsand,portfolioanalytics.Weareseekingahighlymotivateddeveloperwith5+yearsofexperienceinanassortmentoftechnologiesfromC/C++orJavaprogramming,softwaredesignanddevelopmentwithDevOpsconcept.Joiningourdevelopmentteam,youwillworkcloselywithaverycreativeandexperiencedteamtodeliveryworldleadingfinancialdataproductsonRefinitivDataPlatformonpubliccloud.JobResponsibilitiesAnalyzingnewrequirementsfromtheproductmanagersanddevelopdesign,codeandunittestsoftwaresolutionsadheringtoagilescrumpractices.Collaboratewiththearchitectsanddevelopmentteamsinotherregions.PartnerswithQualityAssurancetoensurehighqualitydeliverables.Cooperatewithdedicatedsupportteamstoresolvetheproductionissues.Compliantwithsoftwaredevelopmentprocessandcontributetothecontinuousprocessimprovement.Contributestowardproductandinternaldocumentation–technicalspecifications,softwaredocumentationandunittestplans.EducationBachelordegreeorhigherinComputerScienceoranyotherrelatedfields.RequiredSkillsMusthave5+yearworkexperienceswithinsoftwaredevelopmentindustry.StrongOOunderstandingandprogrammingcapability.HassolidexperienceinoneormoreprogramminglanguagesC++,Javaand/orotherObjectOrientedprogramminglanguages,softwareengineeringmethodologiesandsoftwaredevelopmenttools.ExperiencewithLinuxoperatingsystems,includingshellscriptingandbasicsystemadministration.Strongtroubleshootingandsoftwaredebuggingskills.Passiontolearnandapplynewtechnologies.Canworkindependentlywithminimalsupervision.Abilitytoworkandcommunicateinamultinationalenvironment.TeamPlayer.WrittenandoralEnglish.DesiredSkillsNicetohaveasaplusFinancialmarketknowledgePubliccloudexperiencePythonDevOps","汤森路透","2000人以上","数据服务","上市公司","外企工作环境|福利好|有班车|扁平化管理");
+
+2020-04-06 14:43:53 ================================================================================
+C
+	全国	Positions: 500+
+
+2020-04-06 14:43:58 ================================================================================
+工
+	全国	Positions: 500+
+
+2020-04-06 14:44:03 ================================================================================
+算
+	全国	Positions: 500+
+
+2020-04-06 14:44:09 ================================================================================
+P
+	全国	Positions: 102
+			Failed Store:  https://www.lagou.com/jobs/6983294.html 
+				SQL:  insert into process (keywords,detail_url,position,tags,salary,job_type,city,district,street,education,work_experience,release_date,description,company_name,company_scale,company_field,company_type,company_benefits) value ("工","https://www.lagou.com/jobs/6983294.html","普工操作工","电子/半导体/集成电路","5k-7k","全职","东莞","东莞市市辖区","大岭山镇大片美村德普特电子有限公司","学历不限","不限","2020-04-05","按照工艺要求按时保质保量完成生产任务。","德普特电子","","http://www.lagou.com/gong...","","底薪2130元|购买五险一金");
+			Failed Store:  https://www.lagou.com/jobs/6632054.html 
+				SQL:  insert into process (keywords,detail_url,position,tags,salary,job_type,city,district,street,education,work_experience,release_date,description,company_name,company_scale,company_field,company_type,company_benefits) value ("C","https://www.lagou.com/jobs/6632054.html","C++开发工程师","C++|Linux/Unix","20k-25k","全职","北京","海淀区","东北旺西路8号中关村软件园, 15号楼方舟大厦","本科及以上","5-10年","2020-04-06","JobDescriptionRefinitivDataPlatformprovidesmulti-pointaccesstofeedsanddatamanagementsolutionsincludingreal-timepricing,referencedata,privateandpubliccompanyinformationandevents,commodity,economic,quantitativeandresearchdata,ReutersNewsandover10,000othernewssources,andsupportstheElektronbusiness,providingpre-trade,tradingandposttradingdataandworkflowincludingcrossassetclassexecutionmanagementsystemsandordermanagementsystemsand,portfolioanalytics.Weareseekingahighlymotivateddeveloperwith5+yearsofexperienceinanassortmentoftechnologiesfromC/C++orJavaprogramming,softwaredesignanddevelopmentwithDevOpsconcept.Joiningourdevelopmentteam,youwillworkcloselywithaverycreativeandexperiencedteamtodeliveryworldleadingfinancialdataproductsonRefinitivDataPlatformonpubliccloud.JobResponsibilitiesAnalyzingnewrequirementsfromtheproductmanagersanddevelopdesign,codeandunittestsoftwaresolutionsadheringtoagilescrumpractices.Collaboratewiththearchitectsanddevelopmentteamsinotherregions.PartnerswithQualityAssurancetoensurehighqualitydeliverables.Cooperatewithdedicatedsupportteamstoresolvetheproductionissues.Compliantwithsoftwaredevelopmentprocessandcontributetothecontinuousprocessimprovement.Contributestowardproductandinternaldocumentation–technicalspecifications,softwaredocumentationandunittestplans.EducationBachelordegreeorhigherinComputerScienceoranyotherrelatedfields.RequiredSkillsMusthave5+yearworkexperienceswithinsoftwaredevelopmentindustry.StrongOOunderstandingandprogrammingcapability.HassolidexperienceinoneormoreprogramminglanguagesC++,Javaand/orotherObjectOrientedprogramminglanguages,softwareengineeringmethodologiesandsoftwaredevelopmenttools.ExperiencewithLinuxoperatingsystems,includingshellscriptingandbasicsystemadministration.Strongtroubleshootingandsoftwaredebuggingskills.Passiontolearnandapplynewtechnologies.Canworkindependentlywithminimalsupervision.Abilitytoworkandcommunicateinamultinationalenvironment.TeamPlayer.WrittenandoralEnglish.DesiredSkillsNicetohaveasaplusFinancialmarketknowledgePubliccloudexperiencePythonDevOps","汤森路透","2000人以上","数据服务","上市公司","外企工作环境|福利好|有班车|扁平化管理");
+		Total Crawled: 101	Finished-Point
+2020-04-06 15:00:44================================================================================
+y
+	全国	Positions: 49
+			Failed Store:  https://www.lagou.com/jobs/6415565.html 
+				SQL:  insert into process (keywords,detail_url,position,tags,salary,job_type,city,district,street,education,work_experience,release_date,description,company_name,company_scale,company_field,company_type,company_benefits) value ("y","https://www.lagou.com/jobs/6415565.html","高级Android工程师","电商|移动端|Android","30k-60k","全职","上海","静安区","上海市静安区威海路696号10幢2层301室","本科及以上","5-10年","2020-04-02","Title:SeniorAndroidEngineer,GOATChinaReportingto:GMofChinaLanguagerequirement:FluentinMandarinandEnglishLocation:Shanghai,ChinaWe’relookingforaproduct-drivenSeniorAndroidEngineerwithastrongappreciationforgreatdesignnotonlyinproductsandvisualpresentation,butalsoincodeandtechnicalarchitecture.AsanearlymemberofourGOATChina-basedengineeringteam,you’llcollaboratecross-functionallywithteamsinboththeUSandChinatoadaptourmobileproductsaccordingtolocalChineseconsumerneeds.We’relookingforsomeonewhohasexperiencelocalizingappsfrommultinationalcompaniesinawaythatalignswiththecompany’sidentitywhilealsocateringtothelocalmarket.Youshouldhaveaproventrackrecordofmeaningfullyimprovingappusabilityandaccessibility,therebydrivingincrementalrevenuein-country.Youshouldproducehigh-qualitycodeandbeexcitedaboutresearchingnewmethodsortechnologiesthatimprovethearchitectureanduserexperience.AsaSeniorEngineer,youwill:Bealeaderonasmall,butnimbleteamtaskedwithleadingGOAT’sexpansionintoChinaviamobileeCommerceCollaboratewiththeGOATUSProductandEngineeringteams,andChinateamtolocalizetheGOATnativeAndroidappsfortheChinamarketUseproductrequirementsandtechnicaldesignstowritewell-engineered,robustcodethatmeetsChinesemarketneedsAlignwithproducttorigorouslyprioritizeappfunctionalitywithinourroadmapstoensureefficientspeedtomarketandahigh-qualityuserexperienceWorkwithourteamstotroubleshoot,debug,andfixissuesinproductionandnon-productionenvironmentsContributetotheinnovation,analysis,design,critiqueandcontinualimprovementoftheappKeepuptodatewiththelatestcapabilitiesandfeaturesofeachAndroidreleaseWearelookingfor:5+yearsofexperiencebuildingandlaunchinghighqualityAppsforAndroidinChinaExperience“converting”USAndroidappsintolocalizedversionsfortheChinamarketExperienceshippingaKotlinAndroidappintheChinesemarketExperiencewritingandutilizingunitteststobuildmaintainableandflexiblecodeExcellentpersonal,verbalandwrittencommunicationskillsinbothEnglishandMandarinUnderstandingofthesneakermarketandsneakerculturewithinChinaisaplusExperiencewithRxJavaExperiencewithMVP,MVVM,andMVIExperiencewithimplementingPushNotificationsinChinaGOATGroupistheworld’slargestmarketplaceforauthenticsneakers.Itsbrandsofferthegreatestselectionofsneakersavailablethroughcompany-operatedretailstores,e-commercesitesandmobileappsundertheGOATandFlightClubbrands.Throughitsinnovativetechnologyandservice,GOATGrouphaschangedthelandscapeofsneakercommerceandhasquicklybecometheworld’smosttrustedsourcetodiscover,buyandsellauthenticsneakers.ThecompanyisbackedbystrategicinvestorFootLocker,Inc.aswellassomeoftheleadingnamesinventurecapitalincludingAccel,AndreessenHorowitz,AshtonKutcher,IndexVentures,MatrixPartners,NEA,SVAngel,UpfrontVentures,WebbInvestmentNetworkandYCombinator.岗位职责：l能胜任一个小而精的团队的领导者，负责领导GOAT通过移动电子商务在中国扩张l与美国GOAT产品及工程团队合作，满足中国市场的产品需求并实现中国本地化GOAT原生Android应用程序，以满足中国市场相较于美国市场差异的需求l与产品保持一致，在我们的发展规划中严格划分应用程序功能的优先级，以确保高效的速度和高质量的用户体验l与我们的团队一起解决、调试并修复开发环境和非开发环境中的问题l为应用程序的创新、分析、设计、评论和持续改进做出贡献l随时了解每个Android版本的最新功能和特性岗位要求：l有5年以上Android开发应用程序的经验l有过将国外Android应用程序本地化者优先l在中国市场推出KotlinAndroid应用程序的体验l有过编写和使用单元测试来构建可维护和灵活的代码的经验l具备优秀的中英文口头和书面沟通能力l了解中国的运动鞋市场和运动鞋文化者优先l有过使用RxJava以及MVP、MVVM和MVI的经验者优先","GOATGroup","500-2000人","电商","D轮及以上","外企不加班|团队氛围好");
+			Failed Store:  https://www.lagou.com/jobs/6892025.html 
+				SQL:  insert into process (keywords,detail_url,position,tags,salary,job_type,city,district,street,education,work_experience,release_date,description,company_name,company_scale,company_field,company_type,company_benefits) value ("y","https://www.lagou.com/jobs/6892025.html","Consumer Experience Speci","电商|新零售|客服|英语客服","6k-9k","全职","上海","静安区","上海市静安区威海路696号10幢2层301室","本科及以上","1-3年","2020-03-31","Reportingto:CXCNTeamLeadLanguageRequirement:FluentinMandarinandEnglish;fluencyinadditionalChinesedialectsisidealLocation:Shanghai,ChinaTheCustomerSupportagentisacrucialroleinourcompany,servingastheprimaryL1contactbetweenbuyers,sellers,andGOAT.Theidealcandidatehasexperienceincustomersupport-preferablyHongKongand/orChinatosupportaneCommercesneakermarketplacebusiness.TheCXSpecialistwillhaveanunderstandingofmobileapplicationsnativeiOSandAndroidapps,WeChatapps+MiniPrograms,andtechnologywithaneagernesstoprovidethebestcustomersupportaround.Responsibilities:-SupportCXCNL1WeChatminiprogramandZendesklevel1chat/tickets;includes,butnotlimitedto:consumersupport,troubleshooting,reportingescalationstoTeamLeadandmaintainingminimumexpectationproductivity.-Resolvelevel1customersupportissueswiththeutmostpatienceandbyadheringtocompanypolicies-Providereal-timecustomersupportwithapositiveattitudethroughWeChatminiprogramandemailZendesksoftwareasneeded-Troubleshootand/orescalatebasictechnicalissuesrelatedtoourmobileappsnativeiOSandAndroidapps,aswellasWeChatapp+MiniProgramandwebsitetotheCXCNTeamLead-EscalateanytechnologyissuestoourCXCNTeamlead,sothattheymayinformourUS-basedITandengineeringteamstoensureallCX-relatedtechnologyandsystemsareoperatingsmoothlyinHK/China-FlexibilitytosupportotherassignmentsastheycomeupRequirements:-2-3+yearsofexperienceinconsumerexperienceintheeCommerceindustry-Passionforsneakers,technologyexperienceandhelpingotherssucceed-Anentrepreneurialspirit-AnunderstandingofhowCXandcustomerexpectationsdifferintheUSvs.China,withanabilitytocommunicatewaystoimprovetheoverallcustomerexperienceandcaterittoChina/Asia-Aquicklearner,aself-starter,abletoworkindependently-ExcellentwrittenandverbalcommunicationskillsinbothMandarinandEnglish;abletointeractwithcustomersinaclearandconcisemanner-Mustbeateamplayerwhoisabletomakeindependentdecisionsbasedonestablishedguidelinesandmeetthedaily/weekly/monthlyminimumexpectationsoftherole-Mustbeabletoprioritizeworkandmanagetimeeffectively;theidealcandidatethrivesinafast-paced,independent,multifacetedenvironment-Highlyorganizedwithdemonstratedattentiontodetail-Mustbeavailableandwillingtoworkextendedhoursincludingweekends,Holidays,orcrunchtimesasneeded,tomeettheneedsofthebusiness-ExperienceworkingwithaUS-basedcompanyisaplusGOATGroupistheworld’slargestmarketplaceforauthenticsneakers.Itsbrandsofferthegreatestselectionofsneakersavailablethroughcompany-operatedretailstores,e-commercesitesandmobileappsundertheGOATandFlightClubbrands.Throughitsinnovativetechnologyandservice,GOATGrouphaschangedthelandscapeofsneakercommerceandhasquicklybecometheworld’smosttrustedsourcetodiscover,buyandsellauthenticsneakers.ThecompanyisbackedbystrategicinvestorFootLocker,Inc.aswellassomeoftheleadingnamesinventurecapitalincludingAccel,AndreessenHorowitz,AshtonKutcher,IndexVentures,MatrixPartners,NEA,SVAngel,UpfrontVentures,WebbInvestmentNetworkandYCombinator.","GOATGroup","500-2000人","电商","D轮及以上","带薪年假|领导好");
+			Failed Store:  https://www.lagou.com/jobs/5091176.html 
+				SQL:  insert into process (keywords,detail_url,position,tags,salary,job_type,city,district,street,education,work_experience,release_date,description,company_name,company_scale,company_field,company_type,company_benefits) value ("y","https://www.lagou.com/jobs/5091176.html","产品经理","教育|广告营销","10k-13k","全职","青岛","青岛高新技术产业开发区","黄岛区富春江路1356号311室","本科及以上","3-5年","2020-03-31","岗位职责：1、负责SAAS平台和广告系统、直播相关产品的设计、研发和推广；2、制订产品需求文档，以供设计、开发、测试人员明确产品需求和进行开发、测试；3、跟进UI设计人员的设计和技术人员的开发，确保产品功能特性和交互符合产品需求文档的要求；4、独立完成市场分析和竞品调研的工作，以及数据分析的工作；5、制定产品推广方案并具体实施，对产品推广效果负责；6、整理和分析用户需求和反馈，完成客户端产品的规划与持续改进；7、拥有3年以上互联网在线教育产品运营推广经验；岗位要求：1、本科及以上学历，具有saas平台、直播、广告系统产品设计/管理（iOS或Android或WP）经验；2、具备较强产品设计能力，深入了解saas平台、直播、广告系统的产品研发和运营、推广流程，具有saas平台、直播、广告系统产品推广经历，对市场发展趋势有敏锐的洞察力和创新意识及良好的分析、研判能力，提供有竞争力的产品并能进行有效推广；3、善用数据分析，收集用户意见反馈，持续优化产品；4、具有一定的组织管理能力、判断能力、沟通协调、表达能力。5、较强的执行力，工作责任心强，看重结果导向；良好的职业素养和职业操守，能承受较大的工作压力；6、热爱互联网，关注移动互联网发展动态，认同移动互联网的发展。名医传世是医院培训整体解决方案的提供商，解决医院培训的不规范、零乱不系统、重复性培训等问题，还解决严重存在医护人员技能提升培训渠道不通畅、成本高等问题。名医传世提供SaaS培训考核管理系统，帮助让医院建立各岗位培训体系，让所有的岗位培训，变成标准化、信息化、程序化和系统性；并能建立每个职员的培训历程、档案，方便管理者人才培训分析、调整培训方案，建立精准培训等，全方位帮助医院打造强大的医疗团队。名医传世平台的功能主要有：1、能快速建立专属医院的培训平台；2、能建立不同需求的培训人员组织架构；3、轻松上传视频、建立培训教程、设置考题、还可以建立培训SOP等；4、管理者可随意查看培训效果，精确到个人和教程；5、平台提供名医线上工作室，可以最全面展示名医实力和技术；6、提供名医与基层医生互动交流与合作的通道；园区办公-绿色天然氧吧，森林式办公让你心情舒畅~五天双休-摒弃不规律的调休生活，周末不耍更待何时哇带薪年假-拿着薪资去happy，任性如我=w=绩效奖金-能者多得，快爆发你的小宇宙~岗位晋升-晋升和调薪，自己的天花板自己来决定y扁平管理-我们只看效率，能者说了算！下午茶呢-每周水果雪糕还有糖水哦balabala简直选择困难：3员工活动-组队羽毛球踢毽子唱k徒步浪~生活补贴-工作餐餐补和你的各种通讯费应酬费~报报报！犹豫啥呢，我们在鸟语花香里等你","上啥班","50-150人","移动互联网,企业服务","天使轮","创业公司|有活力|有激情");
+			Failed Store:  https://www.lagou.com/jobs/6832460.html 
+				SQL:  insert into process (keywords,detail_url,position,tags,salary,job_type,city,district,street,education,work_experience,release_date,description,company_name,company_scale,company_field,company_type,company_benefits) value ("y","https://www.lagou.com/jobs/6832460.html","User Acquisition","电商|DSP|电商广告|媒体投放","15k-25k","全职","上海","静安区","上海市静安区威海路696号10幢2层301室","本科及以上","3-5年","2020-03-31","Inthisroleyouwill:●Workhand-in-handwithexternalagencytobuild,manage,monitor,testandoptimizecampaignsbyplatformonline,video,social,paidsearch,etctoincreaseperformance●WorkwiththeUSteamtogetcreativeassetsandcopytoexecutecoordinatedstrategiccampaigns●Closelymonitor,measureandreportoncampaignperformance,budgeting,andconductadhocanalysis●OptimizeKPIsusingdata,experimentation,andfunneloptimization●Developandimplementproceduresforintegratingfindingsintofuturecampaignsandprovidecreativebestpractices●EstablishweeklyreportingleveragingongoingKPIsandmetricsinrelationtoourstrategy●BeflexibletomanageotherassignmentsastheycomeupWearelookingfor:●BA/BSdegreeinbusiness,marketingorequivalenthands-onexperienceconsidered●Minimum3yearsofexperienceinrelevantfieldmediabuying,acquisitionmarketing,mobilemarketing,lifecyclemarketing●Experienceinmobileappmarketingisrequired●GreatunderstandingoftheGreaterChinadigitalandsocialmediaecosystemandtrends●StrongExcelandanalyticalskills-mustbeabletocleanrawdataintoactionableinsights●Familiarwithinternationalmarketingfunnelsandtheeconomicsofuseracquisition●Excellentcommunicationskillsandabilitytointerfaceeffectivelywithstakeholders●ExperiencewithDSPs,DMPs,Dynamic,RichMediacreativeaplus●ProficiencyinSQLaplus●E-commerceexperienceahugepluseitherinwebormobile●Experienceinworkingacrossdifferentglobalculturesaplus●Excellentpersonal,verbal,andwrittencommunicationskillsinbothEnglishandMandarinGOATGroupistheworld’slargestmarketplaceforauthenticsneakers.Itsbrandsofferthegreatestselectionofsneakersavailablethroughcompany-operatedretailstores,e-commercesitesandmobileappsundertheGOATandFlightClubbrands.Throughitsinnovativetechnologyandservice,GOATGrouphaschangedthelandscapeofsneakercommerceandhasquicklybecometheworld’smosttrustedsourcetodiscover,buyandsellauthenticsneakers.ThecompanyisbackedbystrategicinvestorFootLocker,Inc.aswellassomeoftheleadingnamesinventurecapitalincludingAccel,AndreessenHorowitz,AshtonKutcher,IndexVentures,MatrixPartners,NEA,SVAngel,UpfrontVentures,WebbInvestmentNetworkandYCombinator.","GOATGroup","500-2000人","电商","D轮及以上","管理扁平化|发展前景好");
+		Total Crawled: 47	Finished-Point
+2020-04-06 15:12:15================================================================================
+t
+	全国	Positions: 196
+		Total Crawled: 232	Finished-Point
+2020-04-06 15:24:38================================================================================
++
+	全国	Positions: 0
+		Total Crawled: 0	Finished-Point
+2020-04-06 15:24:47================================================================================
++
+	全国	Positions: 0
+		Total Crawled: 0	Finished-Point
+2020-04-06 15:24:50================================================================================
+工
+	全国	Positions: 500+
+			Failed Store:  https://www.lagou.com/jobs/6915403.html 
+				SQL:  insert into process (keywords,detail_url,position,tags,salary,job_type,city,district,street,education,work_experience,release_date,description,company_name,company_scale,company_field,company_type,company_benefits) value ("工","https://www.lagou.com/jobs/6915403.html","普工","其他","3k-5k","全职","常州","武进区","常漕路三号","学历不限","不限","2020-03-23","按照操作流程，完成生产任务，包吃包住，18-40周岁","AAC瑞声科技","","http://www.lagou.com/gong...","","包吃包住");
+		Total Crawled: 169	Finished-Point
+2020-04-06 15:41:01================================================================================
+h
+	全国	Positions: 500+
+			Failed Store:  https://www.lagou.com/jobs/5974706.html 
+				SQL:  insert into process (keywords,detail_url,position,tags,salary,job_type,city,district,street,education,work_experience,release_date,description,company_name,company_scale,company_field,company_type,company_benefits) value ("算","https://www.lagou.com/jobs/5974706.html","NLP算法工程师","NLP|人工智能|机器学习","20k-35k","全职","北京","朝阳区","百子湾路苹果社区北区二十二号院艺术街区 B座2号楼 028 底商 Blued City","硕士及以上","不限","2020-04-03","岗位职责：1、研究深度学习算法和自然语言处理，进行大规模文本特征分析提取建模2、利用NLP相关技术和方法解决实际问题，改进产品功能能力要求：1、一年以上机器学习、NLP研发项目经验，有语义理解、推荐系统、知识图谱等项目经验者优先2、熟悉Hadoop、Hive、Spark等分布式计算架构3、熟悉Tensorflow、Keras等深度学习框架4、熟悉NLP、机器学习、深度学习、强化学习等算法，对NLP方向有较深和全面的认识5、具备研究探索精神和团队协作能力","BLUECITY蓝城兄弟","150-500人","移动互联网,社交","D轮及以上","行业独角兽|弹性工时|免费午餐");
+		Total Crawled: 356	Finished-Point
+2020-04-06 15:44:40================================================================================
+艺
+	全国	Positions: 500+
+		Total Crawled: 93	Finished-Point
+2020-04-06 15:44:48================================================================================
+程
+	全国	Positions: 311
+		Total Crawled: 12	Finished-Point
+2020-04-06 15:46:52================================================================================
+师
+	全国	Positions: 500+
+		Total Crawled: 390	Finished-Point
+2020-04-06 15:54:14================================================================================
+法
+	全国	Positions: 500+
+			Failed Store:  https://www.lagou.com/jobs/6830358.html 
+				SQL:  insert into process (keywords,detail_url,position,tags,salary,job_type,city,district,street,education,work_experience,release_date,description,company_name,company_scale,company_field,company_type,company_benefits) value ("艺","https://www.lagou.com/jobs/6830358.html","主播艺人","音乐|直播","6k-11k","全职","成都","武侯区","新希望国际B座1413","学历不限","不限","2020-04-03","1.服从管理2.具有一定的表达能力，通过网络平台进行直播表演，展现自身才艺3.形象气质佳，颜值出众者优先有无经验均可4.建立并维护粉丝群，保持直播间活跃气氛5.按平台要求直播避免违规6.努力提高自身才艺岗位职1.普通话良好，口齿清晰，头脑灵活，反应灵敏，性格外向善于表达与人沟通，具有强烈的表演欲望2.热爱网络直播事业并有认真学习的态度和良好的心理素质3.服人公司与管理人员安排，具有敬业精神和良好的队意识4.具有某方面技能如.唱歌，跳舞，乐器，表演，主持者优先考虑5.有过网络直播经验更佳1.普通话良好，口齿清晰，头脑灵活，反应灵敏，性格外向善于表达与人沟通，具有强烈的表演欲望2.热爱网络直播事业并有认真学习的态度和良好的心理素质3.服从公司与管理人员安排，具有敬业精神和良好的团队意识4.具有某方面技能如:唱歌，跳舞，乐器，表演，主持者优先考虑5.有过网络直播经验更佳高保底，高提成，高收入!短视频拍摄帮助专业运营团队，强力推荐位，特有Dou+推广”购买支持线上合作，时间自由只要你愿意尝试，愿意配合，收入无上限!直播红利期，赶紧加入我们吧","兴业银行信用卡中心","","http://www.lagou.com/gong...","","五险一金|高薪工作");
+		Total Crawled: 292	Finished-Point
+2020-04-06 16:39:59================================================================================
+			Failed Store:  https://www.lagou.com/jobs/6521558.html 
+				SQL:  insert into process (keywords,detail_url,position,tags,salary,job_type,city,district,street,education,work_experience,release_date,description,company_name,company_scale,company_field,company_type,company_benefits) value ("h","https://www.lagou.com/jobs/6521558.html","h5前端","房产服务|工具软件|前端开发","15k-25k","兼职","深圳","南山区","广东省深圳市南山区后海大道靠近瑞铧苑","学历不限","3-5年","2020-01-18","负责app，小程序，pc端！您好？敢不敢创业？咱们自己当老板，上班也不是长久之计，早晚都要创业趁年轻干吧？找“志同道合”的技术组建10人联合创始人团队，不耽误进度可以兼职创业，目前团队8人，6人技术。iOS已上线（旺盘共享）公司经营房产交易，要做自用房源管理系统app，管理房源，管理员工，管理分公司，分销系统，支付功能，直播看房功能技术合伙人必须对自己的岗位能独当一面的技术能力，有开发过从0到1的产品经验<","旺盘","","http://www.lagou.com/gong...","","创业公司都是发展机会找志同道合者共同创业");
+			Failed Store:  https://www.lagou.com/jobs/6806312.html 
+				SQL:  insert into process (keywords,detail_url,position,tags,salary,job_type,city,district,street,education,work_experience,release_date,description,company_name,company_scale,company_field,company_type,company_benefits) value ("法","https://www.lagou.com/jobs/6806312.html","网络销售客服","电商|营销","5k-10k","全职","长沙","岳麓区","长沙市观沙岭街道 凯德壹中心茶子山东路112号 湘江财富金融中心写字楼Ｃ座1827","大专及以上","3-5年","2020-03-26","薪资待遇及福利：底薪+高额业绩提成+专业培训指导**个月工薪+提成在5000-6000，第二个月工薪+提成在6000-8000，第三个月工薪+提成以后在8000以上，业绩突出的收入在20000以上！职责描述：1、根据上级领导的指导通过各类社交平台，推广公司产品与业务，为公司吸取流量扩大品牌影响；2、根据上级领导的指导下，通过对社交平台的推广引流到公司线上线下销售系统，促进公司销售业务的顺利开展；3、了解和熟悉现代化新媒体、社交，媒体营销要素和市场推广法，协助上级领导完成对公司的新媒体及社交推广宣传工作；任职要求：1、大专学历以上，年龄18-262、善于寻找目标资源，并有相关实操经验和成功例子；3、熟悉不同形式的营销推广模式；4、具有良好的文字表达能力；5、性格外向、沉稳、细致；","艺冉商贸","50-150人","电子商务","未融资","有晋升空间|有免费培训|薪资不封顶");
+		Total Crawled: 432	Finished-Point
+2020-04-06 16:53:25================================================================================
+o
+	全国	Positions: 396
+		Total Crawled: 425	Finished-Point
+2020-04-06 16:54:57================================================================================
+工
+	全国	Positions: 500+
+		Total Crawled: 13	Finished-Point
+2020-04-06 16:55:33================================================================================
+n
+	全国	Positions: 229
+		Total Crawled: 3	Finished-Point
+2020-04-06 17:00:51================================================================================
+程
+	全国	Positions: 311
+		Total Crawled: 4	Finished-Point
+2020-04-06 17:01:39================================================================================
+师
+	全国	Positions: 500+
+
+2020-04-06 17:30:35 ================================================================================
+C++工程师
+	全国
+
+2020-04-06 17:31:53 ================================================================================
+C++工程师
+	全国	Positions: 500+
+
+2020-04-06 17:33:54 ================================================================================
+C
+	全国	Positions: 500+
+
+2020-04-06 17:34:00 ================================================================================
+P
+	全国	Positions: 102
+
+2020-04-06 17:34:05 ================================================================================
+工
+	全国	Positions: 500+
+
+2020-04-06 17:34:10 ================================================================================
+算
+	全国	Positions: 500+
+
+2020-04-06 17:48:52 ================================================================================
+C
+	全国	Positions: 500+
+
+2020-04-06 17:48:57 ================================================================================
+P
+	全国	Positions: 102
+
+2020-04-06 17:49:02 ================================================================================
+工
+	全国	Positions: 500+
+
+2020-04-06 17:49:07 ================================================================================
+算
+	全国	Positions: 500+
+
+2020-04-06 18:09:49 ================================================================================
+C
+	全国	Positions: 500+
+
+2020-04-06 18:09:54 ================================================================================
+P
+	全国	Positions: 102
+
+2020-04-06 18:10:00 ================================================================================
+工
+	全国	Positions: 500+
+
+2020-04-06 18:10:05 ================================================================================
+算
+	全国	Positions: 500+
+
+2020-04-06 18:12:34 ================================================================================
+C
+	全国	Positions: 500+
+
+2020-04-06 18:12:39 ================================================================================
+P
+	全国	Positions: 102
+
+2020-04-06 18:12:45 ================================================================================
+工
+	全国	Positions: 500+
+
+2020-04-06 18:12:50 ================================================================================
+算
+	全国	Positions: 500+
+
+2020-04-06 18:14:40 ================================================================================
+C
+	全国	Positions: 500+
+
+2020-04-06 18:14:47 ================================================================================
+P
+	全国
+
+2020-04-06 18:15:30 ================================================================================
+C
+	全国	Positions: 500+
+
+2020-04-06 18:15:37 ================================================================================
+P
+	全国
+
+2020-04-06 18:17:09 ================================================================================
+C
+	全国	Positions: 500+
+
+2020-04-06 18:17:16 ================================================================================
+P
+	全国	Positions: 102
+
+2020-04-06 18:17:23 ================================================================================
+工
+	全国
+
+2020-04-06 18:18:44 ================================================================================
+C++工程师
+	全国	Positions: 500+
+
+2020-04-06 18:18:51 ================================================================================
+Python工程师
+	全国	Positions: 500+
+
+2020-04-06 18:18:58 ================================================================================
+工艺工程师
+	全国	Positions: 500+
+
+2020-04-06 18:19:06 ================================================================================
+算法工程师
+	全国	Positions: 500+
+			Failed Store:  https://www.lagou.com/jobs/6983294.html 
+				SQL:  insert into threading (keywords,detail_url,position,tags,salary,job_type,city,district,street,education,work_experience,release_date,description,company_name,company_scale,company_field,company_type,company_benefits) value ("工艺工程师","https://www.lagou.com/jobs/6983294.html","普工操作工","电子/半导体/集成电路","5k-7k","全职","东莞","东莞市市辖区","大岭山镇大片美村德普特电子有限公司","学历不限","不限","2020-04-05","按照工艺要求按时保质保量完成生产任务。","德普特电子","","http://www.lagou.com/gong...","","底薪2130元|购买五险一金");
+
+2020-04-06 18:41:47 ================================================================================
+C++工程师
+	全国
+
+2020-04-06 18:41:55 ================================================================================
+Python工程师
+	全国	Positions: 500+	Positions: 500+
+
+2020-04-06 18:42:02 ================================================================================
+工艺工程师
+	全国	Positions: 500+
+
+2020-04-06 18:42:09 ================================================================================
+算法工程师
+	全国	Positions: 500+
+			Failed Store:  https://www.lagou.com/jobs/6983294.html 
+				SQL:  insert into threading (keywords,detail_url,position,tags,salary,job_type,city,district,street,education,work_experience,release_date,description,company_name,company_scale,company_field,company_type,company_benefits) value ("工艺工程师","https://www.lagou.com/jobs/6983294.html","普工操作工","电子/半导体/集成电路","5k-7k","全职","东莞","东莞市市辖区","大岭山镇大片美村德普特电子有限公司","学历不限","不限","2020-04-05","按照工艺要求按时保质保量完成生产任务。","德普特电子","","http://www.lagou.com/gong...","","底薪2130元|购买五险一金");
+			Failed Store:  https://www.lagou.com/jobs/6632054.html 
+				SQL:  insert into threading (keywords,detail_url,position,tags,salary,job_type,city,district,street,education,work_experience,release_date,description,company_name,company_scale,company_field,company_type,company_benefits) value ("C++工程师","https://www.lagou.com/jobs/6632054.html","C++开发工程师","C++|Linux/Unix","20k-25k","全职","北京","海淀区","东北旺西路8号中关村软件园, 15号楼方舟大厦","本科及以上","5-10年","2020-04-06","JobDescriptionRefinitivDataPlatformprovidesmulti-pointaccesstofeedsanddatamanagementsolutionsincludingreal-timepricing,referencedata,privateandpubliccompanyinformationandevents,commodity,economic,quantitativeandresearchdata,ReutersNewsandover10,000othernewssources,andsupportstheElektronbusiness,providingpre-trade,tradingandposttradingdataandworkflowincludingcrossassetclassexecutionmanagementsystemsandordermanagementsystemsand,portfolioanalytics.Weareseekingahighlymotivateddeveloperwith5+yearsofexperienceinanassortmentoftechnologiesfromC/C++orJavaprogramming,softwaredesignanddevelopmentwithDevOpsconcept.Joiningourdevelopmentteam,youwillworkcloselywithaverycreativeandexperiencedteamtodeliveryworldleadingfinancialdataproductsonRefinitivDataPlatformonpubliccloud.JobResponsibilitiesAnalyzingnewrequirementsfromtheproductmanagersanddevelopdesign,codeandunittestsoftwaresolutionsadheringtoagilescrumpractices.Collaboratewiththearchitectsanddevelopmentteamsinotherregions.PartnerswithQualityAssurancetoensurehighqualitydeliverables.Cooperatewithdedicatedsupportteamstoresolvetheproductionissues.Compliantwithsoftwaredevelopmentprocessandcontributetothecontinuousprocessimprovement.Contributestowardproductandinternaldocumentation–technicalspecifications,softwaredocumentationandunittestplans.EducationBachelordegreeorhigherinComputerScienceoranyotherrelatedfields.RequiredSkillsMusthave5+yearworkexperienceswithinsoftwaredevelopmentindustry.StrongOOunderstandingandprogrammingcapability.HassolidexperienceinoneormoreprogramminglanguagesC++,Javaand/orotherObjectOrientedprogramminglanguages,softwareengineeringmethodologiesandsoftwaredevelopmenttools.ExperiencewithLinuxoperatingsystems,includingshellscriptingandbasicsystemadministration.Strongtroubleshootingandsoftwaredebuggingskills.Passiontolearnandapplynewtechnologies.Canworkindependentlywithminimalsupervision.Abilitytoworkandcommunicateinamultinationalenvironment.TeamPlayer.WrittenandoralEnglish.DesiredSkillsNicetohaveasaplusFinancialmarketknowledgePubliccloudexperiencePythonDevOps","汤森路透","2000人以上","数据服务","上市公司","外企工作环境|福利好|有班车|扁平化管理");
+
+2020-04-06 18:56:25 ================================================================================
+C++工程师
+	全国	Positions: 500+
+
+2020-04-06 18:56:33 ================================================================================
+Python工程师
+	全国	Positions: 500+
+
+2020-04-06 18:56:40 ================================================================================
+工艺工程师
+	全国	Positions: 500+
+
+2020-04-06 18:56:47 ================================================================================
+算法工程师
+	全国	Positions: 500+
+			Failed Store:  https://www.lagou.com/jobs/6983294.html 
+				SQL:  insert into threading (keywords,detail_url,position,tags,salary,job_type,city,district,street,education,work_experience,release_date,description,company_name,company_scale,company_field,company_type,company_benefits) value ("工艺工程师","https://www.lagou.com/jobs/6983294.html","普工操作工","电子/半导体/集成电路","5k-7k","全职","东莞","东莞市市辖区","大岭山镇大片美村德普特电子有限公司","学历不限","不限","2020-04-05","按照工艺要求按时保质保量完成生产任务。","德普特电子","","http://www.lagou.com/gong...","","底薪2130元|购买五险一金");
+			Failed Store:  https://www.lagou.com/jobs/6632054.html 
+				SQL:  insert into threading (keywords,detail_url,position,tags,salary,job_type,city,district,street,education,work_experience,release_date,description,company_name,company_scale,company_field,company_type,company_benefits) value ("C++工程师","https://www.lagou.com/jobs/6632054.html","C++开发工程师","C++|Linux/Unix","20k-25k","全职","北京","海淀区","东北旺西路8号中关村软件园, 15号楼方舟大厦","本科及以上","5-10年","2020-04-06","JobDescriptionRefinitivDataPlatformprovidesmulti-pointaccesstofeedsanddatamanagementsolutionsincludingreal-timepricing,referencedata,privateandpubliccompanyinformationandevents,commodity,economic,quantitativeandresearchdata,ReutersNewsandover10,000othernewssources,andsupportstheElektronbusiness,providingpre-trade,tradingandposttradingdataandworkflowincludingcrossassetclassexecutionmanagementsystemsandordermanagementsystemsand,portfolioanalytics.Weareseekingahighlymotivateddeveloperwith5+yearsofexperienceinanassortmentoftechnologiesfromC/C++orJavaprogramming,softwaredesignanddevelopmentwithDevOpsconcept.Joiningourdevelopmentteam,youwillworkcloselywithaverycreativeandexperiencedteamtodeliveryworldleadingfinancialdataproductsonRefinitivDataPlatformonpubliccloud.JobResponsibilitiesAnalyzingnewrequirementsfromtheproductmanagersanddevelopdesign,codeandunittestsoftwaresolutionsadheringtoagilescrumpractices.Collaboratewiththearchitectsanddevelopmentteamsinotherregions.PartnerswithQualityAssurancetoensurehighqualitydeliverables.Cooperatewithdedicatedsupportteamstoresolvetheproductionissues.Compliantwithsoftwaredevelopmentprocessandcontributetothecontinuousprocessimprovement.Contributestowardproductandinternaldocumentation–technicalspecifications,softwaredocumentationandunittestplans.EducationBachelordegreeorhigherinComputerScienceoranyotherrelatedfields.RequiredSkillsMusthave5+yearworkexperienceswithinsoftwaredevelopmentindustry.StrongOOunderstandingandprogrammingcapability.HassolidexperienceinoneormoreprogramminglanguagesC++,Javaand/orotherObjectOrientedprogramminglanguages,softwareengineeringmethodologiesandsoftwaredevelopmenttools.ExperiencewithLinuxoperatingsystems,includingshellscriptingandbasicsystemadministration.Strongtroubleshootingandsoftwaredebuggingskills.Passiontolearnandapplynewtechnologies.Canworkindependentlywithminimalsupervision.Abilitytoworkandcommunicateinamultinationalenvironment.TeamPlayer.WrittenandoralEnglish.DesiredSkillsNicetohaveasaplusFinancialmarketknowledgePubliccloudexperiencePythonDevOps","汤森路透","2000人以上","数据服务","上市公司","外企工作环境|福利好|有班车|扁平化管理");
+			Failed Store:  https://www.lagou.com/jobs/5595152.html 
+				SQL:  insert into threading (keywords,detail_url,position,tags,salary,job_type,city,district,street,education,work_experience,release_date,description,company_name,company_scale,company_field,company_type,company_benefits) value ("Python工程师","https://www.lagou.com/jobs/5595152.html","Lead Go/Python/Java工程师","Golang|Python|Java|后端","35k-45k","全职","北京","朝阳区","亮马桥润世中心","本科及以上","5-10年","2020-04-04","LeadSoftwareEngineer–UI/APIABOUTTHEOPPORTUNITY:FreeWheelislookingforpassionateSoftwareEngineerstohelpdesignandbuildourhigh-quality,innovativevideoadvertisingplatform.ThispositionisbasedinBeijing.FreeWheelhelpsthetelevisionindustrytomonetizetheirpremiumcontentsthrougharobusttechnologyplatform,whichenablesconsumerstoviewhighqualityvideosonanydevicesincludingPC,smartphone,OTTdevice,set-topboxandtraditionalTV.FreeWheel’sBeijingEngineeringHubisthecenterofourglobalengineeringgroupthatisbuildingtheone-stopsolutionforTVindustrytomanageitsbillion-dollarrevenue.Ourtechplatformiscapableofhandlingbillionsofdailyrequests,providinginsightfulforecastingofinventoryandaudience,processingterabytesofrawdailydata,andoptimizingclients’business.RESPONSIBILITIES:Beresponsibleforthecompletelifecycleofsoftwaredevelopment,includingdesigning,prototyping,implementation,testing,maintenanceandtechnicalsupportProducetechnicalspecificationsanddetermineoperationalfeasibilityWritewelldesigned,testable,efficientcodeDevelopsoftwareverificationplansandqualityassuranceproceduresIntegratesoftwarecomponentsintoafullyfunctionalsoftwaresystemDocumentandmaintainsoftwarefunctionalityTailoranddeployengineeringtools,processesandmetricsServeastheexpertofonlineadvertisingindustry,anddrivetheindustrywithcontinuoustechnicalinnovationPartnerwithglobalengineering,productandoperationsteamstofurtherincorporatecollectiveinnovationsALeadSoftwareEngineerinUI/APIteamwillDesignandbuildFreeWheel’sflagshipproductsinhighqualitystandard.Leadaprojectteamtoanalyzeandsolvebusinessproblemacrossaproductline.Bringinbestpracticesandcontrolteam’scode/designquality.Identifyimprovementneededinfundamentaltechnicalareasandleadtheprojectstoimplementit.Mentorteammembers.ABOUTYOU:Extensiveexperience6+yearspreferredonbuildingandoperatinglargescaleweb-basedbusinessapplicationsincludingwebsites,MIS,ERP,workflowtoolsetc.SolidKnowledgeableinthefielde.g.http,LAMP,JAVA,cutting-edgetechnologiesExperiencewithGolangisaplus.RichexperiencewithJavaScript,HTML/CSS,Ajax,andpopularframeworks,likeJQuery,Bootstrap,etc.,isaplus.Experienceinbuildingbrowser-basedrich-clientWebapplicationisaplus.Strongpassionwithlearning/practicingnewtechnics.Hands-ontechnicalleadexperienceispreferred.Teamworkingskills,goodcommunicationskills,Willingnesstoworkunderpressure.ExcellentEnglishskillsonlistening,speaking,readingandwriting.Master’sdegreeinComputerScienceorrelatedfieldisaplus.","FreeWheel","500-2000人","企业服务,数据服务","上市公司","美资互联网|技术导向|英文环境|硅谷文化");
+			Failed Store:  https://www.lagou.com/jobs/6421727.html 
+				SQL:  insert into threading (keywords,detail_url,position,tags,salary,job_type,city,district,street,education,work_experience,release_date,description,company_name,company_scale,company_field,company_type,company_benefits) value ("Python工程师","https://www.lagou.com/jobs/6421727.html","Python Web工程师","企业服务|云计算|Python|Node.js|Linux/Unix","7k-12k","全职","上海","松江区","九杜路349号419/418/417","本科及以上","不限","2020-04-03","工作内容：1.Web应用开发2.PaaS云平台开发3.系统维护、调试热烈欢迎各位计算机相关专业或非计算机相关专业的热爱技术，有志于从事互联网产品开发的同学投递该职位。-------------------------------------------先决条件：1.请确保你至少对Python、JavaScript这两门语言都有深入学习研究的欲望2.对Web前端的知识及其实现充满好奇，能够对所有技术保持好奇更好3.技术是为产品服务的，必须要掌握或愿意学习掌握将技术转化为产品的能力对于以上三点有不同看法的，不适合从事该职位。---------------------------------职位要求：1.思路清晰、主动性强，有缜密的逻辑思维能力，快速的英文阅读能力及学习能力，良好的沟通能力2.有基本的计算机基础理论知识，熟悉常用数据机构与算法3.能熟练使用Python进行Web程序相关开发，掌握Django/Flask等相关框架4.熟悉MySQL/PostgreSQL等关系型数据库，熟悉SQL语言5.对TCP/IP,HTTP等常用协议有基本的了解，能完整叙述一次HTTP请求从客户端到服务器端所经过的各个环节6.有基本的前端技能，了解基本的网页设计知识，如HTML、CSS、JavaScript、jQuery7.熟悉ES6，有Vue.js/React/Angular至少其中一种的使用经验8.能够熟练使用Linux作为日常开发环境9.熟悉Git的常用操作，了解GitHubWorkflow10.有基本的程序错误分析排查能力-------------------------------------------优先条件：1.有1年以上Django开发经验者优先2.有完整的个人业余项目GitHubRepo并在线部署运行3.有为开源项目贡献过代码或者文档者优先4.有PaaS类产品使用经验者优先-------------------------------------个人成长规划：1.作为一名用户熟悉公司的整个业务流程2.作为一名开发人员学习担路应用开发平台的整体概念，强化ES6/Vue.js等技术的了解3.基于应用开发平台开发简单应用4.基于应用开发平台开发客户应用，掌握产品交付的整个流程及注意事项，提升开发质量（开发速度、运行速度、维护成本）5.基本掌握常见企业应用的建模方案，能快速的针对客户的需求给出解决方案，高质量的付诸实施并完成超过客户希望的交付6.在应用开发过程中逐渐了解整个平台的架构，掌握整个平台从前端到后端的设计及实现思路7.掌握定位日常应用开发中遇到的底层平台的问题，弥补自己的技术短板8.对于如何提高应用开发效率有自己的深刻理解，对于平台层面的发展有自己的想法9.参与到平台的开发中，开发高质量的应用注：Eatingyourowndogfood策略，作为一家致力于提供PaaS平台的公司，我们的开发人员必须要牢记此策略。-------------------------------------担路的技术及学习理念：-不做原教旨主义，用合适的工具做正确的事。-稳中求新，快速迭代。-持续学习，不给自己设限，对新知识充满不断探索的欲望。--------------------------------------应用开发平台介绍：应用开发平台可以快速开发出一整套可供多个平台使用的应用，包括PC网页版本、手机网页版本以及小程序版本。全平台适配，数据统一管理，开发流程短，并支持高度自定义，无限扩展其功能，满足各个场景和各个行业的客户的不同需求。--------------------------------------应用开发平台架构：-数据集（云数据库）做到能够让客户自定义去创建表结构，同时还保证在数据量极速增长的情况下的查询以及写入的性能-后端运行时基于Python3.7,Django1.11搭配asyncio/asyncpg实现系统核心服务的功能-云函数方便用户实现自己的业务逻辑，同时做好隔离性，保证出现bug的时候不会波及整个平台的运行情况-可视化编辑器彻底解放用户在开发的时候对于繁杂表单及界面的处理，同时标准化的接口不会对平台的升级造成阻碍-前端运行时遵循Vue.js，实现前端组件的线上/线下开发及加载的支持。通过自主研发的可视化前端开发工具实现组件的可视化布局开发--------------------------------------担路网公司介绍“互联网+”是创新2.0下的互联网发展新形态、新业态，是知识社会创新2.0推动下的互联网形态演进及其催生的经济社会发展新形态。“互联网+”是互联网思维的进一步实践成果，它代表一种先进的生产力，推动经济形态不断的发生演变。从而带动社会经济实体的生命力，为改革、创新、发展提供广阔的网络平台。为企业提供互联网工具，让供需互动变得触手可及。我们致力于互联网信息展示、客户挖掘转化、客户关系维护，为您打造高性价比的一体化互联网解决方案！“一路担当”是我们的公司文化。自成立以来一直秉持团结、平等、共赢的原则，为每一个伙伴提供全面的发展机会，有专人负责培训，鼓励同事之间相互帮助，共同进步。担路网在上海已经有了一定的知名度，已有近万成功合作商家，尤其在中小型商家中担路网三个字已经有了一定的品牌效应，但是我们依然在路上，我们需要更多的伙伴，更多年轻的有激情有梦想的伙伴加入。","担路网","15-50人","移动互联网,企业服务","未融资","年轻团队|年终分红|晋升空间大|待遇从优");
+		Total Crawled: 109	Finished-Point
+2020-04-06 19:18:57================================================================================
+		Total Crawled: 216	Finished-Point
+2020-04-06 19:20:20================================================================================
+		Total Crawled: 126	Finished-Point
+2020-04-06 19:21:23================================================================================
+		Total Crawled: 218	Finished-Point
+2020-04-06 19:21:36================================================================================
+		Total Crawled: 125	Finished-Point
+2020-04-06 19:21:42================================================================================
+		Total Crawled: 231	Finished-Point
+2020-04-06 19:23:13================================================================================
+		Total Crawled: 112	Finished-Point
+2020-04-06 19:23:19================================================================================
+		Total Crawled: 210	Finished-Point
+2020-04-06 19:23:31================================================================================
+
+
+2020-04-08 14:48:45 ================================================================================
+JAVA工程师
+	全国
+
+2020-04-08 14:48:52 ================================================================================
+PHP工程师
+	全国	Positions: 500+	Positions: 500+
+
+2020-04-08 14:51:41 ================================================================================
+C++工程师
+	全国	Positions: 500+
+
+2020-04-08 14:51:49 ================================================================================
+前端工程师
+	全国	Positions: 500+
+		Total Crawled: 336	Finished-Point
+2020-04-08 15:45:02================================================================================
+		Total Crawled: 324	Finished-Point
+2020-04-08 15:46:15================================================================================
+		Total Crawled: 345	Finished-Point
+2020-04-08 15:46:27================================================================================
+		Total Crawled: 350	Finished-Point
+2020-04-08 15:50:05================================================================================
+
+2020-04-13 09:57:49 ================================================================================
+Python工程师
+	全国
+
+2020-04-13 09:57:58 ================================================================================
+数据挖掘
+	全国	Positions: 500+	Positions: 500+
+
+2020-04-13 09:58:06 ================================================================================
+人工智能
+	全国	Positions: 243
+
+2020-04-13 09:58:16 ================================================================================
+爬虫
+	全国	Positions: 215
+
+2020-04-13 09:59:27 ================================================================================
+运营
+	全国	Positions: 500+
+
+2020-04-13 09:59:36 ================================================================================
+销售
+	全国	Positions: 500+
+
+2020-04-13 09:59:44 ================================================================================
+HR
+	全国	Positions: 448
+
+2020-04-13 09:59:53 ================================================================================
+项目经理
+	全国	Positions: 500+
+
+2020-04-13 10:02:47 ================================================================================
+教师
+	全国
+
+2020-04-13 10:02:55 ================================================================================
+医生
+	全国	Positions: 500+	Positions: 115
+			Failed Store:  https://www.lagou.com/jobs/6842816.html
+				SQL:  insert into it (keywords,detail_url,position,tags,salary,job_type,city,district,street,education,work_experience,release_date,description,company_name,company_scale,company_field,company_type,company_benefits) value ("人工智能","https://www.lagou.com/jobs/6842816.html","人工智能","教育|视频|机器学习|人工智能|深度学习|计算机视觉","30k-60k","全职","北京","朝阳区","东三环亮马桥中国平安金融中心5层503","本科及以上","3-5年","2020-04-09","运用计算机进行课程制作，制作的课程作品呈现，素材声音电脑抓取能力，机器人代替播报功能，","财富涟漪","http://www.lagou.com/gong...","未融资","2000人以上","把你的知识变为财富");
+			Failed Store:  https://www.lagou.com/jobs/5626392.html
+				SQL:  insert into it (keywords,detail_url,position,tags,salary,job_type,city,district,street,education,work_experience,release_date,description,company_name,company_scale,company_field,company_type,company_benefits) value ("教师","https://www.lagou.com/jobs/5626392.html","数学教师","教育","5k-6k","全职","淮安","清浦区","<br>上班地址：清河区、清浦区、开发区、淮阴区、绿地、淮安区、九升、淮上人家、新安、翡翠城就近入职。","本科及以上","1-3年","2020-04-11","岗位职责：1.承担教学课程（或相关课程）的教学工作，认真完成教学任务，制定适合我校学生实际的教学计划。2.保持与学生及家长的良好沟通，提升客户满意度；任职资格：正规院校大专以上学历，有教学经验优先，优秀毕业生也可以；福利待遇：与个人能力成正比的薪资，带薪年假、五险、岗位津贴、绩效奖金、年底奖金、员工旅游、节日福利、新婚祝福、生子祝福、子女教育津贴，公司会是你温暖的家。上班地址：清河区、清浦区、开发区、淮阴区、绿地、淮安区、镇淮楼东路、新安、翡翠城就近入职","国际人教育","50-150人","教育","不需要融资","五险|年底奖金|子女教育津贴|旅游等");
+			Failed Store:  https://www.lagou.com/jobs/5621681.html
+				SQL:  insert into it (keywords,detail_url,position,tags,salary,job_type,city,district,street,education,work_experience,release_date,description,company_name,company_scale,company_field,company_type,company_benefits) value ("教师","https://www.lagou.com/jobs/5621681.html","英语教师","教育","5k-6k","全职","淮安","清浦区","<br>上班地址：清河区、清浦区、开发区、淮阴区、绿地、淮安区、九升、淮上人家、新安、翡翠城就近入职。","本科及以上","不限","2020-04-11","岗位职责：1.承担教学课程（或相关课程）的教学工作，认真完成教学任务，制定适合我校学生实际的教学计划。2.保持与学生及家长的良好沟通，提升客户满意度；任职资格：正规院校大专及以上学历，有教学经验及教师资格证者优先，优秀毕业生也可以；任职年龄段：21-33全职一经录取，您将获得高薪资，带薪年假、五险、年底奖金、新婚祝福、生子祝福，子女教育津贴，员工旅游，节日福利，公司会是你温暖的家。上班地址：清河区、清浦区、开发区、淮阴区、绿地、淮安区、九升、淮上人家、新安、翡翠城就近入职。","国际人教育","50-150人","教育","不需要融资","五险|年底奖金|子女教育津贴|旅游等");
+			Failed Store:  https://www.lagou.com/jobs/6762804.html
+				SQL:  insert into it (keywords,detail_url,position,tags,salary,job_type,city,district,street,education,work_experience,release_date,description,company_name,company_scale,company_field,company_type,company_benefits) value ("项目经理","https://www.lagou.com/jobs/6762804.html","项目经理","项目管理","7k-12k","全职","青岛","青岛高新技术产业开发区","高新区汇智桥路151号","学历不限","3-5年","2020-04-13","任职资格：1、有5年以上广告、媒体营销策划或互联网公司相关工作经验；2、能够独立带领团队完成活动；3、了解搭建材质/设备，具备供应商接触或管理经验，熟悉多种活动模式；4、有较强的沟通能力，条理性强，具有良好的应变和处理事务的能力；5、良好的团队合作及敬业精神，踏实肯干、勇于创新；6、具备较强的沟通能力、逻辑分析能力及协调能力、敏锐的市场洞察；力、创造性思维和项目推动能力、方案撰写能力、提案制作和具有较强的陈述能力。岗位职责：1、熟悉活动执行、搭建，可以独立进场，执导彩排；2、能够理解并延需求，在会展策划执行中能够有自己的想法；3、执行控场能力强，方案的整合、把控能力强；4、可独立完成报价，进行成本控制。","人民视频","50-150人","移动互联网","未融资","五险一金|生日礼品");
+		Total Crawled: 113	Finished-Point
+2020-04-13 10:26:48================================================================================
+		Total Crawled: 200	Finished-Point
+2020-04-13 10:35:50================================================================================
+			Failed Store:  https://www.lagou.com/jobs/2948275.html
+				SQL:  insert into it (keywords,detail_url,position,tags,salary,job_type,city,district,street,education,work_experience,release_date,description,company_name,company_scale,company_field,company_type,company_benefits) value ("教师","https://www.lagou.com/jobs/2948275.html","英语教师","教育","5k-10k","全职","北京","丰台区","槐树岭四号院","学历不限","不限","2020-04-10","本校是上海交大昂立国际教育加盟机构，现因扩大发展，招聘幼儿、少儿英语教师10人。1、工作内容：1）教授4到15岁少儿英语课程。2）组织公开课演示，协助招生工作。3）积极参与学校和部门组织的各种培训、教研、讲座和会议等活动。2、任职要求：1）普通话标准，英语流利，授课生动活泼，热爱教育事业，愿意长期致力于儿童英文教育。2）专业不限，英语四级及以上3）语言表达能力强，善于与孩子及家长沟通、交流者优先4）具有爱心、责任心、团队合作意识和吃苦耐劳精神。3、我们可以带给您：1带薪岗前培训+在职技能提升+不定期送外培训的多元培训体系2五险的缴纳3基本工资+课时费+招生奖+续班奖+岗位津贴+年度调薪的薪资构成4免费宿舍，正规三居室，两人一间5生日趴+节日礼物+团建活动+年度体检+亲朋就读优惠等丰富的员工福利6婚假+产假+带薪年假的假期组合","北京优亦佳","","不需要融资","http://www.lagou.com/gong...","包住宿|上保险|美女如云");
+		Total Crawled: 220	Finished-Point
+2020-04-13 10:38:56================================================================================
+		Total Crawled: 278	Finished-Point
+2020-04-13 10:48:55================================================================================
+		Total Crawled: 278	Finished-Point
+2020-04-13 10:49:53================================================================================
+		Total Crawled: 289	Finished-Point
+2020-04-13 10:50:33================================================================================
+			Failed Store:  https://www.lagou.com/jobs/6421727.html
+				SQL:  insert into it (keywords,detail_url,position,tags,salary,job_type,city,district,street,education,work_experience,release_date,description,company_name,company_scale,company_field,company_type,company_benefits) value ("Python工程师","https://www.lagou.com/jobs/6421727.html","Python Web工程师","企业服务|云计算|Python|Node.js|Linux/Unix","7k-12k","全职","上海","松江区","九杜路349号419/418/417","本科及以上","不限","2020-04-10","工作内容：1.Web应用开发2.PaaS云平台开发3.系统维护、调试热烈欢迎各位计算机相关专业或非计算机相关专业的热爱技术，有志于从事互联网产品开发的同学投递该职位。-------------------------------------------先决条件：1.请确保你至少对Python、JavaScript这两门语言都有深入学习研究的欲望2.对Web前端的知识及其实现充满好奇，能够对所有技术保持好奇更好3.技术是为产品服务的，必须要掌握或愿意学习掌握将技术转化为产品的能力对于以上三点有不同看法的，不适合从事该职位。---------------------------------职位要求：1.思路清晰、主动性强，有缜密的逻辑思维能力，快速的英文阅读能力及学习能力，良好的沟通能力2.有基本的计算机基础理论知识，熟悉常用数据机构与算法3.能熟练使用Python进行Web程序相关开发，掌握Django/Flask等相关框架4.熟悉MySQL/PostgreSQL等关系型数据库，熟悉SQL语言5.对TCP/IP,HTTP等常用协议有基本的了解，能完整叙述一次HTTP请求从客户端到服务器端所经过的各个环节6.有基本的前端技能，了解基本的网页设计知识，如HTML、CSS、JavaScript、jQuery7.熟悉ES6，有Vue.js/React/Angular至少其中一种的使用经验8.能够熟练使用Linux作为日常开发环境9.熟悉Git的常用操作，了解GitHubWorkflow10.有基本的程序错误分析排查能力-------------------------------------------优先条件：1.有1年以上Django开发经验者优先2.有完整的个人业余项目GitHubRepo并在线部署运行3.有为开源项目贡献过代码或者文档者优先4.有PaaS类产品使用经验者优先-------------------------------------个人成长规划：1.作为一名用户熟悉公司的整个业务流程2.作为一名开发人员学习担路应用开发平台的整体概念，强化ES6/Vue.js等技术的了解3.基于应用开发平台开发简单应用4.基于应用开发平台开发客户应用，掌握产品交付的整个流程及注意事项，提升开发质量（开发速度、运行速度、维护成本）5.基本掌握常见企业应用的建模方案，能快速的针对客户的需求给出解决方案，高质量的付诸实施并完成超过客户希望的交付6.在应用开发过程中逐渐了解整个平台的架构，掌握整个平台从前端到后端的设计及实现思路7.掌握定位日常应用开发中遇到的底层平台的问题，弥补自己的技术短板8.对于如何提高应用开发效率有自己的深刻理解，对于平台层面的发展有自己的想法9.参与到平台的开发中，开发高质量的应用注：Eatingyourowndogfood策略，作为一家致力于提供PaaS平台的公司，我们的开发人员必须要牢记此策略。-------------------------------------担路的技术及学习理念：-不做原教旨主义，用合适的工具做正确的事。-稳中求新，快速迭代。-持续学习，不给自己设限，对新知识充满不断探索的欲望。--------------------------------------应用开发平台介绍：应用开发平台可以快速开发出一整套可供多个平台使用的应用，包括PC网页版本、手机网页版本以及小程序版本。全平台适配，数据统一管理，开发流程短，并支持高度自定义，无限扩展其功能，满足各个场景和各个行业的客户的不同需求。--------------------------------------应用开发平台架构：-数据集（云数据库）做到能够让客户自定义去创建表结构，同时还保证在数据量极速增长的情况下的查询以及写入的性能-后端运行时基于Python3.7,Django1.11搭配asyncio/asyncpg实现系统核心服务的功能-云函数方便用户实现自己的业务逻辑，同时做好隔离性，保证出现bug的时候不会波及整个平台的运行情况-可视化编辑器彻底解放用户在开发的时候对于繁杂表单及界面的处理，同时标准化的接口不会对平台的升级造成阻碍-前端运行时遵循Vue.js，实现前端组件的线上/线下开发及加载的支持。通过自主研发的可视化前端开发工具实现组件的可视化布局开发--------------------------------------担路网公司介绍“互联网+”是创新2.0下的互联网发展新形态、新业态，是知识社会创新2.0推动下的互联网形态演进及其催生的经济社会发展新形态。“互联网+”是互联网思维的进一步实践成果，它代表一种先进的生产力，推动经济形态不断的发生演变。从而带动社会经济实体的生命力，为改革、创新、发展提供广阔的网络平台。为企业提供互联网工具，让供需互动变得触手可及。我们致力于互联网信息展示、客户挖掘转化、客户关系维护，为您打造高性价比的一体化互联网解决方案！“一路担当”是我们的公司文化。自成立以来一直秉持团结、平等、共赢的原则，为每一个伙伴提供全面的发展机会，有专人负责培训，鼓励同事之间相互帮助，共同进步。担路网在上海已经有了一定的知名度，已有近万成功合作商家，尤其在中小型商家中担路网三个字已经有了一定的品牌效应，但是我们依然在路上，我们需要更多的伙伴，更多年轻的有激情有梦想的伙伴加入。","担路网","15-50人","移动互联网,企业服务","未融资","年轻团队|年终分红|晋升空间大|待遇从优");
+		Total Crawled: 347	Finished-Point
+2020-04-13 11:01:48================================================================================
+		Total Crawled: 351	Finished-Point
+2020-04-13 11:03:11================================================================================
+			Failed Store:  https://www.lagou.com/jobs/5251020.html
+				SQL:  insert into it (keywords,detail_url,position,tags,salary,job_type,city,district,street,education,work_experience,release_date,description,company_name,company_scale,company_field,company_type,company_benefits) value ("教师","https://www.lagou.com/jobs/5251020.html","小学作文教师","教育","5k-6k","全职","北京","昌平区","回龙观流星花园三区","本科及以上","1-3年","2020-03-27","小学生作文提高课有方法培养孩子兴趣同时提高写作水平","北京小哈佛英语乐园","","不需要融资","http://www.lagou.com/gong...","与孩子打交道|简单快乐");
+			Failed Store:  https://www.lagou.com/jobs/3742102.html
+				SQL:  insert into it (keywords,detail_url,position,tags,salary,job_type,city,district,street,education,work_experience,release_date,description,company_name,company_scale,company_field,company_type,company_benefits) value ("教师","https://www.lagou.com/jobs/3742102.html","英语教师","","7K-8K","全职","北京","昌平区","回龙观流星花园三区","本科及以上","1-3年","2020-03-27","少儿英语机构诚聘英语教教师（专、兼职）任职要求：1、英语专业本科毕业，发音标准，特别优秀者不受专业和学历限制。2、具备教育心理学知识，热爱少儿教育；善于调动小朋友的学习积极性和吸引他们的注意力。3、善于和小朋友及家长沟通和交流，性格活泼，多才多艺，富有责任心、爱心、亲和力，喜爱小孩，通晓少儿心理，形象气质俱佳。教师（专、兼职）岗位职责：1、备课、写教案。2、上课所需卡片、游戏教具索取与整理归位。3、学员听力、配音作业制定与布置。4、课后及时与家长沟通。5、定期参加教学培训和教学讨论会。6、课后归位教室桌椅，维护白板、地面干净整洁。","北京小哈佛英语乐园","","不需要融资","http://www.lagou.com/gong...","待遇8k");
+		Total Crawled: 410	Finished-Point
+2020-04-13 11:11:55================================================================================
+		Total Crawled: 422	Finished-Point
+2020-04-13 11:14:43================================================================================
+
+2020-04-14 10:56:23 ================================================================================
+Node.js
+	全国
+
+2020-04-14 10:56:31 ================================================================================
+Go
+	全国	Positions: 334	Positions: 250
+
+2020-04-14 10:56:47 ================================================================================
+ASP
+	全国	Positions: 116
+
+2020-04-14 10:56:55 ================================================================================
+Shell
+	全国	Positions: 500+
+
+2020-04-14 10:57:07 ================================================================================
+区块链
+	全国	Positions: 285
+
+2020-04-14 10:57:15 ================================================================================
+后端开发其它
+	全国	Positions: 
+		Total Crawled: 0	Finished-Point
+2020-04-14 10:57:22================================================================================
+			Failed Store:  https://www.lagou.com/jobs/6435579.html 
+				SQL:  insert into 后端开发 (keywords,detail_url,position,tags,salary,job_type,city,district,street,education,work_experience,release_date,description,company_name,company_scale,company_field,company_type,company_benefits) value ("ASP","https://www.lagou.com/jobs/6435579.html","技术支持","IT支持","10k-15k","全职","上海","浦东新区","金科路","本科及以上","不限","2020-04-14","BusinessOverviewReportingtotheleaderAVPofApplicationsEnablement&amp;Architectureteam,theTechnicalSupportwillplayaroleforanalyzing,investigatingandresolvingtechissuesaccordingtopredeterminedtimelines.ThisrolewilloperateintechnicalsupportofstrategicCitiRoboticandProcessAutomationapplicationprocurestoprovidesupporttoitsclientbasebusinessunitsacrossinstitutionalclients.PurposeoftheRole•WorkasatechsupportinShanghai•UnderstandRoboticsandProcessAutomation•Tocoordinateandexpeditetheon-boardingofnewclients,documentingrequirementsandanalyzingproblemsResponsibilities•Resolvecustomertechnicalissuesthroughdiligentresearch,reproductionandtroubleshooting•Beabletoworkoutdetailedrootcauseanalysisforclientreportedissues•Respondtocustomerrequestsregardingoutages,performancedegradationandprojectstatus.•Workwithvendortodeliverthereleaseandpatchfornewfeaturesandissuefixes•Documentalltechnicalinquiries,developandreviewcontentforknowledgebaseusingtoolset•Determinehowresultswillbemeasuredandcompleteapost-projectevaluationtodeterminehowwellresultswereachieved•Developtoolsandbestpracticeforrepeatabletasksandexecution•Ensureallprojectdocumentsaresafelyarchivedfollowingprojectcompletion.•Engagedinsupportfrominitiationtoclosure,SupportforBAUmode•Maintainflexibleworkschedules,whichmayincludeevenings,weekendsorholidaystoworkondeploymentsorregularlyscheduledmaintenance•Ensureweekendactivitiescompletesuccessfullythroughassignment,coordination,oversightandvalidationandCheckout.Thismayrequiresweekendwork.•Completeworkbreakdownstructuretoestimateeffortrequiredforeachtask•Workdirectlywithotherteammemberstoresolveproblemsinatimelymanner•Resolveanyissuesandsolveproblemsthroughoutprojectlifecyclewhileworkingwithteammembers,SystemAdministrationandDatabaseadministration•Clearlycommunicateexpectationstoteammembersandstakeholders.Opportunities•WorkonastrategicroboticplatformatCiti•GetexposuretovariousbusinessdepartmentsatCiti•BuildtheexperienceofworkinginglobaldevelopmentteamsEducation•Atleastbachelordegree•MajorincomputersciencerelatedSkillrequired•Minimumoftwoyearsofworkingexperienceinanenterpriseenvironment•ProficientinbothspokenandwrittenEnglish•UnderstandRoboticsandProcessAutomation•FamiliaritywithWindowsscripting•WorkingknowledgeofGUIdevelopmentJSP,ASP,.NET•BeabletoworkinadynamicteamenvironmentwhichincludesdevelopersworkingwithdifferenttechnologiessuchasJava,WebServicesandC#/.NETandacrossmultipleregions.•Rapidlyadaptandrespondtochangesinenvironmentandpriorities•Excellentcommunication,includinglisteningskills,problemsolvingandanalyticalskills•Flexibilitywithworkingschedule,changingprioritiesandtightdeadlines•Abilitytoworkonmanytaskssimultaneouslyinahigh-pressureenvironmentSkillOptional•Hasexperienceinworkinginthefinanceindustryisagoodplus•Hasexperienceonroboticsprocessautomationrelatedfieldsisagoodplus•Hasknowledgeofmachinelearningandartificialintelligenceisagoodplus","奥解思","500-2000人","金融","上市公司","福利好|外企");
+			Failed Store:  https://www.lagou.com/jobs/5595152.html 
+				SQL:  insert into 后端开发 (keywords,detail_url,position,tags,salary,job_type,city,district,street,education,work_experience,release_date,description,company_name,company_scale,company_field,company_type,company_benefits) value ("Go","https://www.lagou.com/jobs/5595152.html","Lead Go/Python/Java工程师","Golang|Python|Java|后端","35k-45k","全职","北京","朝阳区","亮马桥润世中心","本科及以上","5-10年","2020-04-14","LeadSoftwareEngineer–UI/APIABOUTTHEOPPORTUNITY:FreeWheelislookingforpassionateSoftwareEngineerstohelpdesignandbuildourhigh-quality,innovativevideoadvertisingplatform.ThispositionisbasedinBeijing.FreeWheelhelpsthetelevisionindustrytomonetizetheirpremiumcontentsthrougharobusttechnologyplatform,whichenablesconsumerstoviewhighqualityvideosonanydevicesincludingPC,smartphone,OTTdevice,set-topboxandtraditionalTV.FreeWheel’sBeijingEngineeringHubisthecenterofourglobalengineeringgroupthatisbuildingtheone-stopsolutionforTVindustrytomanageitsbillion-dollarrevenue.Ourtechplatformiscapableofhandlingbillionsofdailyrequests,providinginsightfulforecastingofinventoryandaudience,processingterabytesofrawdailydata,andoptimizingclients’business.RESPONSIBILITIES:Beresponsibleforthecompletelifecycleofsoftwaredevelopment,includingdesigning,prototyping,implementation,testing,maintenanceandtechnicalsupportProducetechnicalspecificationsanddetermineoperationalfeasibilityWritewelldesigned,testable,efficientcodeDevelopsoftwareverificationplansandqualityassuranceproceduresIntegratesoftwarecomponentsintoafullyfunctionalsoftwaresystemDocumentandmaintainsoftwarefunctionalityTailoranddeployengineeringtools,processesandmetricsServeastheexpertofonlineadvertisingindustry,anddrivetheindustrywithcontinuoustechnicalinnovationPartnerwithglobalengineering,productandoperationsteamstofurtherincorporatecollectiveinnovationsALeadSoftwareEngineerinUI/APIteamwillDesignandbuildFreeWheel’sflagshipproductsinhighqualitystandard.Leadaprojectteamtoanalyzeandsolvebusinessproblemacrossaproductline.Bringinbestpracticesandcontrolteam’scode/designquality.Identifyimprovementneededinfundamentaltechnicalareasandleadtheprojectstoimplementit.Mentorteammembers.ABOUTYOU:Extensiveexperience6+yearspreferredonbuildingandoperatinglargescaleweb-basedbusinessapplicationsincludingwebsites,MIS,ERP,workflowtoolsetc.SolidKnowledgeableinthefielde.g.http,LAMP,JAVA,cutting-edgetechnologiesExperiencewithGolangisaplus.RichexperiencewithJavaScript,HTML/CSS,Ajax,andpopularframeworks,likeJQuery,Bootstrap,etc.,isaplus.Experienceinbuildingbrowser-basedrich-clientWebapplicationisaplus.Strongpassionwithlearning/practicingnewtechnics.Hands-ontechnicalleadexperienceispreferred.Teamworkingskills,goodcommunicationskills,Willingnesstoworkunderpressure.ExcellentEnglishskillsonlistening,speaking,readingandwriting.Master’sdegreeinComputerScienceorrelatedfieldisaplus.","FreeWheel","500-2000人","企业服务,数据服务","上市公司","美资互联网|技术导向|英文环境|硅谷文化");
+			Failed Store:  https://www.lagou.com/jobs/4291309.html 
+				SQL:  insert into 后端开发 (keywords,detail_url,position,tags,salary,job_type,city,district,street,education,work_experience,release_date,description,company_name,company_scale,company_field,company_type,company_benefits) value ("Go","https://www.lagou.com/jobs/4291309.html","Lead Golang/Go Engineer","GO|Java|Python|Ruby","35k-47k","全职","北京","朝阳区","亮马桥润世中心","本科及以上","5-10年","2020-04-14","LeadSoftwareEngineer–UI/APIABOUTTHEOPPORTUNITY:FreeWheelislookingforpassionateSoftwareEngineerstohelpdesignandbuildourhigh-quality,innovativevideoadvertisingplatform.ThispositionisbasedinBeijing.FreeWheelhelpsthetelevisionindustrytomonetizetheirpremiumcontentsthrougharobusttechnologyplatform,whichenablesconsumerstoviewhighqualityvideosonanydevicesincludingPC,smartphone,OTTdevice,set-topboxandtraditionalTV.FreeWheel’sBeijingEngineeringHubisthecenterofourglobalengineeringgroupthatisbuildingtheone-stopsolutionforTVindustrytomanageitsbillion-dollarrevenue.Ourtechplatformiscapableofhandlingbillionsofdailyrequests,providinginsightfulforecastingofinventoryandaudience,processingterabytesofrawdailydata,andoptimizingclients’business.RESPONSIBILITIES:Beresponsibleforthecompletelifecycleofsoftwaredevelopment,includingdesigning,prototyping,implementation,testing,maintenanceandtechnicalsupportProducetechnicalspecificationsanddetermineoperationalfeasibilityWritewelldesigned,testable,efficientcodeDevelopsoftwareverificationplansandqualityassuranceproceduresIntegratesoftwarecomponentsintoafullyfunctionalsoftwaresystemDocumentandmaintainsoftwarefunctionalityTailoranddeployengineeringtools,processesandmetricsServeastheexpertofonlineadvertisingindustry,anddrivetheindustrywithcontinuoustechnicalinnovationPartnerwithglobalengineering,productandoperationsteamstofurtherincorporatecollectiveinnovationsALeadSoftwareEngineerinUI/APIteamwillDesignandbuildFreeWheel’sflagshipproductsinhighqualitystandard.Leadaprojectteamtoanalyzeandsolvebusinessproblemacrossaproductline.Bringinbestpracticesandcontrolteam’scode/designquality.Identifyimprovementneededinfundamentaltechnicalareasandleadtheprojectstoimplementit.Mentorteammembers.ABOUTYOU:Extensiveexperience6+yearspreferredonbuildingandoperatinglargescaleweb-basedbusinessapplicationsincludingwebsites,MIS,ERP,workflowtoolsetc.SolidKnowledgeableinthefielde.g.http,LAMP,JAVA,cutting-edgetechnologiesExperiencewithRubyonRailsisaplus.RichexperiencewithJavaScript,HTML/CSS,Ajax,andpopularframeworks,likeJQuery,Bootstrap,etc.,isaplus.Experienceinbuildingbrowser-basedrich-clientWebapplicationisaplus.Strongpassionwithlearning/practicingnewtechnics.Hands-ontechnicalleadexperienceispreferred.Teamworkingskills,goodcommunicationskills,Willingnesstoworkunderpressure.ExcellentEnglishskillsonlistening,speaking,readingandwriting.Master’sdegreeinComputerScienceorrelatedfieldisaplus.","FreeWheel","500-2000人","企业服务,数据服务","上市公司","美资互联网|英文环境|技术导向|硅谷文化");
+			Failed Store:  https://www.lagou.com/jobs/6910931.html 
+				SQL:  insert into 后端开发 (keywords,detail_url,position,tags,salary,job_type,city,district,street,education,work_experience,release_date,description,company_name,company_scale,company_field,company_type,company_benefits) value ("ASP","https://www.lagou.com/jobs/6910931.html","技术支持专家(网络技术, Es...","IT支持","20k-25k","全职","南京","江宁区","江宁经济开发区苏源大道19号江宁九龙湖国际企业总部园C3号楼","本科及以上","3-5年","2020-04-07","PositionOverviewCitrixTechSupportprovidesprofessionaltechnicalsupportservicestoourcustomerstoensuretheirbusinesssuccessbyusingCitrixproductsandenhancetheirloyalty.ThisfurtherpromotesourSalesandServiceopportunitiestherebyhelpingCitrixachieveourbusinessgoal.Byleveragingglobalinitiatives,developinglocalbestpracticeandcloselycollaboratingwithSales,SE,Partners,LCMandproductteam,CitrixTech-SupportTeamdeliverstoplevelproductivityandcustomersatisfactionrateinthepast9years.YouwillsupportCitrixNetworkingproductslikeCitrixNetScalerADCandSDWAN.AsanEscalationEngineer,youwillberesponsibleforthereview,qualificationandownershipofcomplexenterpriselevelsupportcallssubmittedforescalationbyCitrixSupportRepresentativesworldwide.Ownershipincludesmaintainingcommunicationsinternallyandexternallythroughdirectorlevelwithoversightfromseniormembersoftheteamthroughoutthecaseresolutionprocess.ThecaseownershiprequirestheEscalationEngineertoperformintermediateanalysisofmemorydumps/Networktraces.CitrixADCisanindustryleadingapplicationdeliveryandloadbalancingsolutionthatprovidesahigh-qualityuserexperienceforyourweb,traditional,andcloud-nativeapplicationsregardlessofwheretheyarehosted.CitrixSDWANisournext-generationWANEdgesolution,whichdeliversflexible,automated,secureconnectivityandperformancethatkeepstheworkspacealways-on.Responsibilities·Resolveescalatedcustomerissuesandmaintainownershipuntiltheproblemresolvedcompletelywithminimaloversitefrommoreseniormembersoftheteam·Actasaneffectivetechnicalinterfacebetweenthecustomerand3rdLevelEngineering/ProductDevelopment-byprovidingclearissuedocumentationandbyleveragingproductivecross-functionalworkingrelationshipsintheirareaofexpertise·ActasaSMESubjectMatterExpertinatleastonecoreCitrixproductandaresourceforlessseniormembersoftheteamasneededtotroubleshootandresolvespecificcustomerissues.Developsanunderstandingofatleastoneadjacentproduct·Write&reviewcomplextechnicalarticlesandcasestudiesfortheknowledgebaseleveragingthecustomerreportedcases,productspecifications,andpreviousexperience·DevelopandreviewintermediateleveltechnicaltrainingforinternalandexternalaudiencesinatleastonecoreCitrixproductBasicQualifications·5+yearshandsontroubleshootingexperienceonNetworkSysteminenterpriselevelenvironments·UnderstandstheoperatingsystemresourcemanagementandbuildsOSleveland/ornetworkdebuggingskillsinposition·Abilitytobuildcodeorscriptliteracywhileinpositionwiththegoaltohavetheabilitytoreadandunderstandexistingcodeandorscripts·Excellentlogicalthinking,problemsolvingandcommunicationskills·SolidEnglishWritten/Speakingskillstoco-workwithotherteamsindifferentregion·RichknowledgeofWebtechnologylike:HTTP/HTML/JavaScript/PHP/ASP·RichknowledgeofNetworkingRouting,Switching,Firewall,TCP/IP,etc.·RichknowledgeofL7protocolssuchasFTP,DHCP,DNS,etc.·KnowledgeofOperationSystem,especiallyLinux/FBSD","思杰系统信息技术（北京）有限公司南京分公司","500-2000人","数据服务","上市公司","双休|五险一金公司缴纳");
+			Failed Store:  https://www.lagou.com/jobs/6900689.html 
+				SQL:  insert into 后端开发 (keywords,detail_url,position,tags,salary,job_type,city,district,street,education,work_experience,release_date,description,company_name,company_scale,company_field,company_type,company_benefits) value ("ASP","https://www.lagou.com/jobs/6900689.html","Escalation Engineer","IT支持|运维","20k-25k","全职","南京","江宁区","江宁经济开发区苏源大道19号江宁九龙湖国际企业总部园C3号楼","本科及以上","5-10年","2020-04-07","PositionOverviewCitrixTechSupportprovidesprofessionaltechnicalsupportservicestoourcustomerstoensuretheirbusinesssuccessbyusingCitrixproductsandenhancetheirloyalty.ThisfurtherpromotesourSalesandServiceopportunitiestherebyhelpingCitrixachieveourbusinessgoal.Byleveragingglobalinitiatives,developinglocalbestpracticeandcloselycollaboratingwithSales,SE,Partners,LCMandproductteam,CitrixTech-SupportTeamdeliverstoplevelproductivityandcustomersatisfactionrateinthepast9years.YouwillsupportCitrixNetworkingproductslikeCitrixNetScalerADCandSDWAN.AsanEscalationEngineer,youwillberesponsibleforthereview,qualificationandownershipofcomplexenterpriselevelsupportcallssubmittedforescalationbyCitrixSupportRepresentativesworldwide.Ownershipincludesmaintainingcommunicationsinternallyandexternallythroughdirectorlevelwithoversightfromseniormembersoftheteamthroughoutthecaseresolutionprocess.ThecaseownershiprequirestheEscalationEngineertoperformintermediateanalysisofmemorydumps/Networktraces.CitrixADCisanindustryleadingapplicationdeliveryandloadbalancingsolutionthatprovidesahigh-qualityuserexperienceforyourweb,traditional,andcloud-nativeapplicationsregardlessofwheretheyarehosted.CitrixSDWANisournext-generationWANEdgesolution,whichdeliversflexible,automated,secureconnectivityandperformancethatkeepstheworkspacealways-on.Responsibilities·Resolveescalatedcustomerissuesandmaintainownershipuntiltheproblemresolvedcompletelywithminimaloversitefrommoreseniormembersoftheteam·Actasaneffectivetechnicalinterfacebetweenthecustomerand3rdLevelEngineering/ProductDevelopment-byprovidingclearissuedocumentationandbyleveragingproductivecross-functionalworkingrelationshipsintheirareaofexpertise·ActasaSMESubjectMatterExpertinatleastonecoreCitrixproductandaresourceforlessseniormembersoftheteamasneededtotroubleshootandresolvespecificcustomerissues.Developsanunderstandingofatleastoneadjacentproduct·Write&reviewcomplextechnicalarticlesandcasestudiesfortheknowledgebaseleveragingthecustomerreportedcases,productspecifications,andpreviousexperience·DevelopandreviewintermediateleveltechnicaltrainingforinternalandexternalaudiencesinatleastonecoreCitrixproductBasicQualifications·5+yearshandsontroubleshootingexperienceonNetworkSysteminenterpriselevelenvironments·UnderstandstheoperatingsystemresourcemanagementandbuildsOSleveland/ornetworkdebuggingskillsinposition·Abilitytobuildcodeorscriptliteracywhileinpositionwiththegoaltohavetheabilitytoreadandunderstandexistingcodeandorscripts·Excellentlogicalthinking,problemsolvingandcommunicationskills·SolidEnglishWritten/Speakingskillstoco-workwithotherteamsindifferentregion·RichknowledgeofWebtechnologylike:HTTP/HTML/JavaScript/PHP/ASP·RichknowledgeofNetworkingRouting,Switching,Firewall,TCP/IP,etc.·RichknowledgeofL7protocolssuchasFTP,DHCP,DNS,etc.·KnowledgeofOperationSystem,especiallyLinux/FBSD","思杰系统信息技术（北京）有限公司南京分公司","500-2000人","数据服务","上市公司","五险一金|带薪年假|周末双休");
+			Failed Store:  https://www.lagou.com/jobs/6968630.html 
+				SQL:  insert into 后端开发 (keywords,detail_url,position,tags,salary,job_type,city,district,street,education,work_experience,release_date,description,company_name,company_scale,company_field,company_type,company_benefits) value ("ASP","https://www.lagou.com/jobs/6968630.html","Technical Support Manager","IT支持","35k-45k","全职","上海","黄浦区","中海国际中心","本科及以上","5-10年","2020-04-07","Airwallexisafinancialtechnologycompanyredefiningpaymentsglobally.Inthespanof3years,Airwallexhassecuredover$202MUSDinexternalfunding,supportedbytop-tierinvestorsincludingDSTGlobal,Tencent,SequoiaCapitalChinaandMasterCard.Thecompanyusesadvancedtechnologytoenablelow-cost,high-speedandtransparentinternationalpaymentsencompassingtheentirecross-borderpaymentvaluechain,fromglobalcollectiontoforeignexchangeandinternationalpayments.Ledbyahighlycapable,experienced,anddrivenexecutiveteam,wehaveestablishedinternationalofficesacrossHongKong,Shanghai,Shenzhen,Beijing,Singapore,London,TokyoandSanFrancisco.JobDescription:AstheSeniorTechnicalSupportManager,youwillbeleadingtechnicalsupportandonboardingteamstosupportourmerchant’sdailyoperations,includingaccountconfiguration,technicalsupportandescalationmanagement.Responsibilities:﻿Providecoaching,guidanceanddaytodaymanagementto2teamsof7people,setupclearOKRsandtrackhighlevelKPI’s.LeadteamtocontinuousimprovementinservicequalityandefficiencyWorkcloselywithproductanddeveloperteamsinglobaloffices,participateiniteration,releaseandroadmapplanning.Handlingurgentescalationfromexternalmerchantandinternalusers.Strongcollaborationandnegotiationwithallstakeholdersincludingcustomers,productmanager,developerandmanagementteam.Analysismonthlyserviceticketdataandwriteteamperformanceandincidentsummaryreporttomanagementteam.Communicatingincidentandscheduledmaintenancenotificationtoexternalandinternalusers.Highlyflexible,abilitytoprioritizemultipleincidentsanddeadlinesinordertoexecutewellinafast-paced,rapidlyevolvingorganization.Requirement:8+yearsofexperiencewithapaymentorsoftwareortechnologycompany5+yearsofpeoplemanagementexperience.BSdegreeorequivalentexperiencerequired,preferablyinComputerScienceorManagementInformationSystems,MSdegreeisaplus.Exceptionalcommunicationspoken/writtenEnglishandpresentationskills.Abilitytospeakfluentlytoengineers,productmanager,commercialpeopleand3rdpartyserviceproviders.Familiarwithtechnicalsupportprocessandescalationmanagement.ExperiencedinoneormoreofthefollowingprogramminglanguagesPHP,Java,C++,ASP,C#,Python,Javascript.UnderstandingofHTTPprotocol,REST,Json,WebService,TCP/IP,SQL,Linux/Unixcommands.Experiencewithsoftwareapplicationdebuggingandtroubleshooting.Abilitytoidentify,analyzeandresolveproblemslogicallyandsystematically.","Airwallex空中云汇","150-500人","移动互联网,金融","C轮","五险一金|带薪年假|晋升机会|绩效奖金");
+			Failed Store:  https://www.lagou.com/jobs/6849873.html 
+				SQL:  insert into 后端开发 (keywords,detail_url,position,tags,salary,job_type,city,district,street,education,work_experience,release_date,description,company_name,company_scale,company_field,company_type,company_benefits) value ("ASP","https://www.lagou.com/jobs/6849873.html","Integration Manager SZ","售前支持|售后支持","25k-40k","全职","深圳","南山区","南山科技园","学历不限","5-10年","2020-04-07","Airwallexisafinancialtechnologycompanyredefiningpaymentsglobally.Inthespanof3years,Airwallexhassecuredover$202MUSDinexternalfunding,supportedbytop-tierinvestorsincludingDSTGlobal,Tencent,SequoiaCapitalChinaandMasterCard.Thecompanyusesadvancedtechnologytoenablelow-cost,high-speedandtransparentinternationalpaymentsencompassingtheentirecross-borderpaymentvaluechain,fromglobalcollectiontoforeignexchangeandinternationalpayments.Ledbyahighlycapable,experienced,anddrivenexecutiveteam,wehaveestablishedinternationalofficesacrossHongKong,Shanghai,Shenzhen,Beijing,Singapore,London,TokyoandSanFrancisco.﻿Responsibilities：1.Provideclientswithin-depthintegrationinstructionsandthebestmethodsofintegrationtofitwithclient'sbusinessprocesses.2.BeakeysourceofknowledgeontheAirwallexplatformandAPIs.3.Beabletoidentifyandtroubleshoottechnicalissuesandensureclient’sintegrationfollowthebestpracticeguidelinestocreatebestclientexperience.4.Establishandmaintainstrongrelationshipsactingastheprimarypointofcontactduringtheintegrationprocess;Alsoplayakeyroleongatheringmerchant’sfeedback,evaluatingmerchantneeds,andcommunicatingthesetoproductandmanagementpersonnel.5.Collaboratecloselywithbusinessunits,accountmanagementandproductmanagementteams.Qualifications：1.Bachelor’sorMaster’sdegreeincomputerscience/Engineeringfromareputablecollege/University.2.3+yearsprofessionalexperienceinmanagingmultipleprojectswithexternalcustomers,preferablyinanIntegrationorProjectManagementrole.3.Professionalandengagingcommunicationskillswithabilitytoadjustcommunicationtoanyaudienceisacriticalrequirementforthisposition.4.Abilitytorapidlyunderstandnewproducts;Demonstrateproactivethinkingandadaptiveproblem-solvingskills.5.ExperiencedknowledgeofWebServices,JSON,HTML/HTTP.6.UnderstandatleastoneofthemajorprogramminglanguagesPHP,Java,C++,ASP,C#,Python.7.CapabilitytocommunicateinEnglishandCantonesewithbothinternalandexternalstakeholders.8.Excellentknowledgeofthee-Commerce,Internet/Softwareand/orPaymentsBanking,FX,SWIFT,CreditCard,GatewaysandProcessors,LocalPaymentsindustrieswouldbeastrongplus.","Airwallex空中云汇","150-500人","移动互联网,金融","C轮","五险一金|带薪年假|晋升机会|绩效奖金");
+		Total Crawled: 85	Finished-Point
+2020-04-14 11:11:19================================================================================
+			Failed Store:  https://www.lagou.com/jobs/6885278.html 
+				SQL:  insert into 后端开发 (keywords,detail_url,position,tags,salary,job_type,city,district,street,education,work_experience,release_date,description,company_name,company_scale,company_field,company_type,company_benefits) value ("区块链","https://www.lagou.com/jobs/6885278.html","区块链","移动互联网|互联网金融","40k-70k","全职","杭州","滨江区","滨江区江南大道","本科及以上","3-5年","2020-03-11","区块链业务发展落地战略规划部门拓充等~~","深圳市阿里山电子集团有限公司","","不需要融资","http://www.lagou.com/gong...","高薪|远高于市场水平");
+			Failed Store:  https://www.lagou.com/jobs/6274350.html 
+				SQL:  insert into 后端开发 (keywords,detail_url,position,tags,salary,job_type,city,district,street,education,work_experience,release_date,description,company_name,company_scale,company_field,company_type,company_benefits) value ("Node.js","https://www.lagou.com/jobs/6274350.html","Node.js研发工程师","中间件|后端|全栈","15k-30k","全职","北京","朝阳区","百子湾路苹果社区北区二十二号院艺术街区 B座2号楼 028 底商 Blued City","学历不限","不限","2020-04-07","工作职责：1.负责blued服务端的设计研发工作2.负责产品升级功能完善的相关调研工作职位要求：1.2年以上node.js中大型互联网产品开发及维护经验；2.熟悉常见WebServer（Apache/Lighttpd/Nginx）的配置与维护；3.熟悉MySQL数据库，拥有优秀的数据库设计能力，对数据库的基本理论及其内部实现机制有比较深刻的理解；4.热爱互联网，对探索未知领域有浓厚的兴趣；5.优秀的分析问题和解决问题的能力，踏实、勤奋的工作激情，敏锐全面的洞察力，清晰缜密的逻辑思维能力，以及独立的分析调研能力；6.具备优秀的沟通、协作、推动能力和良好的团队合作精神，能够准确把握用户的需求7.有以下经验者优先：1.精通C/C++者优先2.熟悉Nginx模块开发、Node.jsC/C++模块开发经验者优先3.具有丰富NoSQL经验者优先4.有移动产品相关研发经验者优先5.有即时通讯相关研发经验者优先","BLUECITY蓝城兄弟","150-500人","移动互联网,社交","D轮及以上","行业独角兽|弹性工时|免费午餐");
+			Failed Store:  https://www.lagou.com/jobs/6590944.html 
+				SQL:  insert into 后端开发 (keywords,detail_url,position,tags,salary,job_type,city,district,street,education,work_experience,release_date,description,company_name,company_scale,company_field,company_type,company_benefits) value ("Go","https://www.lagou.com/jobs/6590944.html","go开发工程师","服务器端|GO|Golang","18k-35k","全职","北京","朝阳区","百子湾路苹果社区北区二十二号院艺术街区 B座2号楼 028 底商 Blued City","本科及以上","不限","2020-04-07","岗位职责负责BluedAPP的服务端开发负责高可用，高并发微服务的开发工作岗位要求1.本科及以上学历，1~3年服务端开发经验，一年以上Golang开发经验2.熟练掌握RPC、TCP/IP、HTTP协议3.良好的算法基础和清晰的编程思路4.熟悉Redis，MySQL，Cassandra等一种以上数据库技术5.熟悉Kubernetes，Docker等虚拟化技术者优先6.熟悉分布式、高并发及高可用架构的设计与编码者优先","BLUECITY蓝城兄弟","150-500人","移动互联网,社交","D轮及以上","行业独角兽|弹性工时|免费午餐");
+			Failed Store:  https://www.lagou.com/jobs/6990934.html 
+				SQL:  insert into 后端开发 (keywords,detail_url,position,tags,salary,job_type,city,district,street,education,work_experience,release_date,description,company_name,company_scale,company_field,company_type,company_benefits) value ("Shell","https://www.lagou.com/jobs/6990934.html","运维开发工程师","通信/网络设备|运维|DevOps|大数据运维","12k-23k","全职","广州","天河区","信息港B栋","本科及以上","3-5年","2020-04-14","JobDescriptionforConsultant1ObjectiveofthepositionKafkaandElasticsearchperformancefinetuning,optimizeresourceutilization.KafkaandElasticsearchsecurityhardeningsupport,ensureproductsecurityfromdesigntooperation.AssistoperationteamtosupportforKafkaandElasticsearchinproductionenvironment,providerecommendationandsuggestiontoavoid/minimizecustomerimpact.Supportdevelopmentteamtodefineandoptimizemetricsdashboardandalert.InvestigateKafkaandElasticsearchupgradeincluding,technicalsolution,verificationandoperationdocumentations.Feedbacktodevelopmentteamandworkcloselywithdeveloperforsoftwareimprovement2ResponsibilitiesandauthoritiesDevOpsengineerisresponsibleforsolutionproductcontinuesdeployanddeliver.Securecontinuesserviceofproductionenvironment,supportcustomerrequirementandworkcloselywithdevelopmentteamforsoftwareimprovement.Responsibletoinvestigateandprovidesolutionforproductintegration,includingperformanceoptimizationandsecurityhardening.Responsibletosolutionproductsoftwaredeliver,includingsetuptheCI/CDframeworkofsoftwaredeploymentandsystemintegrationSetupservice/systemmonitorframework,includingresulthandling,alarmnotification,resourceoptimizedandreportvisualizationResponsibleforoperationsupportincluding,incidenthandling,backupandrestore,upgradeandvulnerabilityanalysis.Participateincustomersupportandworkcloselywithdevelopmentteamforsoftwareimprovement3RequirementsforthepositionNote:Therequirementsbelowareorderedfromhighprioritytolowpriority,andtheitemswith*aremandatoryrequirement3.1Technical:*BachelororMasterdegreeincomputerscience,informationtechnologyorrelatedarea*Richexperienceinoperate,troubleshootingandoptimizationforKafkaandElasticsearch,especiallyunderhightrafficandhighavailabilityrequirements.*StrongbackgroundinUNIX/Linuxadministration,andcompetentinscriptprogramming,suchasshellorPython,etc.*FamiliarwithvirtualizationdeploymentandcloudservicessuchasAzure,AWSandDockercontainer.*Experiencewithautomationconfigurationmanagementpractices,toolsandframework,knowledgeinconfigurationmanagementtoolssuchasAnsible,Chef,andetc.KnowledgeofbestpracticesandIToperationsinanalways-up,always-availableserviceAworkingunderstandingofcodeandscriptPHP,Python,Perland/orRubyFamiliarwithcloudtechnologieslike–RESTAPIandServices,SQS,WebsocketsetcCodingexperiencesinJava,JavaEEwillbeadvantage3.2Softskill:*Excellentanalyticalandproblemsolvingskills*Excellentcommunicationskillincludingcustomersupportandfeedback*Goodteamworktosupport/backupteammemberwitheachotherandwillingtodedicatewhenpromptsupportneededincaseofincidentGoodatwritten/oralEnglishandcanuseEnglishfortech.discussion.","北京瑞友","2000人以上","电商","上市公司","平台好");
+			Failed Store:  https://www.lagou.com/jobs/5943825.html 
+				SQL:  insert into 后端开发 (keywords,detail_url,position,tags,salary,job_type,city,district,street,education,work_experience,release_date,description,company_name,company_scale,company_field,company_type,company_benefits) value ("Go","https://www.lagou.com/jobs/5943825.html","微服务架构师（GO/.Net/JS）","金融|系统架构|技术管理|架构师|高级技术管理","30k-50k","全职","深圳","福田区","嘉里建设广场","本科及以上","5-10年","2020-04-07","TheRole/Responsibilities:ASoftwareArchitectfulfilsthefollowingresponsibilitieswithlittletomoderateguidanceofmoreseniorteammembers.·TakeownershipofstoriesandinterpretbusinessrequirementsforthesestorieswiththeassistanceofBusinessAnalysts.·Providefeedbackonrequirementsfromatechnicalperspective,andprovideestimatesforuserstoriesandtasks.·Provideinputintotechnicaldesign,atthestoryand/ormodulelevel.·Complywithcodingstandards.·Collaboratewithqualityassuranceengineerstofixdefects.·Collaboratewithbuildandreleaseengineerstopreparepackagesandsolveenvironmentissues.·Investigateandfindtherootcauseforsoftwareproblemsreportedbyclients.·Maintaintechnicaldocuments.·ReviewcodeofAssociateSoftwareEngineers.MentorAssociateSoftwareEngineers.Qualifications:·MinimumBachelor’sdegreeinComputerScienceorrelatedmajorfromtopinstitutions,Masterdegreeisaplus.Thegraduateduniversitiesofcandidatemustbeintop50inChinamainlandorOverseascollegesanduniversities.·DeepunderstandingofObjectOrienteddesignanddevelopment·5+yearsofprofessionalsoftwaredevelopmentexperienceonmulti-tieredenterpriseapplications.·Abletoworkwellwithintheconstructsofanagiledevelopmentprocess,includingSCRUM,UnitTesting,ContinuousBuildandIntegration,etc.·Willingtolearnnewtechnologies;capableofself-directedlearning.·Verygoodverbalandwrittencommunicationskills·Abilitytohandlemultipleassignmentsconcurrentlyandindependentlymanagetime·Workswellinafast-pacedteamenvironment;abletoworkunderpressuretomeettightdeadlines·Hassuperbanalyticalskillsandpersistenceinproblemsolving.·ExperiencedinProgrammingLanguages:C#,Go/Golang,Javascript·ExperiencedinDevelopmenttools:VisualStudio,VisualStudioCodeetc.·ExperiencedinDevelopmentPlatforms:MicrosoftWindows,Linux.·ExperiencedinApplicationServers:IIS.·ExperiencedinApplicationFrameworks&Engines:.NETCore,ASP.NETMVC,ASP.NETWEBAPI,EntityFramework/EntityFrameworkCore.·ExperiencedinDatabases:SQLServer,MongoDB,Redisetc.·ExperiencedinOthers:Git.·ExperiencedinRestfulAPIdesignanddevelopment.·Familiarwithmicro-servicedevelopmentprocessisaplus.·Familiarwiththecontainerandcontainermanagementplatformisaplus,suchasDocker/K8s.","穆迪","2000人以上","企业服务,金融","上市公司","外企管理双休不加班假期丰富花式员工活动");
+		Total Crawled: 232	Finished-Point
+2020-04-14 11:35:09================================================================================
+		Total Crawled: 212	Finished-Point
+2020-04-14 11:38:20================================================================================
+			Failed Store:  https://www.lagou.com/jobs/6835064.html 
+				SQL:  insert into 后端开发 (keywords,detail_url,position,tags,salary,job_type,city,district,street,education,work_experience,release_date,description,company_name,company_scale,company_field,company_type,company_benefits) value ("区块链","https://www.lagou.com/jobs/6835064.html","区块链工程师-全栈-Chain E...","区块链|全栈","30k-60k","全职","深圳","南山区","南山区大冲商务中心A座","本科及以上","不限","2020-04-13","Crypto.com,thepioneeringpaymentsandcryptocurrencyplatform,formerlyknownasMonaco,seekstoacceleratetheworld’stransitiontocryptocurrency.ItsMCObrandedconsumerfinancialservices,includingtheMCOVisaCard,MCOWalletapp,andMCOTokenembraceavisionofCryptocurrencyinEveryWallet™.Crypto.comisheadquarteredinHongKong.Formoreinformation,pleasevisit:www.crypto.comAbouttherole:AsaFull-StackEngineeringinourteamyouwillworkonproductsthatsolverealworldproblemsforpeopleusingavarietyoftechnologies.Wearelookingforastart-startingengineerwhoisabletomovequicklybetweenbackend,iOS,Androidandmuchmoreandabletoidentifyissuesandimprovementsacrossthestack.Responsibilities:Developmentactivitiesincludefull-stackdevelopment,proposingarchitecturaldecisions,participatingindesigns,designreview,codereviewandimplementationofproductsbridgingCrypto.comchaintodevelopersandend-usersDevelopprototypesfornewideasproposedbyyouandtheteamYouaretheownerofyourprojects.Weareopen-mindedtonewtechnologiesandyoucantry-outdifferentthingshereIdentifyissuesandimplementsolutionstocomplexproblemsinlarge-scalebackendinfrastructureandmobileplatformsManagementofdocumentationofallcodeandfunctionalitiesimplementedWorkcloselywithDevOpsandmobileengineerstoimprovetechstackforlong-termengineeringinitiativesRequirements:Interestedinbuildingfirst-classproducttosolvereal-worldproblemsExperiencedwithvarioustechnologies,self-motivated,afastlearnerandhavea“getthingsdone”mentalityHumbletoembracebetterideasfromothers,eagertomakethingsbetter,opentochallengesandpossibilitiesStrongorganizationalskills,interpersonalskillsandhavingtheabilitytojuggleconflictingrequirementsfrommanydifferentstakeholdersUnderstandingofBlockchaintechnologyProficiencyinhandlingscalability,security,andperformanceExperiencewithmobiledevelopmentisanadvantageKnowledgeoflow-levelnetworkingorOSinternalsLinux,iOS,andAndroidwouldbeusefulKnowledgeoffront-endframeworksandtechnologiese.g.React.js,Vue.js,Mobx,ReduxKnowledgeofserver-sideprogramminglanguagese.g.Golang,Node.js,Python,Ruby,JavaWhatcanyouexpectfromus?Weofferanattractivecompensationpackageworkinginacutting-edgefieldofFintech.HugeresponsibilitiesfromDay1.Betheownerofyourownlearningcurve.ThepossibilitiesarelimitlessanddependonyouYougettoworkinaverydynamicenvironmentandbepartofaninternationalteamYouwillgettohaveinvolvementindevelopingabrandnewproductfromscratchalongsideatalentedteam","Crypto.com","150-500人","移动互联网,电商","B轮","20天有薪年假|具有竞争力的薪资");
+		Total Crawled: 263	Finished-Point
+2020-04-14 11:40:27================================================================================
+		Total Crawled: 265	Finished-Point
+2020-04-14 11:40:51================================================================================
+
+2020-04-14 13:05:21 ================================================================================
+HTML5
+	全国
+
+2020-04-14 13:05:28 ================================================================================
+Android
+	全国	Positions: 500+	Positions: 500+
+
+2020-04-14 13:06:00 ================================================================================
+iOS
+	全国	Positions: 500+
+
+2020-04-14 13:06:07 ================================================================================
+WP
+	全国	Positions: 21
+
+2020-04-14 13:06:34 ================================================================================
+移动开发其它
+	全国	Positions: 500+
+			Failed Store:  https://www.lagou.com/jobs/5091176.html 
+				SQL:  insert into 移动开发 (keywords,detail_url,position,tags,salary,job_type,city,district,street,education,work_experience,release_date,description,company_name,company_scale,company_field,company_type,company_benefits) value ("WP","https://www.lagou.com/jobs/5091176.html","产品经理","教育|广告营销","10k-13k","全职","青岛","青岛高新技术产业开发区","黄岛区富春江路1356号311室","本科及以上","3-5年","2020-03-31","岗位职责：1、负责SAAS平台和广告系统、直播相关产品的设计、研发和推广；2、制订产品需求文档，以供设计、开发、测试人员明确产品需求和进行开发、测试；3、跟进UI设计人员的设计和技术人员的开发，确保产品功能特性和交互符合产品需求文档的要求；4、独立完成市场分析和竞品调研的工作，以及数据分析的工作；5、制定产品推广方案并具体实施，对产品推广效果负责；6、整理和分析用户需求和反馈，完成客户端产品的规划与持续改进；7、拥有3年以上互联网在线教育产品运营推广经验；岗位要求：1、本科及以上学历，具有saas平台、直播、广告系统产品设计/管理（iOS或Android或WP）经验；2、具备较强产品设计能力，深入了解saas平台、直播、广告系统的产品研发和运营、推广流程，具有saas平台、直播、广告系统产品推广经历，对市场发展趋势有敏锐的洞察力和创新意识及良好的分析、研判能力，提供有竞争力的产品并能进行有效推广；3、善用数据分析，收集用户意见反馈，持续优化产品；4、具有一定的组织管理能力、判断能力、沟通协调、表达能力。5、较强的执行力，工作责任心强，看重结果导向；良好的职业素养和职业操守，能承受较大的工作压力；6、热爱互联网，关注移动互联网发展动态，认同移动互联网的发展。名医传世是医院培训整体解决方案的提供商，解决医院培训的不规范、零乱不系统、重复性培训等问题，还解决严重存在医护人员技能提升培训渠道不通畅、成本高等问题。名医传世提供SaaS培训考核管理系统，帮助让医院建立各岗位培训体系，让所有的岗位培训，变成标准化、信息化、程序化和系统性；并能建立每个职员的培训历程、档案，方便管理者人才培训分析、调整培训方案，建立精准培训等，全方位帮助医院打造强大的医疗团队。名医传世平台的功能主要有：1、能快速建立专属医院的培训平台；2、能建立不同需求的培训人员组织架构；3、轻松上传视频、建立培训教程、设置考题、还可以建立培训SOP等；4、管理者可随意查看培训效果，精确到个人和教程；5、平台提供名医线上工作室，可以最全面展示名医实力和技术；6、提供名医与基层医生互动交流与合作的通道；园区办公-绿色天然氧吧，森林式办公让你心情舒畅~五天双休-摒弃不规律的调休生活，周末不耍更待何时哇带薪年假-拿着薪资去happy，任性如我=w=绩效奖金-能者多得，快爆发你的小宇宙~岗位晋升-晋升和调薪，自己的天花板自己来决定y扁平管理-我们只看效率，能者说了算！下午茶呢-每周水果雪糕还有糖水哦balabala简直选择困难：3员工活动-组队羽毛球踢毽子唱k徒步浪~生活补贴-工作餐餐补和你的各种通讯费应酬费~报报报！犹豫啥呢，我们在鸟语花香里等你","上啥班","50-150人","移动互联网,企业服务","天使轮","创业公司|有活力|有激情");
+		Total Crawled: 21	Finished-Point
+2020-04-14 13:09:44================================================================================
+			Failed Store:  https://www.lagou.com/jobs/7007010.html 
+				SQL:  insert into 移动开发 (keywords,detail_url,position,tags,salary,job_type,city,district,street,education,work_experience,release_date,description,company_name,company_scale,company_field,company_type,company_benefits) value ("Android","https://www.lagou.com/jobs/7007010.html","安卓开发工程师","大数据|智能硬件|Android|移动端","12k-18k","全职","青岛","青岛高新技术产业开发区","QST青软实训总部基地","本科及以上","5-10年","2020-04-14","岗位职责1、负责安卓前沿技术的跟踪与落地，提升产品的竞争力；2、负责项目架构及性能优化、关键技术选型、技术难题攻关、技术创新等工作；3、负责公司安卓端的技术架构设计和重点模块开发；4、参与APP应用需求的整理分析，并协助产品工程师研讨可行性和交付周期；5、负责根据产品开发计划，按时提交高质量代码，完成开发任务；6、与项目相关管理、测试和需求等人员沟通和合作；7、协助测试人员进行应用的自动化测试、兼容性与性能测试；8、负责相关技术文档的编写，完成项目中其他的文档编写工作。任职要求:1、一到三年安卓开发经验，熟悉安卓开发流程、系统架构、开发环境；2、扎实的java基础，必须熟悉数据结构，算法，多线程，网络等。对新技术持有敏感性以及愿意致力于新技术的探索和研究；3、熟悉主流安卓终端软件框架和UI框架，精通UI布局和控件的使用；具有较丰富的安卓性能与内存优化经验；4、有良好的Java功底，熟悉Android平台；5、有独立开发Android应用APP的能力，能独立分析和解决Andriod开发中的问题；6.对安卓APP性能优化和内存优化有一定了解，熟练掌握Andriod平台下的代码调试和调优技术；7.有良好的代码书写习惯和文档习惯；8、有解决问题、钻研新技术的兴趣和能力，善于交流和表达，有良好的团队合作精神；9、有较强的责任心和全局思维能力，能够独立负责一个项目；10、自学能力强，沟通协作意识良好，能够承担工作压力；11、做事利索，具有探索的精神，具备较强的分析、解决问题的能力；12、有音视频通话，AI语音交互、AI视觉交互等相关开发经验的优先考虑。","合信万成","150-500人","人工智能,物联网","不需要融资","五险一金");
+		Total Crawled: 252	Finished-Point
+2020-04-14 13:49:04================================================================================
+		Total Crawled: 274	Finished-Point
+2020-04-14 13:53:38================================================================================
+		Total Crawled: 291	Finished-Point
+2020-04-14 13:55:37================================================================================
+		Total Crawled: 292	Finished-Point
+2020-04-14 13:58:25================================================================================
+
+2020-04-14 14:17:34 ================================================================================
+web前端
+	全国
+
+2020-04-14 14:17:41 ================================================================================
+Flash
+	全国	Positions: 500+	Positions: 500+
+
+2020-04-14 14:17:59 ================================================================================
+html5
+	全国	Positions: 500+
+
+2020-04-14 14:18:06 ================================================================================
+JavaScript
+	全国	Positions: 500+
+			Failed Crawl:  1 3 https://www.lagou.com/jobs/5532057.html
+			Failed Crawl:  1 1 https://www.lagou.com/jobs/6972326.html
+			Failed Crawl:  1 1 https://www.lagou.com/jobs/5304489.html
+			Failed Crawl:  1 2 https://www.lagou.com/jobs/6961825.html
+			Failed Crawl:  1 2 https://www.lagou.com/jobs/4343759.html
+			Failed Crawl:  1 3 https://www.lagou.com/jobs/6993156.html
+			Failed Crawl:  1 3 https://www.lagou.com/jobs/6821989.html
+
+2020-04-14 14:19:51 ================================================================================
+web前端
+	全国	Positions: 500+
+
+2020-04-14 14:19:58 ================================================================================
+Flash
+	全国	Positions: 500+
+
+2020-04-14 14:20:32 ================================================================================
+html5
+	全国	Positions: 500+
+
+2020-04-14 14:20:39 ================================================================================
+JavaScript
+	全国	Positions: 500+
+
+2020-04-14 14:21:19 ================================================================================
+U3D
+	全国	Positions: 500+
+
+2020-04-14 14:21:26 ================================================================================
+COCOS2D-X
+	全国	Positions: 339
+
+2020-04-14 14:21:33 ================================================================================
+前端开发其它
+	全国	Positions: 500+
+			Failed Store:  https://www.lagou.com/jobs/6786853.html 
+				SQL:  insert into 前端 (keywords,detail_url,position,tags,salary,job_type,city,district,street,education,work_experience,release_date,description,company_name,company_scale,company_field,company_type,company_benefits) value ("Flash","https://www.lagou.com/jobs/6786853.html","视频制作","广告营销|视频","2k-4k","兼职","上海","长宁区","龙之梦","大专及以上","3-5年","2020-04-14","1、大专以上学历，影视动画/美术/视频编辑相关专业2、2年以上相关视频拍摄及制作经验有创新精神3、吃苦耐劳，能承受加班强度，能发挥各种剪辑创意；熟练使用AE、FLASH、PS、Pre、EDlUS等专业剪辑制作软件，具有优秀的视觉感，节奏感，对色彩感知识和画面艺术感较敏感；4、有较高的工作效率，有较好的工作主动性和灵活性福利待遇","傲璇文化","http://www.lagou.com/gong...","不需要融资","少于15人","创意|灵活");
+		Total Crawled: 168	Finished-Point
+2020-04-14 14:51:08================================================================================
+		Total Crawled: 201	Finished-Point
+2020-04-14 14:56:27================================================================================
+		Total Crawled: 237	Finished-Point
+2020-04-14 15:03:08================================================================================
+		Total Crawled: 323	Finished-Point
+2020-04-14 15:14:59================================================================================
+		Total Crawled: 330	Finished-Point
+2020-04-14 15:15:46================================================================================
+		Total Crawled: 336	Finished-Point
+2020-04-14 15:17:46================================================================================
+		Total Crawled: 372	Finished-Point
+2020-04-14 15:23:22================================================================================
+
+2020-04-14 15:28:57 ================================================================================
+图像处理
+	全国	Positions: 500+
+
+2020-04-14 15:29:04 ================================================================================
+图像识别
+	全国	Positions: 500+
+
+2020-04-14 15:29:32 ================================================================================
+语音识别
+	全国	Positions: 224
+
+2020-04-14 15:29:39 ================================================================================
+机器视觉
+	全国	Positions: 353
+
+2020-04-14 15:30:14 ================================================================================
+算法工程师
+	全国	Positions: 500+
+
+2020-04-14 15:30:21 ================================================================================
+自然语言处理
+	全国	Positions: 500+
+			Failed Store:  https://www.lagou.com/jobs/6636103.html 
+				SQL:  insert into 人工智能 (keywords,detail_url,position,tags,salary,job_type,city,district,street,education,work_experience,release_date,description,company_name,company_scale,company_field,company_type,company_benefits) value ("图像识别","https://www.lagou.com/jobs/6636103.html","图像识别算法","机器学习|数据挖掘|图像处理","30k-60k","全职","广州","天河区","天河北路888号13-15楼","本科及以上","5-10年","2020-04-13","•Excellentknowledgeinartificialintelligencetheoreticalconcepts•ExpertinmachinelearningMLandstatisticalmodelingconcepts•DeepknowledgeofMLconceptsforclassification,regression,clustering,datamining,predictiveanalyticsetc.•AbilitytodeveloprobustMLmodelsexamplePython,MATLAB\Octave\RStudio,R,•KnowledgeofDeepLearningDLconceptslikeCNN,FCN,LSTMetc.•Experience\KnowledgewithstandardDLtoolsandlibrarieslikeCaffe,TensorFlow,PyTorch,MxNetetc.•AbletocapturerequirementsfrominternalcustomerandproposetechnicalsolutionsusingML\AItechniques•Deephandsonknowledgeofimageprocessingconcepts•Deepknowledgeofimageanalysismethodslikesegmentation,compression,enhancementetc.•Expertiseinalgorithmprototyping,testingandevaluation•Up-to-datewithrecentdevelopmentsincomputervisionapplicationswiththeadvancementofmachinelearning,deeplearning,etc.•ExperiencewithdeployingMachineLearninginferencemodelsNicetohave:containerswithDockers,Jenkins,orKubernetestoProductionenvironmentsNicetohave:Edge&Cloud•Abilitytodorapidprototyping.Takinganidea,developingaPOC,movingthePOCtodesign,developandtestandmakingitproductionreadyandcommerciallyviableproduct.General•Computerprogrammingskills,stronganalytical/mathematicalskills,knowledgeofcloudapplicationsispreferredandexcellentcommunicationskillsOptionalSkills:•UnderstandingofKeras,MicrosoftCNTK,etc.Experience:•Overall5+yearsofexperienceinArtificialIntelligencedomainandimageprocessingdesignorrelatedfield•Experienceindevising,prototypingandtestingmachinelearningmodels•Experienceindevelopingdeeplearningbasedsolutions•Experienceindevising,prototypingandtestingapplicationsrelatedtoimageprocessing,computervision,etc.•Experienceindevelopingalgorithmsfollowedbyvalidation•Experienceindigitalsystemdesignandanalysis,DSPtechniques,algorithmdevelopment,andapplications.RolesandResponsibilities:•Brainstormanddefinetechnicalrequirements,designtechnicalarchitecture,andbuildthedevelopmentframework•Handsondevelopmentofthesolution•Participateinpre-salesactivitiesasneeded•Guideateamofsoftwareengineersinareasofmachinelearningandhelpthemtosolvealltechnicalissuesrelatedtothespecificproblem•Definethetechnologystack,toolsused,development/testing/releasemethodology","奔步","150-500人","移动互联网,电商","不需要融资","弹性上下班|外资公司|可转正");
+			Failed Store:  https://www.lagou.com/jobs/6653677.html 
+				SQL:  insert into 人工智能 (keywords,detail_url,position,tags,salary,job_type,city,district,street,education,work_experience,release_date,description,company_name,company_scale,company_field,company_type,company_benefits) value ("自然语言处理","https://www.lagou.com/jobs/6653677.html","NLP/AI技术讲师","人工智能|机器学习|深度学习|NLP","25k-45k","全职","北京","朝阳区","财富金融中心","本科及以上","不限","2020-04-14","NVIDIAisrevolutionizingthewayAI,robotsandautonomousmachinesworktogether.WearelookingforaSDKMarketingManagerwhoispassionateaboutAI/NLPtojoinNVIDIA’sdeveloperproductmarketinggroup.OurteamisfocusedongrowingthedeveloperecosystemthatusesNVIDIA'sGPUsoftwaredevelopmentkits.Weneedsomeonetechnicaltobuildgo-to-marketplansandshepherdthecreationofsupportingmarketingmaterialslikesampleapplications,tutorials,whitepapers,anddeeplytechnicalpresentations.Doyouhavetherareblendofbothtechnicalandmarketingskills?Weneedhard-workingandcreativepeoplewhowanttobeworkingonstate-of-the-arttechnologyandarepassionateaboutsupportingtheecosystemofGPU/NLPanddevelopers.Ifso,wewouldlovetolearnmoreaboutyou.Thecandidatewillalsobeanexcellentteamplayer,astrongcommunicator/negotiatorwithsolidpresentationskills,abletoworkandthriveinafast-pacedenvironment.Whatyouwillbedoing:•SyncupwithProductmarketing,developermarketingandenterprisemarketingteaminheadquartertolocalizeSDKproducts/marketingassetsandtrainingcoursefordeveloperdevelopment,focusonAI/NLPapplicationfields•Plannerandtrainerforonline/offlinetraining/events,jointwithinternalteamandexternalpartnersto:•IncreasingDeveloperprogramregistrationnumber•IncreasingGPUprogrammingdevelopernumber•Increasingdevelopertrainednumber/hours•IncreasingSDKdownloadsnumber•IncreasingSDKwebpageuniquevisitors,togetbetterwebstatistics•HostofAI/NLPinNVIDIAChinaDevelopercommunity:BBS/WechatgroupsWhatweneedtosee:•5+years’experienceincustomersupportorsoftwaredevelopmentorproductmarketing•Experienceworkingwithsalesandtechnicalteams•Strongskillontraining/presentation•StrongknowledgeofC/C++,Python•StrongknowledgeofNatureLanguageProcessandpopularAIframeworkslikePytorch,TensorFlowWaystostandoutofacrowd:•Strongknowledgeofsoftwaredesign,programmingtechniques,andalgorithms.•Goodcommunicationandorganizationskills,withalogicalapproachforproblemsolving,goodtimemanagement,andtaskprioritizationskills.•Goodoral/writtenEnglishcommunicationskillwithcrossfunctionteam.•Experiencewithparallelprogramming,CUDAC/C++isaplus.","NVIDIA(英伟达)","2000人以上","硬件,文娱丨内容","上市公司","优秀团队|工程师文化");
+			Failed Store:  https://www.lagou.com/jobs/6987606.html 
+				SQL:  insert into 人工智能 (keywords,detail_url,position,tags,salary,job_type,city,district,street,education,work_experience,release_date,description,company_name,company_scale,company_field,company_type,company_benefits) value ("机器视觉","https://www.lagou.com/jobs/6987606.html","视觉算法工程师","计算机视觉|图像处理|算法","10k-15k","全职","西安","西安国家民用航天产业基地","西安市航天基地航创路1123号启航.创新园A2研发楼","本科及以上","1-3年","2020-04-13","职责描述：1、负责工业设备站表计示数识别算法开发；2、负责设备状态（可见光，红外）识别算法开发；3、负责撰写开发文档和使用文档；4、负责协助完成产品的测试；5、负责跟进计算机视觉领域技术前沿。任职要求：1、本科及以上，计算机相关专业；2、有三年以上机器视觉相关开发经验；3、精通OpenCV及PCL，熟悉机器人操作系统（ROS）等软件包；4、扎实的C/C++开发、调试的经验，熟悉Linux平台下的程序开发；5、具有扎实的图像处理功底，精通TensorFlow，PyTorch，Caffe等深度学习架构；6、熟悉Faster-RCNN、Mask-RCNN等目标检测方法。","希德电子","150-500人","其他","上市公司","行业有前景|发展空间大|薪酬待遇好");
+			Failed Store:  https://www.lagou.com/jobs/6274374.html 
+				SQL:  insert into 人工智能 (keywords,detail_url,position,tags,salary,job_type,city,district,street,education,work_experience,release_date,description,company_name,company_scale,company_field,company_type,company_benefits) value ("算法工程师","https://www.lagou.com/jobs/6274374.html","算法工程师机器学习方向","机器学习|推荐|建模|算法","25k-45k","全职","北京","朝阳区","百子湾路苹果社区北区二十二号院艺术街区 B座2号楼 028 底商 Blued City","本科及以上","不限","2020-04-14","岗位职责：1、负责Feed流内容推荐系统的研发2、负责电商推荐系统的研发岗位要求：1、有Feed流内容推荐算法、电商推荐算法工作经验2、熟悉LR、GBDT、FM、XGBoost等CTR预估、用户分群模型构建3、熟悉Caffe、Tensorflow等深度学习平台的模型训练和业务部署4、强悍的工程实现能力，熟练使用Map-Reduce、Hive、Spark等Hadoop生态","BLUECITY蓝城兄弟","150-500人","移动互联网,社交","D轮及以上","行业独角兽|弹性工时|免费午餐");
+		Total Crawled: 218	Finished-Point
+2020-04-14 16:07:05================================================================================
+		Total Crawled: 222	Finished-Point
+2020-04-14 16:09:33================================================================================
+		Total Crawled: 270	Finished-Point
+2020-04-14 16:19:23================================================================================
+			Failed Store:  https://www.lagou.com/jobs/6964234.html 
+				SQL:  insert into 人工智能 (keywords,detail_url,position,tags,salary,job_type,city,district,street,education,work_experience,release_date,description,company_name,company_scale,company_field,company_type,company_benefits) value ("自然语言处理","https://www.lagou.com/jobs/6964234.html","算法工程师-NLP （专家或者L...","","25k-50k","全职","深圳","福田区","深圳 - 福田区 - 上梅林 - 梅林路卓越梅林中心广场（卓悦汇南区）B座2301","硕士及以上","5-10年","2020-04-08","﻿负责自然语言处理的算法设计与研发，包括不限于智能客服﻿1.计算机/统计/数学相关专业毕业，研究生及以上学历2.编程基础扎实，至少熟悉Java/C++/Python等编程语言之一3.了解常见的机器学习/深度学习算法，关注行业前沿技术，动手能力强，至少掌握Tensorflow/Pytorch/Mxnet中一种深度学习框架4.良好的沟通能力与团队协作能力5.有智能客服相关经验者优先BAT、饿了么、美团、高德、科大讯飞等知名背景","拉勾猎头","500-2000人","移动互联网,企业服务","D轮及以上","发展机会");
+			Failed Store:  https://www.lagou.com/jobs/5482136.html 
+				SQL:  insert into 人工智能 (keywords,detail_url,position,tags,salary,job_type,city,district,street,education,work_experience,release_date,description,company_name,company_scale,company_field,company_type,company_benefits) value ("自然语言处理","https://www.lagou.com/jobs/5482136.html","高级算法工程师（NLP）","电商|移动互联网|人工智能|机器学习|深度学习|NLP","20k-40k","全职","上海","长宁区","天山西路567号","硕士及以上","5-10年","2020-04-10","LexisNexis–ChinaWhoAreWe?LexisNexisisthefirststopforgloballegalandbusinessinformation,meetinginternationalstandardsaswellaslocalmarketneeds.ServingclientsthatrangefromlawfirmsandGovernment,tobusinessandtheacademicsector,ourChinese-Englishbilinguallegaldatabasehasbecomeanessentialresource.Thisamazingworldofinformationisatourclients’fingertips.Andit’sallthankstoourexpertteam.SRCONSULTINGNLPENGINEERThroughtechnologyandanalytics,LexisNexisistransformingthewaymanysectorsaccessinformation.What’smore,we’recontinuallyinnovatingandcreatingnewandexcitingflagshipproducts.You’lljoinusinthishubofcreativityandexcellence,andmakeyourowncontributiontopowerfulinnovativesolutions.JOBRESPONSIBILITIES·Performhands-ondataanalysisandmodellingwithhugedatasets.·Applydatamining,NLP,andmachinelearning/deeplearningbothsupervisedandunsupervisedtoimproverelevanceandpersonalizationalgorithms.·Workside-by-sidewithproductmanagers,softwareengineers,anddesignersindesigningexperimentsandminimumviableproducts.·Discoverdatasources,getaccesstothem,importthem,cleanthemup,andmakethem“model-ready”.YouneedtobewillingandabletodoyourownETL.·Createandrefinefeaturesfromtheunderlyingdata.You’llenjoydevelopingjustenoughsubjectmatterexpertisetohaveanintuitionaboutwhatfeaturesmightmakeyourmodelperformbetter,andthenyou’lllather,rinseandrepeat.·RunregularA/Btests,gatherdata,performstatisticalanalysis,drawconclusionsontheimpactofyouroptimizationsandcommunicateresultstopeersandleaders.·Explorenewdesignortechnologyshiftstodeterminehowtheymightconnectwiththecustomerbenefitswewishtodeliver.REQUIREMENTS·BS,MS,orPhDinanappropriatetechnologyfieldComputerScience,Statistics,AppliedMath,OperationsResearch,etc..·2+year’sexperiencewithdatascience&NLP.·StrongprogrammingskillswithPython.·EfficientinSQL,Hive,orSparkSQL,etc.·ComfortableinLinuxenvironment·Experienceindataminingalgorithmsandstatisticalmodellingtechniquessuchasclustering,classification,regression,decisiontrees,neuralnets,supportvectormachines,anomalydetection,recommendersystems,sequentialpatterndiscovery,andtextmining.·FamiliarwithlatestdevelopmentinNLP&deeplearning·Solidcommunicationskills:Demonstratedabilitytoexplaincomplextechnicalissuestobothtechnicalandnon-technicalaudiences.","LexisNexis","500-2000人","不限","上市公司","15-20天年假|生日|圣诞假|节日福利");
+			Failed Store:  https://www.lagou.com/jobs/6118973.html 
+				SQL:  insert into 人工智能 (keywords,detail_url,position,tags,salary,job_type,city,district,street,education,work_experience,release_date,description,company_name,company_scale,company_field,company_type,company_benefits) value ("自然语言处理","https://www.lagou.com/jobs/6118973.html","算法工程师（NLP)","电商|移动互联网|人工智能|机器学习|深度学习|NLP","20k-40k","全职","上海","长宁区","天山西路567号","硕士及以上","1-3年","2020-04-10","LexisNexis–ChinaWhoAreWe？LexisNexisisthefirststopforgloballegalandbusinessinformationinChina,meetinginternationalstandardsaswellaslocalmarketneeds.ServingclientsthatrangefromlawfirmsandGovernment,tobusinessandtheacademicsector,ourChinese-Englishbilinguallegaldatabasehasbecomeanessentialresource.Thisamazingworldofinformationisatourclients’fingertips.Andit’sallthankstoourexpertteamThroughtechnologyandanalytics,LexisNexisistransformingthewaymanysectorsaccessinformation.What’smore,we’recontinuallyinnovatingandcreatingnewandexcitingflagshipproducts.You’lljoinusinthishubofcreativityandexcellence,andmakeyourowncontributiontopowerfulnewsolutions.Workinghand-in-handwithcustomersandindustryexperts,you’llshapethewayinformationisaccessedinthefuture.律商联讯是一家领先的内容和技术解决方案提供商，帮助法律、企业、税务、政府、学术和非营利性组织的专业人员作出知情决策，实现更好的业务成果。作为数字化先锋，公司率先通过Lexis®服务在网上提供法律信息。如今，律商联讯拥有先进的技术和世界一流的内容，帮助专业人士更快、更简便、更有效地工作。通过与客户密切合作，公司确保客户能利用其解决方案降低风险、改善生产力、提高盈利能力、促进业务发展。律商联讯作为服务于各领域专业客户的领先信息解决方案提供商—励讯集团（RELXGroupPLC）的旗下公司，向175个国家的客户提供服务，全球雇员人数超过10000名。Joinateamofdrivensoftwareengineerstodesign,prototype,implement,deploy,andmaintainfeaturesforourNLPorsearchrelatedprojects.Conductexperimentsonlargedatasetstoevaluatethefeasibility,results,andperformanceofNLPtechnology.Makesoundengineeringdecisionsandimprovesoftwaredevelopmentpracticeswithaneyeforperformanceandreliability.KeyResponsibilities:StrongPythonprogramingskills.HandsonPythonexperienceondataanalysis&visualizationisabigplus.Experiencebuildingsoftwarethatdealswithunstructuredtextdata.KnowledgeofmoderndeeplearningapproachestoNLP,includingbutnotlimitedtoword2vec,seq2seq&FastText.Knowledgeoftraditionalmachinelearningalgorithmandtechniques,includingbutnotlimitedtoTF-IDF,n-gram,SVM&LSI.AbletoreadEnglishdocumentsandNLPresearchpapers.Qualifications:BSdegreeorequivalentpracticalexperienceinaquantitativefield,preferablycomputerscience,statistics,ormathematics.Experiencewithdatasciencelibslikenumpy,pandas,matplotlib.Experiencewithmachinelearninglibslikegensim,scikit-learn,xgboostExperiencewithothermachinelearningtopicslikerecommendationsystemExperiencewithLinuxisaplus.WorkingknowledgeofJavaorC#.ExperiencewithdeeplearningframeworklikeTensorflow.ExperiencewithdistributedcomputingtechnologylikeHadoop,Hive,PigorSpark.ExperiencewithSolr,ElasticSearchoranyothersearchengine.","LexisNexis","500-2000人","不限","上市公司","15-20天年假|生日|圣诞假|节日福利");
+
+2020-04-14 16:30:09 ================================================================================
+深度学习
+	全国	Positions: 500+
+
+2020-04-14 16:30:16 ================================================================================
+机器学习
+	全国	Positions: 500+
+		Total Crawled: 301	Finished-Point
+2020-04-14 16:30:27================================================================================
+		Total Crawled: 346	Finished-Point
+2020-04-14 16:32:09================================================================================
+		Total Crawled: 347	Finished-Point
+2020-04-14 16:36:21================================================================================
+
+2020-04-14 17:13:50 ================================================================================
+测试工程师
+	全国	Positions: 500+
+
+2020-04-14 17:13:57 ================================================================================
+自动化测试
+	全国	Positions: 500+
+
+2020-04-14 17:14:05 ================================================================================
+功能测试
+	全国	Positions: 500+
+
+2020-04-14 17:14:12 ================================================================================
+性能测试
+	全国	Positions: 500+
+
+2020-04-14 17:14:19 ================================================================================
+测试开发
+	全国	Positions: 500+
+
+2020-04-14 17:15:36 ================================================================================
+游戏测试
+	全国	Positions: 308
+
+2020-04-14 17:15:43 ================================================================================
+白盒测试
+	全国	Positions: 500+
+
+2020-04-14 17:15:50 ================================================================================
+灰盒测试
+	全国	Positions: 36
+
+2020-04-14 17:15:59 ================================================================================
+黑盒测试
+	全国	Positions: 500+
+
+2020-04-14 17:16:24 ================================================================================
+手机测试
+	全国	Positions: 20
+
+2020-04-14 17:16:32 ================================================================================
+硬件测试
+	全国	Positions: 
+
+2020-04-14 17:16:39 ================================================================================
+测试经理
+	全国
+		Total Crawled: 0	Finished-Point
+2020-04-14 17:16:41================================================================================	Positions: 204
+
+2020-04-14 17:16:46 ================================================================================
+测试其它
+	全国	Positions: 500+
+		Total Crawled: 19	Finished-Point
+2020-04-14 17:19:36================================================================================
+		Total Crawled: 34	Finished-Point
+2020-04-14 17:21:42================================================================================
+			Failed Store:  https://www.lagou.com/jobs/6343721.html 
+				SQL:  insert into 测试 (keywords,detail_url,position,tags,salary,job_type,city,district,street,education,work_experience,release_date,description,company_name,company_scale,company_field,company_type,company_benefits) value ("测试开发","https://www.lagou.com/jobs/6343721.html","测试开发工程师","测试开发|性能测试|自动化","15k-30k","全职","北京","朝阳区","百子湾路苹果社区北区二十二号院艺术街区 B座2号楼 028 底商 Blued City","本科及以上","3-5年","2020-04-14","工作内容：1.负责Blued某条业务的测试工作，制定项目测试方案，计划并实施，保证项目质量和进度2.设计与执行测试用例，跟踪定位产品中的缺陷或问题3.参与产品需求、系统设计和程序代码的评审工作，并提出改进意见4.评估项目质量风险，与产品经理和开发人员就项目进度和问题进行沟通5.根据产品和项目特点，提出合理的技术解决方案，并负责设计和实现相应工具、平台，提高效率与质量职位要求：1.全日制本科及以上学历，计算机相关专业优先2.至少3年web产品开发/测试经验，或者无线端开发/测试经验，背景优秀者年限可略放宽3.掌握PHP/JAVA或几种脚本语言如python/shell等，能熟练阅读代码或熟练编写代码4.精通软件测试理论和方法，熟悉互联网行业测试环境及相关技术5.熟悉LNMP架构，掌握基本的SQL语句6.善于学习和运用新知识，具有良好的分析和解决问题能力7.性格开朗，善于沟通和项目推进，具有极强的责任心和自驱力","BLUECITY蓝城兄弟","150-500人","移动互联网,社交","D轮及以上","行业独角兽|弹性工时|免费午餐");
+		Total Crawled: 213	Finished-Point
+2020-04-14 17:36:44================================================================================
+		Total Crawled: 211	Finished-Point
+2020-04-14 17:36:45================================================================================
+		Total Crawled: 139	Finished-Point
+2020-04-14 17:42:39================================================================================
+			Failed Store:  https://www.lagou.com/jobs/6964226.html 
+				SQL:  insert into 测试 (keywords,detail_url,position,tags,salary,job_type,city,district,street,education,work_experience,release_date,description,company_name,company_scale,company_field,company_type,company_benefits) value ("测试经理","https://www.lagou.com/jobs/6964226.html","测试经理/专家","","20k-40k","全职","深圳","福田区","深圳 - 福田区 - 上梅林 - 梅林路卓越梅林中心广场（卓悦汇南区）B座2301","本科及以上","5-10年","2020-04-08","﻿1）负责建设推动软件测试技术落地，提高测试专业度和效率；2）负责发展和管理团队，提高团队整体效能，打造具备自我学习和进化能力的团队；3）保证测试结果，优化测试流程。﻿1）本科及以上学历，计算机相关专业；2）6年以上互联网产品测试经验，3年以上互联网行业测试管理经验；3）根据部门的实际情况制定合适的测试流程规范，具备对测试人员进行培训和指导的能力；4）熟练掌握测试管理相关工具，具有丰富的产品测试和系统测试经验，对技术理解具有前瞻性；5）具有高度的责任心，出色的沟通协作能力、团队管理能力、人才培养能力。知名互联网背景，行业不限","拉勾猎头","500-2000人","移动互联网,企业服务","D轮及以上","发展机会");
+		Total Crawled: 144	Finished-Point
+2020-04-14 17:44:14================================================================================
+			Failed Store:  https://www.lagou.com/jobs/6917399.html 
+				SQL:  insert into 测试 (keywords,detail_url,position,tags,salary,job_type,city,district,street,education,work_experience,release_date,description,company_name,company_scale,company_field,company_type,company_benefits) value ("测试经理","https://www.lagou.com/jobs/6917399.html","高级测试经理","硬件测试|功耗测试|渗透测试|可靠性测试","8k-12k","全职","西安","西安国家民用航天产业基地","丈八一路汇鑫IBC A座406","本科及以上","5-10年","2020-04-08","岗位职责：1、根据公司项目需求，进行测试方案设计，了解沟通用户需求，编写测试用例，提交测试问题并监督修复情况，分析测试结果；2、与研发、产品等协作实现各阶段的测试活动；评估测试工作的有效性；参与系统各个环节的设计评审；3、负责公司研发质量管理，流程梳理4、产品的测试与问题提交，跟踪禅道系统的问题进度，推动研发问题解决任职要求：1.有3年以上手机或智能终端行业经验，熟练掌握Android手机系统的测试理论、方法、流程和规范；2.能根据产品测试标准、项目计划、客户需求制定具体的测试策略、测试计划；3.负责项目过程中所有测试进度的跟进和测试质量把控，具体负责协调统筹：硬件测试、软件测试、可靠性测试、器件测试、认证测试、可靠性测试、功耗测试等4.熟悉研发质量过程管理，对项目的关键节点能够进行有效的评审和风险管控5.具备良好逻辑分析能力、学习能力和创新能力强，具有团队合作精神，良好的语言表达及沟通能力；6.熟悉Android自动化测试实施能力，掌握一种主流测试框架及编程语言；7.有扫描，高频读写器（UHF），手机终端行业经验优先考虑","cilico","150-500人","移动互联网,硬件","未融资","公司重点项目|管理岗位");
+		Total Crawled: 175	Finished-Point
+2020-04-14 17:45:55================================================================================
+		Total Crawled: 191	Finished-Point
+2020-04-14 17:48:05================================================================================
+		Total Crawled: 200	Finished-Point
+2020-04-14 17:50:18================================================================================
+		Total Crawled: 223	Finished-Point
+2020-04-14 17:52:20================================================================================
+		Total Crawled: 241	Finished-Point
+2020-04-14 17:56:34================================================================================
+		Total Crawled: 284	Finished-Point
+2020-04-14 18:02:35================================================================================
+		Total Crawled: 250	Finished-Point
+2020-04-14 18:08:15================================================================================
+		Total Crawled: 239	Finished-Point
+2020-04-14 18:12:52================================================================================
