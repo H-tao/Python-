@@ -14,6 +14,7 @@ class DataProcess(object):
         # 存储的数据格式
         sql_data = dict(
             # 搜索信息
+            position_id = '', # 职位id
             keywords='',  # 职位搜索关键字
             detail_url='',  # 招聘详细页网址
 
@@ -54,10 +55,13 @@ class DataProcess(object):
         sql_data = deepcopy(self.sql_data_format())
 
         # 搜索信息
-        sql_data['keywords'] = keyword  # 职位搜索关键字
         # href是<class 'lxml.etree._ElementUnicodeResult'>类型，需要编码为utf-8再解码为str
         detail_url = href if not html.xpath('//link[@rel="canonical"]/@href') else html.xpath('//link[@rel="canonical"]/@href')[0].encode('utf-8').decode()
-        sql_data['detail_url'] = detail_url.split(sep='?', maxsplit=1)[0]  # 招聘详细页网址
+        detail_url = detail_url.split(sep='?', maxsplit=1)[0]
+        position_id = re.sub('[^\d]*', '', detail_url)
+        sql_data['position_id'] = position_id
+        sql_data['keywords'] = keyword  # 职位搜索关键字
+        sql_data['detail_url'] = detail_url  # 招聘详细页网址
 
         # 岗位相关信息
         sql_data['position'] = self.get_one(html.xpath('//div[@class="job-name"]/h1/text()'))  # 职位名称（如：Python开发，Python实习生）

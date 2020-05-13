@@ -7,7 +7,7 @@ from scrapy.utils.python import to_bytes
 
 
 class UrlDupefilter(Settings):
-    def __init__(self, col='detail_url'):
+    def __init__(self, col='position_id'):
         super().__init__()
         # key的名字，里面的内容随便写，这里的key相当于字典名称，而不是key值。为了后面引用而建的
         self.redis_set = self.TABLE_NAME

@@ -14,12 +14,12 @@ class All():
     def make_queue(self):
         d = {}
         for big_category, sub_group in self.all_positinos.items():
-            # if big_category != '设计':  # 只爬取设计
-            #     continue
+            if big_category != '游戏':  # 只爬取设计
+                continue
             d['DB_NAME'] = big_category
             for sub_category, keywords in sub_group.items():
                 d['TABLE_NAME'] = re.sub('/','或',sub_category)
-                d['keywords'] = [i for k in keywords for i in k.split(sep='/', maxsplit=1)]
+                d['keywords'] = [i.strip() for k in keywords for i in k.split(sep='/', maxsplit=1)]
                 self.queue.put(deepcopy(d))
 
         self.cmd_queue = Queue()
@@ -39,24 +39,10 @@ class All():
             dict = json.loads(data)
             return dict
 
-    def other(self):
-        l = [
-            'python E:\Documents\GitProject\Python-\LagouSpider-master\caller_args.py -d 技术 -t 高端职位 -k 技术经理 技术总监 架构师 CTO 运维总监 技术合伙人 项目总监 测试总监 安全专家 高端技术职位其它',
-            'python E:\Documents\GitProject\Python-\LagouSpider-master\caller_args.py -d 技术 -t 项目管理 -k 项目经理 项目助理',
-            'python E:\Documents\PythonCode\Spider\lagou-process\caller_args.py -d 技术 -t 硬件开发 -k 硬件 嵌入式 自动化 单片机 电路设计 驱动开发 系统集成 FPGA开发 DSP开发 ARM开发 PCB工艺 模具设计 热传导 材料工程师 精益工程师 射频工程师 硬件开发其它',
-            'python E:\Documents\PythonCode\Spider\lagou-process\caller_args.py -d 技术 -t 企业软件 -k 实施工程师 售前工程师 售后工程师 BI工程师 企业软件其它'
-        ]
-        for i in l:
-            self.queue.put(i)
-        return self.queue
-
-
     def run(self):
-        # cmd_queue = self.other()
-
         cmd_queue = self.get_positions_queue()
-        # while not cmd_queue.empty():
-        #     print(cmd_queue.get())
+        while not cmd_queue.empty():
+            print(cmd_queue.get())
         lock = Lock()
         for i in range(self.processor_num):
             l = LagouProcess(lock, cmd_queue)

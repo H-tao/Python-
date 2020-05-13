@@ -1,0 +1,6 @@
+[2020/05/13 11:44:39] 127.0.0.1 "// HTTP/1.1" GET 200 
+[2020/05/13 11:44:39] Not Found: /favicon.ico
+[2020/05/13 11:44:41] 127.0.0.1 "/jobs/keyword=%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86&page=1&num=15 HTTP/1.1" GET 200 
+[2020/05/13 11:44:41] 127.0.0.1 "/query/keyword=%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86&page=1&num=15 HTTP/1.1" GET 200 
+[2020/05/13 11:44:50] 127.0.0.1 "/jobs/keyword=%E5%B8%82%E5%9C%BA%E7%AD%96%E5%88%92&page=1&num=15 HTTP/1.1" GET 200 
+[2020/05/13 11:44:50] 127.0.0.1 "/query/keyword=%E5%B8%82%E5%9C%BA%E7%AD%96%E5%88%92&page=1&num=15 HTTP/1.1" GET 200 

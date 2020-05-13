@@ -1,0 +1,84 @@
+{% load myfilter %}
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>招聘信息网站</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/pager.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/main.css">
+    <link id="css1" rel="stylesheet" type="text/css" href="../static/css/navbar.css">
+</head>
+<body>
+    <div class="search bar6">
+        <form id="query" action="{% url "jobs" %}" method="GET">
+            <input name="keyword" type="text" placeholder="请输入您要搜索的职位...">
+            <button type="submit"></button>
+        </form>
+    </div>
+
+    <div class="page_info">
+        <div hidden="hidden">当前关键字：<a id="keyword">{{ keyword }}</a></div>
+        <div>职位总数：<a id="total_job_num">{{ job_num }}</a></div>
+        <div>当前页数：<a id="page">{{ page }}</a></div>
+        <div hidden="hidden">每页岗位数：<a id="num">{{ num }}</a></div>
+    </div>
+
+    <div class="pager_container">
+        <span action="prev">上一页</span>
+        <span page="1" class="pager_is_current">1</span>
+
+        {#        大于15页，省略中间页      #}
+        {% if total_page_num > 10 %}
+            <span page="2" class="pager_not_current">2</span>
+            <span page="3" class="pager_not_current">3</span>
+            ...
+            <span page="{{ total_page_num }}" class="pager_not_current">{{ total_page_num }}</span>
+        {% else %}
+            {% for i in total_page_num|get_range %}
+               <span page="{{ i }}">{{ i }}</span>
+            {% endfor %}
+        {% endif %}
+        <span action="next">下一页</span>
+    </div>
+    <div hidden="hidden"><a id="total_page_num">{{ total_page_num }}</a></div>
+    <div hidden="hidden"><a id="token">{{ csrf_token }}</a></div>
+
+    <div id="wrap" class="search-job-list-wrap">
+        <div id="main" class="inner home-inner">
+            <div class="job-box">
+                <div class="sider">
+                    <div class="analyse_fig">
+                        <img id="wordcloud" src="../static/images/loading.gif" data-src="" alt="" width="24">
+                    </div>
+                    <div class="analyse_fig">
+                        <img id="salary" src="../static/images/loading.gif" alt="" width="24">
+                    </div>
+                    <div class="analyse_fig">
+                        <img id="company_scale" src="../static/images/loading.gif" data-src="" alt="" width="24">
+                    </div>
+                    <div class="analyse_fig">
+                        <img id="company_type" src="../static/images/loading.gif" data-src=""  alt="" width="24">
+                    </div>
+                    <div class="analyse_fig">
+                        <img id="education" src="../static/images/loading.gif" data-src=""  alt="" width="24">
+                    </div>
+                    <div class="analyse_fig">
+                        <img id="work_experience" src="../static/images/loading.gif" data-src=""  alt="" width="24">
+                    </div>
+                </div>
+                <div class="job-list">
+                    <ul id="jobs_container">
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="d" hidden="hidden">{{ d }}</div>
+        <div id="t" hidden="hidden">{{ t }}</div>
+    </div>
+
+    <script type="text/javascript" src="../static/js/flush.js"></script>
+</body>
+</html>

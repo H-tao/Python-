@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>找工作，上好招聘</title>
+    <link id="css1" rel="stylesheet" type="text/css" href="../static/css/navbar.css">
+</head>
+<body>
+    <div class="search bar6">
+        <form id="query" action="{% url "jobs" %}" method="GET">
+            <input name="keyword" type="text" placeholder="请输入您要搜索的职位...">
+            <button type="submit"></button>
+        </form>
+    </div>
+
+    <div id="tips" class="tips">
+        项目开发中，功能待完善：暂不支持模糊搜索，只支持搜索导航栏已存在的关键词
+    </div>
+    <div class="menu">
+        <div class="menuTop">岗位分类</div>
+        <ul>
+            <li>
+                <a herf="javascript:;">技术</a>
+                <a class="hot-job">Java</a>
+                <a class="hot-job">PHP</a>
+                <a class="hot-job">C++</a>
+                <a class="hot-job">区块链</a>
+                <span></span>
+                <a>&gt;</a>
+                <div class="submenu">
+                    <div class="subleft">
+                        <dl>
+                            <dt>后端开发</dt>
+                            <dd class="job_container">
+                                <a>Java</a>
+                                <a>C++</a>
+                                <a>PHP</a>
+                                <a>数据挖掘</a>
+                                <a>搜索算法</a>
+                                <a>精准推荐</a>
+                                <a>C</a>
+                                <a>C#</a>
+                                <a>全栈工程师</a>
+                                <a>.NET</a>
+                                <a>Hadoop</a>
+                                <a>Python</a>
+                                <a>Delphi</a>
+                                <a>VB</a>
+                                <a>Perl</a>
+                                <a>Ruby</a>
+                                <a>Node.js</a>
+                                <a>Go</a>
+                                <a>ASP</a>
+                                <a>Shell</a>
+                                <a>区块链</a>
+                                <a>后端开发其它</a>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>移动开发</dt>
+                            <dd class="job_container">
+                                <a>HTML5</a>
+                                <a>Android</a>
+                                <a>iOS</a>
+                                <a>WP</a>
+                                <a>移动开发其它</a>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>前端开发</dt>
+                            <dd class="job_container">
+                                <a>web前端</a>
+                                <a>Flash</a>
+                                <a>html5</a>
+                                <a>JavaScript</a>
+                                <a>U3D</a>
+                                <a>COCOS2D-X</a>
+                                <a>前端开发其它</a>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>人工智能</dt>
+                            <dd class="job_container">
+                                <a>深度学习</a>
+                                <a>机器学习</a>
+                                <a>图像处理</a>
+                                <a>图像识别</a>
+                                <a>语音识别</a>
+                                <a>机器视觉</a>
+                                <a>算法工程师</a>
+                                <a>自然语言处理</a>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>测试</dt>
+                            <dd class="job_container">
+                                <a>测试工程师</a>
+                                <a>自动化测试</a>
+                                <a>功能测试</a>
+                                <a>性能测试</a>
+                                <a>测试开发</a>
+                                <a>游戏测试</a>
+                                <a>白盒测试</a>
+                                <a>灰盒测试</a>
+                                <a>黑盒测试</a>
+                                <a>手机测试</a>
+                                <a>硬件测试</a>
+                                <a>测试经理</a>
+                                <a>测试其它</a>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>运维</dt>
+                            <dd class="job_container">
+                                <a>运维工程师</a>
+                                <a>运维开发工程师</a>
+                                <a>网络工程师</a>
+                                <a>系统工程师</a>
+                                <a>IT支持</a>
+                                <a>IDC</a>
+                                <a>CDN</a>
+                                <a>F5</a>
+                                <a>系统管理员</a>
+                                <a>病毒分析</a>
+                                <a>WEB安全</a>
+                                <a>网络安全</a>
+                                <a>系统安全</a>
+                                <a>运维经理</a>
+                                <a>运维其它</a>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>DBA</dt>
+                            <dd class="job_container">
+                                <a>MySQL</a>
+                                <a>SQLServer</a>
+                                <a>Oracle</a>
+                                <a>DB2</a>
+                                <a>MongoDB</a>
+                                <a>ETL</a>
+                                <a>Hive</a>
+                                <a>数据仓库</a>
+                                <a>DBA其它</a>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>高端职位</dt>
+                            <dd class="job_container">
+                                <a>技术经理</a>
+                                <a>技术总监</a>
+                                <a>架构师</a>
+                                <a>CTO</a>
+                                <a>运维总监</a>
+                                <a>技术合伙人</a>
+                                <a>项目总监</a>
+                                <a>测试总监</a>
+                                <a>安全专家</a>
+                                <a>高端技术职位其它</a>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>项目管理</dt>
+                            <dd class="job_container">
+                                <a>项目经理</a>
+                                <a>项目助理</a>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>硬件开发</dt>
+                            <dd class="job_container">
+                                <a>硬件</a>
+                                <a>嵌入式</a>
+                                <a>自动化</a>
+                                <a>单片机</a>
+                                <a>电路设计</a>
+                                <a>驱动开发</a>
+                                <a>系统集成</a>
+                                <a>FPGA开发</a>
+                                <a>DSP开发</a>
+                                <a>ARM开发</a>
+                                <a>PCB工艺</a>
+                                <a>模具设计</a>
+                                <a>热传导</a>
+                                <a>材料工程师</a>
+                                <a>精益工程师</a>
+                                <a>射频工程师</a>
+                                <a>硬件开发其它</a>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>企业软件</dt>
+                            <dd class="job_container">
+                                <a>实施工程师</a>
+                                <a>售前工程师</a>
+                                <a>售后工程师</a>
+                                <a>BI工程师</a>
+                                <a>企业软件其它</a>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="subright" style="background-color: antiquewhite"></div>
+                </div>
+            </li>
+            <li>
+                <a herf="javascript:;">产品</a>
+                <a class="hot-job">产品总监</a>
+                <a class="hot-job">产品经理</a>
+                <span></span>
+                <a>&gt;</a>
+                <div class="submenu">
+                    <div class="subleft">
+                        <dl>
+                            <dt>产品经理</dt>
+                            <dd class="job_container">
+                                <a>产品经理</a>
+                                <a>网页产品经理</a>
+                                <a>移动产品经理</a>
+                                <a>产品助理</a>
+                                <a>数据产品经理</a>
+                                <a>电商产品经理</a>
+                                <a>游戏策划</a>
+                                <a>产品实习生</a>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>产品设计师</dt>
+                            <dd class="job_container">
+                                <a>网页产品设计师</a>
+                                <a>无线产品设计师</a>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>高端职位</dt>
+                            <dd class="job_container">
+                                <a>产品部经理</a>
+                                <a>产品总监</a>
+                                <a>游戏制作人</a>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="subright" style="background-color: antiquewhite"></div>
+                </div>
+            </li>
+            <li>
+                <a herf="javascript:;">设计</a>
+                <a class="hot-job">UI设计师</a>
+                <a class="hot-job">交互设计师</a>
+                <a class="hot-job">网页设计师</a>
+                <span></span>
+                <a>&gt;</a>
+                <div class="submenu">
+                    <div class="subleft">
+                        <dl>
+                            <dt>视觉设计</dt>
+                            <dd class="job_container">
+                                <a>视觉设计师</a>
+                                <a>网页设计师</a>
+                                <a>Flash设计师</a>
+                                <a>APP设计师</a>
+                                <a>UI设计师</a>
+                                <a>平面设计师</a>
+                                <a>美术设计师（2D/3D）</a>
+                                <a>广告设计师</a>
+                                <a>多媒体设计师</a>
+                                <a>原画师</a>
+                                <a>游戏特效</a>
+                                <a>游戏界面设计师</a>
+                                <a>游戏场景</a>
+                                <a>游戏角色</a>
+                                <a>游戏动作</a>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>交互设计</dt>
+                            <dd class="job_container">
+                                <a>交互设计师</a>
+                                <a>无线交互设计师</a>
+                                <a>网页交互设计师</a>
+                                <a>硬件交互设计师</a>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>用户研究</dt>
+                            <dd class="job_container">
+                                <a>数据分析师</a>
+                                <a>用户研究员</a>
+                                <a>游戏数值策划</a>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>高端职位</dt>
+                            <dd class="job_container">
+                                <a>设计经理</a>
+                                <a>主管</a>
+                                <a>设计总监</a>
+                                <a>视觉设计经理</a>
+                                <a>视觉设计总监</a>
+                                <a>交互设计经理</a>
+                                <a>交互设计总监</a>
+                                <a>用户研究经理</a>
+                                <a>用户研究总监</a>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="subright" style="background-color: antiquewhite"></div>
+                </div>
+            </li>
+            <li>
+                <a herf="javascript:;">运营</a>
+                <a class="hot-job">新媒体运营</a>
+                <a class="hot-job">产品运营</a>
+                <a class="hot-job">数据运营</a>
+                <span></span>
+                <a>&gt;</a>
+                <div class="submenu">
+                    <div class="subleft">
+                        <dl>
+                            <dt>运营</dt>
+                            <dd class="job_container">
+                                <a>用户运营</a>
+                                <a>产品运营</a>
+                                <a>数据运营</a>
+                                <a>内容运营</a>
+                                <a>活动运营</a>
+                                <a>商家运营</a>
+                                <a>品类运营</a>
+                                <a>游戏运营</a>
+                                <a>网络推广</a>
+                                <a>运营专员</a>
+                                <a>网店运营</a>
+                                <a>新媒体运营</a>
+                                <a>海外运营</a>
+                                <a>运营经理</a>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>编辑</dt>
+                            <dd class="job_container">
+                                <a>副主编</a>
+                                <a>内容编辑</a>
+                                <a>文案策划</a>
+                                <a>记者</a>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>客服</dt>
+                            <dd class="job_container">
+                                <a>售前咨询</a>
+                                <a>售后客服</a>
+                                <a>淘宝客服</a>
+                                <a>客服经理</a>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>高端职位</dt>
+                            <dd class="job_container">
+                                <a>主编</a>
+                                <a>运营总监</a>
+                                <a>COO</a>
+                                <a>客服总监</a>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="subright" style="background-color: antiquewhite"></div>
+                </div>
+            </li>
+            <li>
+                <a herf="javascript:;">市场</a>
+                <a class="hot-job">市场营销</a>
+                <a class="hot-job">市场推广</a>
+                <a class="hot-job">市场策划</a>
+                <span></span>
+                <a>&gt;</a>
+                <div class="submenu">
+                    <div class="subleft">
+                        <dl>
+                            <dt>市场或营销</dt>
+                            <dd class="job_container">
+                                <a>市场营销</a>
+                                <a>市场策划</a>
+                                <a>市场顾问</a>
+                                <a>商务渠道</a>
+                                <a>商业数据分析</a>
+                                <a>活动策划</a>
+                                <a>网络营销</a>
+                                <a>海外市场</a>
+                                <a>商务专员</a>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>媒介或公关</dt>
+                            <dd class="job_container">
+                                <a>政府关系</a>
+                                <a>品牌公关</a>
+                                <a>广告协调</a>
+                                <a>媒介投放</a>
+                                <a>媒介合作</a>
+                                <a>媒介顾问</a>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>品牌或广告</dt>
+                            <dd class="job_container">
+                                <a>广告创意</a>
+                                <a>广告制作</a>
+                                <a>广告文案</a>
+                                <a>广告投放</a>
+                                <a>广告定价</a>
+                                <a>广告专员</a>
+                                <a>品牌合作</a>
+                                <a>品牌策划</a>
+                                <a>品牌专员</a>
+                                <a>美术指导</a>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>渠道或推广</dt>
+                            <dd class="job_container">
+                                <a>市场推广</a>
+                                <a>渠道推广</a>
+                                <a>SEO</a>
+                                <a>SEM</a>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>高端职位</dt>
+                            <dd class="job_container">
+                                <a>策划经理</a>
+                                <a>媒介经理</a>
+                                <a>市场总监</a>
+                                <a>公关总监</a>
+                                <a>媒介总监</a>
+                                <a>创意总监</a>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="subright" style="background-color: antiquewhite"></div>
+                </div>
+            </li>
+            <li>
+                <a herf="javascript:;">销售</a>
+                <a class="hot-job">销售专员</a>
+                <a class="hot-job">销售经理</a>
+                <a class="hot-job">销售总监</a>
+                <span></span>
+                <a>&gt;</a>
+                <div class="submenu">
+                    <div class="subleft">
+                        <dl>
+                            <dt>销售</dt>
+                            <dd class="job_container">
+                                <a>销售专员</a>
+                                <a>销售顾问</a>
+                                <a>销售经理</a>
+                                <a>客户代表</a>
+                                <a>大客户代表</a>
+                                <a>客户经理</a>
+                                <a>商务拓展</a>
+                                <a>渠道销售</a>
+                                <a>代理商销售</a>
+                                <a>电话销售</a>
+                                <a>广告销售</a>
+                                <a>信用卡销售</a>
+                                <a>保险销售</a>
+                                <a>销售工程师</a>
+                                <a>商务渠道</a>
+                                <a>其他销售</a>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>销售管理</dt>
+                            <dd class="job_container">
+                                <a>销售总监</a>
+                                <a>商务总监</a>
+                                <a>区域总监</a>
+                                <a>城市经理</a>
+                                <a>团队经理</a>
+                                <a>销售VP</a>
+                                <a>商务主管</a>
+                                <a>其他销售管理职位</a>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="subright" style="background-color: antiquewhite"></div>
+                </div>
+            </li>
+            <li>
+                <a herf="javascript:;">职能</a>
+                <a class="hot-job">HR</a>
+                <a class="hot-job">行政</a>
+                <a class="hot-job">财务</a>
+                <a class="hot-job">审计</a>
+                <span></span>
+                <a>&gt;</a>
+                <div class="submenu">
+                    <div class="subleft">
+                        <dl>
+                            <dt>人力资源</dt>
+                            <dd class="job_container">
+                                <a>人力资源</a>
+                                <a>招聘</a>
+                                <a>HRBP</a>
+                                <a>人事/HR</a>
+                                <a>培训经理</a>
+                                <a>薪资福利经理</a>
+                                <a>绩效考核经理</a>
+                                <a>员工关系</a>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>行政</dt>
+                            <dd class="job_container">
+                                <a>助理</a>
+                                <a>前台</a>
+                                <a>行政</a>
+                                <a>总助</a>
+                                <a>文秘</a>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>财务</dt>
+                            <dd class="job_container">
+                                <a>会计</a>
+                                <a>出纳</a>
+                                <a>财务</a>
+                                <a>结算</a>
+                                <a>税务</a>
+                                <a>审计</a>
+                                <a>风控</a>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>法务</dt>
+                            <dd class="job_container">
+                                <a>法务</a>
+                                <a>律师</a>
+                                <a>专利</a>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>高端职位</dt>
+                            <dd class="job_container">
+                                <a>行政总监</a>
+                                <a>财务总监</a>
+                                <a>HRD</a>
+                                <a>HRM</a>
+                                <a>CFO</a>
+                                <a>CEO</a>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="subright" style="background-color: antiquewhite"></div>
+                </div>
+            </li>
+            <li>
+                <a herf="javascript:;">游戏</a>
+                <a class="hot-job">小游戏开发</a>
+                <a class="hot-job">U3D</a>
+                <a class="hot-job">游戏策划</a>
+                <span></span>
+                <a>&gt;</a>
+                <div class="submenu">
+                    <div class="subleft">
+                        <dl>
+                            <dt>技术开发</dt>
+                            <dd class="job_container">
+                                <a>H5游戏开发</a>
+                                <a>小游戏开发</a>
+                                <a>游戏后端开发</a>
+                                <a>C++游戏开发</a>
+                                <a>FLASH</a>
+                                <a>COCOS2D-X</a>
+                                <a>U3D</a>
+                                <a>游戏测试</a>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>产品策划</dt>
+                            <dd class="job_container">
+                                <a>游戏制作人</a>
+                                <a>游戏产品经理</a>
+                                <a>游戏项目经理</a>
+                                <a>游戏策划</a>
+                                <a>剧情设计</a>
+                                <a>游戏文案</a>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>设计</dt>
+                            <dd class="job_container">
+                                <a>游戏动画</a>
+                                <a>游戏原画</a>
+                                <a>游戏界面</a>
+                                <a>游戏场景</a>
+                                <a>游戏角色</a>
+                                <a>游戏动作</a>
+                                <a>游戏动效</a>
+                                <a>游戏美工</a>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>运营/推广</dt>
+                            <dd class="job_container">
+                                <a>游戏运营</a>
+                                <a>游戏编辑</a>
+                                <a>游戏推广</a>
+                                <a>手游推广</a>
+                                <a>页游推广</a>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>其他</dt>
+                            <dd class="job_container">
+                                <a>游戏主播</a>
+                                <a>游戏陪练</a>
+                                <a>游戏体验</a>
+                                <a>电竞主持</a>
+                                <a>电竞讲师</a>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="subright" style="background-color: antiquewhite"></div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <script type="text/javascript" src="../static/js/form.js"></script>
+</body>
+</html>

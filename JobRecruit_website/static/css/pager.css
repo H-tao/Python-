@@ -1,0 +1,50 @@
+.pager_container, .page_info, #job_container{
+    margin:0 auto ; text-align:center;
+}
+
+.page_info div{
+    display:inline-block;
+    padding-left: 20px;
+    margin: 10px 3px 10px 2px;
+}
+
+.pager_container span, .pager_container .page_no {
+    cursor: pointer;
+    color: #555;
+    display: inline-block;
+    border: 1px solid #002c00;
+    height: 28px;
+    line-height: 21px;
+    padding: 3px 10px;
+    margin: 2px 2px 2px 2px;
+    font-size: 14px;
+    text-decoration: none
+}
+
+.pager_container span:first-child {
+    margin: 0 5px 0 0
+}
+
+.pager_container .page_no:not(.pager_next_disabled):not(.pager_prev_disabled):hover, .pager_container span:not(.pager_next_disabled):not(.pager_prev_disabled):hover {
+    background-color: #00b38a;
+    border-color: #00b38a;
+    text-decoration: none;
+    color: #fff
+}
+
+.pager_container .pager_is_current {
+    background-color: #00b38a !important;
+    color: #fff !important;
+    font-weight: 700;
+    border-color: #00b38a !important
+}
+
+.pager_container .pager_lgthen {
+    color: #337BAC
+}
+
+.pager_container .pager_prev_disabled, .pager_container .pager_next_disabled, .pager_container .pager_lgthen_dis {
+    color: silver !important;
+    cursor: default !important
+}
+

@@ -74,22 +74,6 @@ def get_data():
     # write_to_file(all_positions)
 
 
-    # pool = Pool(4)
-    # lock = Lock()
-    # # pool.map()
-    # for big_category_name, sub_group in all_positions.items():
-    #     # print(big_category_name)
-    #     if big_category_name == '技术':
-    #         continue
-    #     for sub_cate_name, pos_s in sub_group.items():
-    #         # print('\t',sub_cate_name)
-    #         # print('\t\t', pos_s)
-    #         print('-'*40)
-    #         lp = LagouProcess(lock, big_category=big_category_name, sub_category=sub_cate_name, positions=pos_s)
-    #         lp.start()
-    #     print('*'*80)
-    #     time.sleep(10)
-
 def write_to_file(all_positions):
     f = open('./positions.txt', 'a+', encoding='utf-8')
     f.write(str(json.dumps(all_positions,ensure_ascii=False)))
