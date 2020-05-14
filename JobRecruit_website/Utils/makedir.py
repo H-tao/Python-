@@ -1,4 +1,4 @@
-from recruit_website.settings import BASE_DIR
+from lagou_website.settings import BASE_DIR
 from Utils.positions import keyword_of_db_table
 import os
 

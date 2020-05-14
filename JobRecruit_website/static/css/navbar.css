@@ -4,14 +4,14 @@ li { list-style: none; }
 .menu { width: 1200px; height: 600px; margin: 30px auto; background-color: #ececec; }
 .menu .menuTop { background-color: #F10215; color: #fff; width: 300px; height: 40px; padding-left: 20px; line-height: 40px; cursor: pointer; }
 .menu ul { width: 300px; background-color: #fff; border: 2px solid #F10215; box-sizing: border-box; position: relative; }
-.menu ul li { height: 50px; padding-left: 8px; text-align: left; line-height: 50px; font-size: 20px; background: url(image/1.png) no-repeat right; z-index: 2; }
+.menu ul li { height: 50px; padding-left: 8px; text-align: left; line-height: 50px; font-size: 20px;  z-index: 2; }
 .menu ul li a { color: #707070; }
 .menu ul li a:hover { color: red; text-decoration: underline; cursor: pointer; }
 .menu ul li:hover { border: 1px solid #DDD; border-right: 0; background-image: none; }
 .menu ul li:hover .submenu { display: block; }
 .menu ul li:hover span { width: 30px; height: 30px; display: inline-block; background-color: #FFF; float: right; z-index: 100; position: relative; }
 .menu ul li .submenu { position: absolute; left: 300px; top: 0; width: 860px; height: 300px; border: 1px solid #DDD; box-shadow: 0 0 8px #DDD; -moz-box-shadow: 0 0 8px #DDD; -webkit-box-shadow: 0 0 8px #DDD; background-color: #FFF; z-index: 3; display: none; }
-.menu ul li .submenu .subleft { margin-left: 0px; width: 550px; height: 300px; float: left; padding: 5px; }
+.menu ul li .submenu .subleft { margin-left: 0; width: 550px; height: 300px; float: left; padding: 5px; }
 .menu ul li .submenu .subleft dl { overflow: hidden; border-bottom: 1px solid #D1D1D1; padding: 10px 0; }
 .menu ul li .submenu .subleft dl dt { float: left; height: 22px; line-height: 22px; margin-right: 10px; font-weight: bold; color: #707070; font-size: 14px; cursor: pointer; }
 .menu ul li .submenu .subleft dl dd {}

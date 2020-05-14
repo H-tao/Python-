@@ -4,7 +4,7 @@
 '''
 from Utils.positions import keyword_of_db_table
 from Utils.data_analyse import data_analysis
-from recruit_website.settings import BASE_DIR
+from lagou_website.settings import BASE_DIR
 from DB.MysqlClient import MysqlClient
 import os
 

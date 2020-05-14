@@ -95,7 +95,7 @@
             {
                 if (xmlhttp.readyState == 4 && xmlhttp.status == 200)
                 {
-                    // console.log(xmlhttp.responseText);
+                    // 回调函数
                     loadJson(xmlhttp.responseText);
                 }
             };
@@ -376,10 +376,27 @@
             var oEducation = document.getElementById("education");
             var oWorkExperience = document.getElementById("work_experience");
 
-            oWordCloud.src = "../static/images/" + oD.innerText + "/" + oT.innerText + "/" + oK.innerText + "/" + "wordcloud.png";
-            oSalary.src = "../static/images/" + oD.innerText + "/" + oT.innerText + "/" + oK.innerText + "/" + "salary.png";
-            oCompanyScale.src = "../static/images/" + oD.innerText + "/" + oT.innerText + "/" + oK.innerText + "/" + "company_scale.png";
-            oCompanyType.src = "../static/images/" + oD.innerText + "/" + oT.innerText + "/" + oK.innerText + "/" + "company_type.png";
-            oEducation.src = "../static/images/" + oD.innerText + "/" + oT.innerText + "/" + oK.innerText + "/" + "education.png";
-            oWorkExperience.src = "../static/images/" + oD.innerText + "/" + oT.innerText + "/" + oK.innerText + "/" + "work_experience.png";
+            imgUrl = "/static/images/" + oD.innerText + "/" + oT.innerText + "/" + oK.innerText + "/";
+            fnGetFig(imgUrl + "wordcloud.png", oWordCloud);
+            fnGetFig(imgUrl + "salary.png", oSalary);
+            fnGetFig(imgUrl + "company_scale.png", oCompanyScale);
+            fnGetFig(imgUrl + "company_type.png", oCompanyType);
+            fnGetFig(imgUrl + "education.png", oEducation);
+            fnGetFig(imgUrl + "work_experience.png", oWorkExperience);
+
+        }
+
+        // Ajax获取加载图片
+        function fnGetFig(url, oImg) {
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", url, true);
+            xhr.responseType = "blob";
+            xhr.onload = function () {
+                if (this.status == 200) {
+                    var blob = this.response;
+                    oImg.src = window.URL.createObjectURL(blob);
+                    oImg.style.width = "320px";
+                }
+            };
+            xhr.send();
         }

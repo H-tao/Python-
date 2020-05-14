@@ -6,7 +6,7 @@ from Utils import positions
 import pymysql
 from collections import defaultdict
 import pandas
-from recruit_website.settings import DATABASES
+from lagou_website.settings import DATABASES
 
 class MysqlClient(object):
     def __init__(self):

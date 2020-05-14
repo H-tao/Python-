@@ -2,7 +2,7 @@
 
 from Utils.positions import keyword_of_db_table
 from Utils.data_analyse import data_analysis
-from recruit_website.settings import BASE_DIR
+from lagou_website.settings import BASE_DIR
 from DB.MysqlClient import MysqlClient
 import os
 
@@ -39,9 +39,9 @@ def generate_fig():
 
 
 if __name__ == '__main__':
-    # c = MysqlClient()
-    # df = c.get_all(KEYWORD)
-    # data_analysis(df, './static/images')
+    c = MysqlClient()
+    df = c.get_all(KEYWORD)
+    data_analysis(df, './static/images')
 
-    generate_fig()
+    # generate_fig()
 
