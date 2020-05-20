@@ -41,8 +41,8 @@ class All():
 
     def run(self):
         cmd_queue = self.get_positions_queue()
-        while not cmd_queue.empty():
-            print(cmd_queue.get())
+        # while not cmd_queue.empty():
+        #     print(cmd_queue.get())
         lock = Lock()
         for i in range(self.processor_num):
             l = LagouProcess(lock, cmd_queue)

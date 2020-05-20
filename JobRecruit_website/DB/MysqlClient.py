@@ -110,5 +110,5 @@ if __name__ == '__main__':
     # keywords = ['HTML5', 'Android', 'iOS', 'WP', '移动开发其它']
     # for k in keywords:
     #     print(c.get_jobs(k))
-    df = c.get_jobs('HTML5')
+    df = c.get_jobs('MySQL')
     print(df)

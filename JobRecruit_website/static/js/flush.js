@@ -394,9 +394,10 @@
             xhr.onload = function () {
                 if (this.status == 200) {
                     var blob = this.response;
+                    // 加载图片，并更改样式
                     oImg.src = window.URL.createObjectURL(blob);
                     oImg.style.width = "320px";
                 }
             };
-            xhr.send();
+            xhr.send(); // 发送请求
         }
