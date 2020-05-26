@@ -114,3 +114,7 @@
 [2020/05/14 19:38:14] 127.0.0.1 "/query/keyword=SQLServer&page=1&num=15 HTTP/1.1" GET 200 
 [2020/05/14 19:38:19] 127.0.0.1 "/jobs/keyword=%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93&page=1&num=15 HTTP/1.1" GET 200 
 [2020/05/14 19:38:19] 127.0.0.1 "/query/keyword=%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93&page=1&num=15 HTTP/1.1" GET 200 
+[2020/05/22 15:10:12] 127.0.0.1 "// HTTP/1.1" GET 200 
+[2020/05/22 15:10:12] Not Found: /favicon.ico
+[2020/05/22 15:10:14] 127.0.0.1 "/jobs/keyword=%E5%8C%BA%E5%9D%97%E9%93%BE&page=1&num=15 HTTP/1.1" GET 200 
+[2020/05/22 15:10:14] 127.0.0.1 "/query/keyword=%E5%8C%BA%E5%9D%97%E9%93%BE&page=1&num=15 HTTP/1.1" GET 200 
