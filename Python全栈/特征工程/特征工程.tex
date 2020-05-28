@@ -1,0 +1,3194 @@
+\documentclass[11pt]{article}
+
+    \usepackage[breakable]{tcolorbox}
+    \usepackage{parskip} % Stop auto-indenting (to mimic markdown behaviour)
+    
+    \usepackage{fontspec, xunicode, xltxtra}
+    \setmainfont{Microsoft YaHei}
+    \usepackage{ctex}
+
+    \usepackage{iftex}
+    \ifPDFTeX
+
+
+    	\usepackage[T1]{fontenc}
+    	\usepackage{mathpazo}
+    \else
+    	\usepackage{fontspec}
+    \fi
+
+    % Basic figure setup, for now with no caption control since it's done
+    % automatically by Pandoc (which extracts ![](path) syntax from Markdown).
+    \usepackage{graphicx}
+    % Maintain compatibility with old templates. Remove in nbconvert 6.0
+    \let\Oldincludegraphics\includegraphics
+    % Ensure that by default, figures have no caption (until we provide a
+    % proper Figure object with a Caption API and a way to capture that
+    % in the conversion process - todo).
+    \usepackage{caption}
+    \DeclareCaptionFormat{nocaption}{}
+    \captionsetup{format=nocaption,aboveskip=0pt,belowskip=0pt}
+
+    \usepackage[Export]{adjustbox} % Used to constrain images to a maximum size
+    \adjustboxset{max size={0.9\linewidth}{0.9\paperheight}}
+    \usepackage{float}
+    \floatplacement{figure}{H} % forces figures to be placed at the correct location
+    \usepackage{xcolor} % Allow colors to be defined
+    \usepackage{enumerate} % Needed for markdown enumerations to work
+    \usepackage{geometry} % Used to adjust the document margins
+    \usepackage{amsmath} % Equations
+    \usepackage{amssymb} % Equations
+    \usepackage{textcomp} % defines textquotesingle
+    % Hack from http://tex.stackexchange.com/a/47451/13684:
+    \AtBeginDocument{%
+        \def\PYZsq{\textquotesingle}% Upright quotes in Pygmentized code
+    }
+    \usepackage{upquote} % Upright quotes for verbatim code
+    \usepackage{eurosym} % defines \euro
+    \usepackage[mathletters]{ucs} % Extended unicode (utf-8) support
+    \usepackage{fancyvrb} % verbatim replacement that allows latex
+    \usepackage{grffile} % extends the file name processing of package graphics 
+                         % to support a larger range
+    \makeatletter % fix for grffile with XeLaTeX
+    \def\Gread@@xetex#1{%
+      \IfFileExists{"\Gin@base".bb}%
+      {\Gread@eps{\Gin@base.bb}}%
+      {\Gread@@xetex@aux#1}%
+    }
+    \makeatother
+
+    % The hyperref package gives us a pdf with properly built
+    % internal navigation ('pdf bookmarks' for the table of contents,
+    % internal cross-reference links, web links for URLs, etc.)
+    \usepackage{hyperref}
+    % The default LaTeX title has an obnoxious amount of whitespace. By default,
+    % titling removes some of it. It also provides customization options.
+    \usepackage{titling}
+    \usepackage{longtable} % longtable support required by pandoc >1.10
+    \usepackage{booktabs}  % table support for pandoc > 1.12.2
+    \usepackage[inline]{enumitem} % IRkernel/repr support (it uses the enumerate* environment)
+    \usepackage[normalem]{ulem} % ulem is needed to support strikethroughs (\sout)
+                                % normalem makes italics be italics, not underlines
+    \usepackage{mathrsfs}
+    
+
+    
+    % Colors for the hyperref package
+    \definecolor{urlcolor}{rgb}{0,.145,.698}
+    \definecolor{linkcolor}{rgb}{.71,0.21,0.01}
+    \definecolor{citecolor}{rgb}{.12,.54,.11}
+
+    % ANSI colors
+    \definecolor{ansi-black}{HTML}{3E424D}
+    \definecolor{ansi-black-intense}{HTML}{282C36}
+    \definecolor{ansi-red}{HTML}{E75C58}
+    \definecolor{ansi-red-intense}{HTML}{B22B31}
+    \definecolor{ansi-green}{HTML}{00A250}
+    \definecolor{ansi-green-intense}{HTML}{007427}
+    \definecolor{ansi-yellow}{HTML}{DDB62B}
+    \definecolor{ansi-yellow-intense}{HTML}{B27D12}
+    \definecolor{ansi-blue}{HTML}{208FFB}
+    \definecolor{ansi-blue-intense}{HTML}{0065CA}
+    \definecolor{ansi-magenta}{HTML}{D160C4}
+    \definecolor{ansi-magenta-intense}{HTML}{A03196}
+    \definecolor{ansi-cyan}{HTML}{60C6C8}
+    \definecolor{ansi-cyan-intense}{HTML}{258F8F}
+    \definecolor{ansi-white}{HTML}{C5C1B4}
+    \definecolor{ansi-white-intense}{HTML}{A1A6B2}
+    \definecolor{ansi-default-inverse-fg}{HTML}{FFFFFF}
+    \definecolor{ansi-default-inverse-bg}{HTML}{000000}
+
+    % commands and environments needed by pandoc snippets
+    % extracted from the output of `pandoc -s`
+    \providecommand{\tightlist}{%
+      \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+    \DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+    % Add ',fontsize=\small' for more characters per line
+    \newenvironment{Shaded}{}{}
+    \newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{{#1}}}}
+    \newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.56,0.13,0.00}{{#1}}}
+    \newcommand{\DecValTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+    \newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+    \newcommand{\FloatTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+    \newcommand{\CharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+    \newcommand{\StringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+    \newcommand{\CommentTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textit{{#1}}}}
+    \newcommand{\OtherTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{{#1}}}
+    \newcommand{\AlertTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{{#1}}}}
+    \newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.02,0.16,0.49}{{#1}}}
+    \newcommand{\RegionMarkerTok}[1]{{#1}}
+    \newcommand{\ErrorTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{{#1}}}}
+    \newcommand{\NormalTok}[1]{{#1}}
+    
+    % Additional commands for more recent versions of Pandoc
+    \newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.53,0.00,0.00}{{#1}}}
+    \newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+    \newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+    \newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.73,0.40,0.53}{{#1}}}
+    \newcommand{\ImportTok}[1]{{#1}}
+    \newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.73,0.13,0.13}{\textit{{#1}}}}
+    \newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+    \newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+    \newcommand{\VariableTok}[1]{\textcolor[rgb]{0.10,0.09,0.49}{{#1}}}
+    \newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{{#1}}}}
+    \newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.40,0.40,0.40}{{#1}}}
+    \newcommand{\BuiltInTok}[1]{{#1}}
+    \newcommand{\ExtensionTok}[1]{{#1}}
+    \newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.74,0.48,0.00}{{#1}}}
+    \newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.49,0.56,0.16}{{#1}}}
+    \newcommand{\InformationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+    \newcommand{\WarningTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+    
+    
+    % Define a nice break command that doesn't care if a line doesn't already
+    % exist.
+    \def\br{\hspace*{\fill} \\* }
+    % Math Jax compatibility definitions
+    \def\gt{>}
+    \def\lt{<}
+    \let\Oldtex\TeX
+    \let\Oldlatex\LaTeX
+    \renewcommand{\TeX}{\textrm{\Oldtex}}
+    \renewcommand{\LaTeX}{\textrm{\Oldlatex}}
+    % Document parameters
+    % Document title
+    \title{特征工程}
+    
+    
+    
+    
+    
+% Pygments definitions
+\makeatletter
+\def\PY@reset{\let\PY@it=\relax \let\PY@bf=\relax%
+    \let\PY@ul=\relax \let\PY@tc=\relax%
+    \let\PY@bc=\relax \let\PY@ff=\relax}
+\def\PY@tok#1{\csname PY@tok@#1\endcsname}
+\def\PY@toks#1+{\ifx\relax#1\empty\else%
+    \PY@tok{#1}\expandafter\PY@toks\fi}
+\def\PY@do#1{\PY@bc{\PY@tc{\PY@ul{%
+    \PY@it{\PY@bf{\PY@ff{#1}}}}}}}
+\def\PY#1#2{\PY@reset\PY@toks#1+\relax+\PY@do{#2}}
+
+\expandafter\def\csname PY@tok@w\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.73,0.73}{##1}}}
+\expandafter\def\csname PY@tok@c\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@cp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.74,0.48,0.00}{##1}}}
+\expandafter\def\csname PY@tok@k\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@kp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@kt\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.69,0.00,0.25}{##1}}}
+\expandafter\def\csname PY@tok@o\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@ow\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.67,0.13,1.00}{##1}}}
+\expandafter\def\csname PY@tok@nb\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nf\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@nc\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@nn\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@ne\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.82,0.25,0.23}{##1}}}
+\expandafter\def\csname PY@tok@nv\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@no\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.53,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nl\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.63,0.63,0.00}{##1}}}
+\expandafter\def\csname PY@tok@ni\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.60,0.60,0.60}{##1}}}
+\expandafter\def\csname PY@tok@na\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.49,0.56,0.16}{##1}}}
+\expandafter\def\csname PY@tok@nt\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nd\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.67,0.13,1.00}{##1}}}
+\expandafter\def\csname PY@tok@s\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sd\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@si\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.73,0.40,0.53}{##1}}}
+\expandafter\def\csname PY@tok@se\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.73,0.40,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sr\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.40,0.53}{##1}}}
+\expandafter\def\csname PY@tok@ss\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@sx\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@m\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@gh\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@gu\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.50,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@gd\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.63,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@gi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.63,0.00}{##1}}}
+\expandafter\def\csname PY@tok@gr\endcsname{\def\PY@tc##1{\textcolor[rgb]{1.00,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@ge\endcsname{\let\PY@it=\textit}
+\expandafter\def\csname PY@tok@gs\endcsname{\let\PY@bf=\textbf}
+\expandafter\def\csname PY@tok@gp\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@go\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.53,0.53,0.53}{##1}}}
+\expandafter\def\csname PY@tok@gt\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.27,0.87}{##1}}}
+\expandafter\def\csname PY@tok@err\endcsname{\def\PY@bc##1{\setlength{\fboxsep}{0pt}\fcolorbox[rgb]{1.00,0.00,0.00}{1,1,1}{\strut ##1}}}
+\expandafter\def\csname PY@tok@kc\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@kd\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@kn\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@kr\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@bp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@fm\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@vc\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@vg\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@vi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@vm\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@sa\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sb\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sc\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@dl\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@s2\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sh\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@s1\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@mb\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@mf\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@mh\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@mi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@il\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@mo\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@ch\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@cm\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@cpf\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@c1\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@cs\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+
+\def\PYZbs{\char`\\}
+\def\PYZus{\char`\_}
+\def\PYZob{\char`\{}
+\def\PYZcb{\char`\}}
+\def\PYZca{\char`\^}
+\def\PYZam{\char`\&}
+\def\PYZlt{\char`\<}
+\def\PYZgt{\char`\>}
+\def\PYZsh{\char`\#}
+\def\PYZpc{\char`\%}
+\def\PYZdl{\char`\$}
+\def\PYZhy{\char`\-}
+\def\PYZsq{\char`\'}
+\def\PYZdq{\char`\"}
+\def\PYZti{\char`\~}
+% for compatibility with earlier versions
+\def\PYZat{@}
+\def\PYZlb{[}
+\def\PYZrb{]}
+\makeatother
+
+
+    % For linebreaks inside Verbatim environment from package fancyvrb. 
+    \makeatletter
+        \newbox\Wrappedcontinuationbox 
+        \newbox\Wrappedvisiblespacebox 
+        \newcommand*\Wrappedvisiblespace {\textcolor{red}{\textvisiblespace}} 
+        \newcommand*\Wrappedcontinuationsymbol {\textcolor{red}{\llap{\tiny$\m@th\hookrightarrow$}}} 
+        \newcommand*\Wrappedcontinuationindent {3ex } 
+        \newcommand*\Wrappedafterbreak {\kern\Wrappedcontinuationindent\copy\Wrappedcontinuationbox} 
+        % Take advantage of the already applied Pygments mark-up to insert 
+        % potential linebreaks for TeX processing. 
+        %        {, <, #, %, $, ' and ": go to next line. 
+        %        _, }, ^, &, >, - and ~: stay at end of broken line. 
+        % Use of \textquotesingle for straight quote. 
+        \newcommand*\Wrappedbreaksatspecials {% 
+            \def\PYGZus{\discretionary{\char`\_}{\Wrappedafterbreak}{\char`\_}}% 
+            \def\PYGZob{\discretionary{}{\Wrappedafterbreak\char`\{}{\char`\{}}% 
+            \def\PYGZcb{\discretionary{\char`\}}{\Wrappedafterbreak}{\char`\}}}% 
+            \def\PYGZca{\discretionary{\char`\^}{\Wrappedafterbreak}{\char`\^}}% 
+            \def\PYGZam{\discretionary{\char`\&}{\Wrappedafterbreak}{\char`\&}}% 
+            \def\PYGZlt{\discretionary{}{\Wrappedafterbreak\char`\<}{\char`\<}}% 
+            \def\PYGZgt{\discretionary{\char`\>}{\Wrappedafterbreak}{\char`\>}}% 
+            \def\PYGZsh{\discretionary{}{\Wrappedafterbreak\char`\#}{\char`\#}}% 
+            \def\PYGZpc{\discretionary{}{\Wrappedafterbreak\char`\%}{\char`\%}}% 
+            \def\PYGZdl{\discretionary{}{\Wrappedafterbreak\char`\$}{\char`\$}}% 
+            \def\PYGZhy{\discretionary{\char`\-}{\Wrappedafterbreak}{\char`\-}}% 
+            \def\PYGZsq{\discretionary{}{\Wrappedafterbreak\textquotesingle}{\textquotesingle}}% 
+            \def\PYGZdq{\discretionary{}{\Wrappedafterbreak\char`\"}{\char`\"}}% 
+            \def\PYGZti{\discretionary{\char`\~}{\Wrappedafterbreak}{\char`\~}}% 
+        } 
+        % Some characters . , ; ? ! / are not pygmentized. 
+        % This macro makes them "active" and they will insert potential linebreaks 
+        \newcommand*\Wrappedbreaksatpunct {% 
+            \lccode`\~`\.\lowercase{\def~}{\discretionary{\hbox{\char`\.}}{\Wrappedafterbreak}{\hbox{\char`\.}}}% 
+            \lccode`\~`\,\lowercase{\def~}{\discretionary{\hbox{\char`\,}}{\Wrappedafterbreak}{\hbox{\char`\,}}}% 
+            \lccode`\~`\;\lowercase{\def~}{\discretionary{\hbox{\char`\;}}{\Wrappedafterbreak}{\hbox{\char`\;}}}% 
+            \lccode`\~`\:\lowercase{\def~}{\discretionary{\hbox{\char`\:}}{\Wrappedafterbreak}{\hbox{\char`\:}}}% 
+            \lccode`\~`\?\lowercase{\def~}{\discretionary{\hbox{\char`\?}}{\Wrappedafterbreak}{\hbox{\char`\?}}}% 
+            \lccode`\~`\!\lowercase{\def~}{\discretionary{\hbox{\char`\!}}{\Wrappedafterbreak}{\hbox{\char`\!}}}% 
+            \lccode`\~`\/\lowercase{\def~}{\discretionary{\hbox{\char`\/}}{\Wrappedafterbreak}{\hbox{\char`\/}}}% 
+            \catcode`\.\active
+            \catcode`\,\active 
+            \catcode`\;\active
+            \catcode`\:\active
+            \catcode`\?\active
+            \catcode`\!\active
+            \catcode`\/\active 
+            \lccode`\~`\~ 	
+        }
+    \makeatother
+
+    \let\OriginalVerbatim=\Verbatim
+    \makeatletter
+    \renewcommand{\Verbatim}[1][1]{%
+        %\parskip\z@skip
+        \sbox\Wrappedcontinuationbox {\Wrappedcontinuationsymbol}%
+        \sbox\Wrappedvisiblespacebox {\FV@SetupFont\Wrappedvisiblespace}%
+        \def\FancyVerbFormatLine ##1{\hsize\linewidth
+            \vtop{\raggedright\hyphenpenalty\z@\exhyphenpenalty\z@
+                \doublehyphendemerits\z@\finalhyphendemerits\z@
+                \strut ##1\strut}%
+        }%
+        % If the linebreak is at a space, the latter will be displayed as visible
+        % space at end of first line, and a continuation symbol starts next line.
+        % Stretch/shrink are however usually zero for typewriter font.
+        \def\FV@Space {%
+            \nobreak\hskip\z@ plus\fontdimen3\font minus\fontdimen4\font
+            \discretionary{\copy\Wrappedvisiblespacebox}{\Wrappedafterbreak}
+            {\kern\fontdimen2\font}%
+        }%
+        
+        % Allow breaks at special characters using \PYG... macros.
+        \Wrappedbreaksatspecials
+        % Breaks at punctuation characters . , ; ? ! and / need catcode=\active 	
+        \OriginalVerbatim[#1,codes*=\Wrappedbreaksatpunct]%
+    }
+    \makeatother
+
+    % Exact colors from NB
+    \definecolor{incolor}{HTML}{303F9F}
+    \definecolor{outcolor}{HTML}{D84315}
+    \definecolor{cellborder}{HTML}{CFCFCF}
+    \definecolor{cellbackground}{HTML}{F7F7F7}
+    
+    % prompt
+    \makeatletter
+    \newcommand{\boxspacing}{\kern\kvtcb@left@rule\kern\kvtcb@boxsep}
+    \makeatother
+    \newcommand{\prompt}[4]{
+        \ttfamily\llap{{\color{#2}[#3]:\hspace{3pt}#4}}\vspace{-\baselineskip}
+    }
+    
+
+    
+    % Prevent overflowing lines due to hard-to-break entities
+    \sloppy 
+    % Setup hyperref package
+    \hypersetup{
+      breaklinks=true,  % so long urls are correctly broken across lines
+      colorlinks=true,
+      urlcolor=urlcolor,
+      linkcolor=linkcolor,
+      citecolor=citecolor,
+      }
+    % Slightly bigger margins than the latex defaults
+    
+    \geometry{verbose,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in}
+    
+    
+
+\begin{document}
+    
+    \maketitle
+    
+    
+
+    
+    \hypertarget{ux83b7ux53d6ux6570ux636e}{%
+\subsection{1.获取数据}\label{ux83b7ux53d6ux6570ux636e}}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{1}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{k+kn}{import} \PY{n+nn}{os}
+\PY{k+kn}{import} \PY{n+nn}{pandas} \PY{k}{as} \PY{n+nn}{pd}
+\PY{k}{def} \PY{n+nf}{load\PYZus{}housing\PYZus{}data}\PY{p}{(}\PY{n}{housing\PYZus{}path} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{./}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}\PY{p}{:} \PY{c+c1}{\PYZsh{} 导入数据}
+    \PY{n}{csv\PYZus{}path} \PY{o}{=} \PY{n}{os}\PY{o}{.}\PY{n}{path}\PY{o}{.}\PY{n}{join}\PY{p}{(}\PY{n}{housing\PYZus{}path}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{housing.csv}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+    \PY{k}{return} \PY{n}{pd}\PY{o}{.}\PY{n}{read\PYZus{}csv}\PY{p}{(}\PY{n}{csv\PYZus{}path}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{2}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{data\PYZus{}housing} \PY{o}{=} \PY{n}{load\PYZus{}housing\PYZus{}data}\PY{p}{(}\PY{p}{)}
+\PY{n}{data\PYZus{}housing}\PY{o}{.}\PY{n}{head}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\prompt{Out}{outcolor}{2}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+   longitude  latitude  housing\_median\_age  total\_rooms  total\_bedrooms  \textbackslash{}
+0    -122.23     37.88                41.0        880.0           129.0
+1    -122.22     37.86                21.0       7099.0          1106.0
+2    -122.24     37.85                52.0       1467.0           190.0
+3    -122.25     37.85                52.0       1274.0           235.0
+4    -122.25     37.85                52.0       1627.0           280.0
+
+   population  households  median\_income  median\_house\_value ocean\_proximity
+0       322.0       126.0         8.3252            452600.0        NEAR BAY
+1      2401.0      1138.0         8.3014            358500.0        NEAR BAY
+2       496.0       177.0         7.2574            352100.0        NEAR BAY
+3       558.0       219.0         5.6431            341300.0        NEAR BAY
+4       565.0       259.0         3.8462            342200.0        NEAR BAY
+\end{Verbatim}
+\end{tcolorbox}
+        
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{3}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{data\PYZus{}housing}\PY{o}{.}\PY{n}{shape}
+\end{Verbatim}
+\end{tcolorbox}
+
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\prompt{Out}{outcolor}{3}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+(20640, 10)
+\end{Verbatim}
+\end{tcolorbox}
+        
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{4}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{data\PYZus{}housing}\PY{o}{.}\PY{n}{info}\PY{p}{(}\PY{p}{)}  \PY{c+c1}{\PYZsh{} 数据集的简单描述，得到每个属性类型和非空值数据量}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 20640 entries, 0 to 20639
+Data columns (total 10 columns):
+longitude             20640 non-null float64
+latitude              20640 non-null float64
+housing\_median\_age    20640 non-null float64
+total\_rooms           20640 non-null float64
+total\_bedrooms        20433 non-null float64
+population            20640 non-null float64
+households            20640 non-null float64
+median\_income         20640 non-null float64
+median\_house\_value    20640 non-null float64
+ocean\_proximity       20640 non-null object
+dtypes: float64(9), object(1)
+memory usage: 1.6+ MB
+    \end{Verbatim}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{5}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{data\PYZus{}housing}\PY{o}{.}\PY{n}{describe}\PY{p}{(}\PY{p}{)}  \PY{c+c1}{\PYZsh{} 显示数值属性摘要}
+\end{Verbatim}
+\end{tcolorbox}
+
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\prompt{Out}{outcolor}{5}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+          longitude      latitude  housing\_median\_age   total\_rooms  \textbackslash{}
+count  20640.000000  20640.000000        20640.000000  20640.000000
+mean    -119.569704     35.631861           28.639486   2635.763081
+std        2.003532      2.135952           12.585558   2181.615252
+min     -124.350000     32.540000            1.000000      2.000000
+25\%     -121.800000     33.930000           18.000000   1447.750000
+50\%     -118.490000     34.260000           29.000000   2127.000000
+75\%     -118.010000     37.710000           37.000000   3148.000000
+max     -114.310000     41.950000           52.000000  39320.000000
+
+       total\_bedrooms    population    households  median\_income  \textbackslash{}
+count    20433.000000  20640.000000  20640.000000   20640.000000
+mean       537.870553   1425.476744    499.539680       3.870671
+std        421.385070   1132.462122    382.329753       1.899822
+min          1.000000      3.000000      1.000000       0.499900
+25\%        296.000000    787.000000    280.000000       2.563400
+50\%        435.000000   1166.000000    409.000000       3.534800
+75\%        647.000000   1725.000000    605.000000       4.743250
+max       6445.000000  35682.000000   6082.000000      15.000100
+
+       median\_house\_value
+count        20640.000000
+mean        206855.816909
+std         115395.615874
+min          14999.000000
+25\%         119600.000000
+50\%         179700.000000
+75\%         264725.000000
+max         500001.000000
+\end{Verbatim}
+\end{tcolorbox}
+        
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{6}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{data\PYZus{}housing}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{ocean\PYZus{}proximity}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{o}{.}\PY{n}{value\PYZus{}counts}\PY{p}{(}\PY{p}{)}  \PY{c+c1}{\PYZsh{} 查看多少种类， 5种分类，获得每种分类下有多少区域}
+\end{Verbatim}
+\end{tcolorbox}
+
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\prompt{Out}{outcolor}{6}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+<1H OCEAN     9136
+INLAND        6551
+NEAR OCEAN    2658
+NEAR BAY      2290
+ISLAND           5
+Name: ocean\_proximity, dtype: int64
+\end{Verbatim}
+\end{tcolorbox}
+        
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{7}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{c+c1}{\PYZsh{} 在jupyter内绘制图}
+\PY{o}{\PYZpc{}}\PY{k}{matplotlib} inline
+\PY{k+kn}{import} \PY{n+nn}{matplotlib}\PY{n+nn}{.}\PY{n+nn}{pyplot} \PY{k}{as} \PY{n+nn}{plt}
+\PY{n}{data\PYZus{}housing}\PY{o}{.}\PY{n}{hist}\PY{p}{(}\PY{n}{bins} \PY{o}{=} \PY{l+m+mi}{50}\PY{p}{,} \PY{n}{figsize} \PY{o}{=} \PY{p}{(}\PY{l+m+mi}{20}\PY{p}{,} \PY{l+m+mi}{15}\PY{p}{)}\PY{p}{)}
+\PY{n}{plt}\PY{o}{.}\PY{n}{show}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{特征工程_files/特征工程_7_0.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    \hypertarget{ux89c2ux5bdfux56feux8868ux603bux7ed3}{%
+\subsubsection{观察图表总结：}\label{ux89c2ux5bdfux56feux8868ux603bux7ed3}}
+
+\hypertarget{ux623fux9f84ux548cux623fux4ef7ux88abux8bbeux5b9aux4e86ux4e0aux9650}{%
+\paragraph{房龄和房价被设定了上限}\label{ux623fux9f84ux548cux623fux4ef7ux88abux8bbeux5b9aux4e86ux4e0aux9650}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  设置了上限的区域，重新收集标签值
+\item
+  把设置了上限的区域数据移除
+\end{enumerate}
+
+\hypertarget{ux91cdux5c3e-ux5934ux9ad8ux5c3eux957f}{%
+\paragraph{重尾 头高尾长}\label{ux91cdux5c3e-ux5934ux9ad8ux5c3eux957f}}
+
+\begin{itemize}
+\tightlist
+\item
+  转换数据，把数据形状变成偏钟型分布（正态分布） \#\#\#\#\# 收入特征
+\item
+  数据提供的上游证实 数据单位 年薪 万美元，提前对特征进行了缩放
+\end{itemize}
+
+    \hypertarget{ux5206ux5272ux8badux7ec3ux96c6ux548cux6d4bux8bd5ux96c6}{%
+\subsection{2.分割训练集和测试集}\label{ux5206ux5272ux8badux7ec3ux96c6ux548cux6d4bux8bd5ux96c6}}
+
+\begin{itemize}
+\tightlist
+\item
+  训练集用于模型训练 占整个数据集的80\%，测试集占20\%
+\end{itemize}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{8}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{k+kn}{import} \PY{n+nn}{numpy} \PY{k}{as} \PY{n+nn}{np}
+\PY{c+c1}{\PYZsh{} 对原来的数组进行重新洗牌，随机打乱原来的元素顺序}
+\PY{c+c1}{\PYZsh{} data：传入数据    test\PYZus{}radio：数据集和测试集的比例}
+\PY{k}{def} \PY{n+nf}{split\PYZus{}train\PYZus{}test}\PY{p}{(}\PY{n}{data}\PY{p}{,} \PY{n}{test\PYZus{}radio}\PY{p}{)}\PY{p}{:}
+    \PY{c+c1}{\PYZsh{} 随机数种子}
+    \PY{n}{np}\PY{o}{.}\PY{n}{random}\PY{o}{.}\PY{n}{seed}\PY{p}{(}\PY{l+m+mi}{2}\PY{p}{)}
+    \PY{n}{indices} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{random}\PY{o}{.}\PY{n}{permutation}\PY{p}{(}\PY{n+nb}{len}\PY{p}{(}\PY{n}{data}\PY{p}{)}\PY{p}{)}  \PY{c+c1}{\PYZsh{} 随机打乱整个数据集的索引}
+    \PY{n}{test\PYZus{}set\PYZus{}size} \PY{o}{=} \PY{n+nb}{int}\PY{p}{(}\PY{n+nb}{len}\PY{p}{(}\PY{n}{data}\PY{p}{)} \PY{o}{*} \PY{n}{test\PYZus{}radio}\PY{p}{)}  \PY{c+c1}{\PYZsh{} 测试集和数据集分割点的索引}
+    \PY{n}{test\PYZus{}indices} \PY{o}{=} \PY{n}{indices}\PY{p}{[} \PY{p}{:} \PY{n}{test\PYZus{}set\PYZus{}size}\PY{p}{]}  \PY{c+c1}{\PYZsh{} 测试集索引}
+    \PY{n}{train\PYZus{}indices} \PY{o}{=} \PY{n}{indices}\PY{p}{[}\PY{n}{test\PYZus{}set\PYZus{}size} \PY{p}{:} \PY{p}{]}  \PY{c+c1}{\PYZsh{} 训练集索引}
+    \PY{k}{return} \PY{n}{data}\PY{o}{.}\PY{n}{iloc}\PY{p}{[}\PY{n}{train\PYZus{}indices}\PY{p}{]}\PY{p}{,} \PY{n}{data}\PY{o}{.}\PY{n}{iloc}\PY{p}{[}\PY{n}{test\PYZus{}indices}\PY{p}{]}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{9}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{train\PYZus{}set}\PY{p}{,} \PY{n}{test\PYZus{}set} \PY{o}{=} \PY{n}{split\PYZus{}train\PYZus{}test}\PY{p}{(}\PY{n}{data\PYZus{}housing}\PY{p}{,} \PY{l+m+mf}{0.2}\PY{p}{)}  \PY{c+c1}{\PYZsh{} 传入数据和比例}
+\PY{n+nb}{print}\PY{p}{(}\PY{n+nb}{len}\PY{p}{(}\PY{n}{train\PYZus{}set}\PY{p}{)}\PY{p}{)}
+\PY{n+nb}{print}\PY{p}{(}\PY{n+nb}{len}\PY{p}{(}\PY{n}{test\PYZus{}set}\PY{p}{)}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+16512
+4128
+    \end{Verbatim}
+
+    \hypertarget{ux6807ux8bc6ux6570ux636e}{%
+\subsection{3.标识数据}\label{ux6807ux8bc6ux6570ux636e}}
+
+\begin{itemize}
+\tightlist
+\item
+  为了避免新增数据的时候，同一条数据被反复划分，出现时而在测试集时而在训练集的情况，需要对数据进行标识
+\item
+  使用行索引进行标识
+\end{itemize}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{10}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{k+kn}{import} \PY{n+nn}{hashlib}
+\PY{c+c1}{\PYZsh{} 唯一hash标识的判断，返回True\PYZbs{}False，对于测试集数据返回True，训练集返回False}
+\PY{k}{def} \PY{n+nf}{test\PYZus{}set\PYZus{}check}\PY{p}{(}\PY{n}{identifier}\PY{p}{,} \PY{n}{test\PYZus{}radio}\PY{p}{,} \PY{n+nb}{hash} \PY{o}{=} \PY{n}{hashlib}\PY{o}{.}\PY{n}{md5}\PY{p}{)}\PY{p}{:}
+    \PY{c+c1}{\PYZsh{} 将identifier类型转为np.int64}
+    \PY{c+c1}{\PYZsh{} digest()[\PYZhy{}1]取hash加密后最后一个字节}
+    \PY{c+c1}{\PYZsh{} 返回摘要，作为二进制数据的字符串}
+    \PY{k}{return} \PY{n+nb}{hash}\PY{p}{(}\PY{n}{np}\PY{o}{.}\PY{n}{int64}\PY{p}{(}\PY{n}{identifier}\PY{p}{)}\PY{p}{)}\PY{o}{.}\PY{n}{digest}\PY{p}{(}\PY{p}{)}\PY{p}{[}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{]} \PY{o}{\PYZlt{}} \PY{l+m+mi}{256} \PY{o}{*} \PY{n}{test\PYZus{}radio}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{11}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{c+c1}{\PYZsh{} id\PYZus{}column：data中作为标识的一列}
+\PY{k}{def} \PY{n+nf}{split\PYZus{}train\PYZus{}test\PYZus{}by\PYZus{}id}\PY{p}{(}\PY{n}{data}\PY{p}{,} \PY{n}{test\PYZus{}radio}\PY{p}{,} \PY{n}{id\PYZus{}column}\PY{p}{)}\PY{p}{:}
+    \PY{n}{ids} \PY{o}{=} \PY{n}{data}\PY{p}{[}\PY{n}{id\PYZus{}column}\PY{p}{]}
+    \PY{c+c1}{\PYZsh{} 判断数据是否在测试集中，apply对每个数据都会应用test\PYZus{}set\PYZus{}check检查数据}
+    \PY{n}{isin\PYZus{}test\PYZus{}set} \PY{o}{=} \PY{n}{ids}\PY{o}{.}\PY{n}{apply}\PY{p}{(}\PY{k}{lambda} \PY{n}{id\PYZus{}}\PY{p}{:}\PY{n}{test\PYZus{}set\PYZus{}check}\PY{p}{(}\PY{n}{id\PYZus{}}\PY{p}{,} \PY{n}{test\PYZus{}radio}\PY{p}{)}\PY{p}{)}
+    \PY{c+c1}{\PYZsh{} \PYZhy{}负号代表不在测试集中}
+    \PY{k}{return} \PY{n}{data}\PY{o}{.}\PY{n}{loc}\PY{p}{[}\PY{o}{\PYZhy{}}\PY{n}{isin\PYZus{}test\PYZus{}set}\PY{p}{]}\PY{p}{,} \PY{n}{data}\PY{o}{.}\PY{n}{loc}\PY{p}{[}\PY{n}{isin\PYZus{}test\PYZus{}set}\PY{p}{]}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{12}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{data\PYZus{}housing\PYZus{}with\PYZus{}id} \PY{o}{=} \PY{n}{data\PYZus{}housing}\PY{o}{.}\PY{n}{reset\PYZus{}index}\PY{p}{(}\PY{p}{)}  \PY{c+c1}{\PYZsh{} 使用行索引作为标识符 ID}
+\PY{n}{data\PYZus{}housing\PYZus{}with\PYZus{}id}\PY{o}{.}\PY{n}{head}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\prompt{Out}{outcolor}{12}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+   index  longitude  latitude  housing\_median\_age  total\_rooms  \textbackslash{}
+0      0    -122.23     37.88                41.0        880.0
+1      1    -122.22     37.86                21.0       7099.0
+2      2    -122.24     37.85                52.0       1467.0
+3      3    -122.25     37.85                52.0       1274.0
+4      4    -122.25     37.85                52.0       1627.0
+
+   total\_bedrooms  population  households  median\_income  median\_house\_value  \textbackslash{}
+0           129.0       322.0       126.0         8.3252            452600.0
+1          1106.0      2401.0      1138.0         8.3014            358500.0
+2           190.0       496.0       177.0         7.2574            352100.0
+3           235.0       558.0       219.0         5.6431            341300.0
+4           280.0       565.0       259.0         3.8462            342200.0
+
+  ocean\_proximity
+0        NEAR BAY
+1        NEAR BAY
+2        NEAR BAY
+3        NEAR BAY
+4        NEAR BAY
+\end{Verbatim}
+\end{tcolorbox}
+        
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{13}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{c+c1}{\PYZsh{} 分割数据}
+\PY{n}{train\PYZus{}set}\PY{p}{,} \PY{n}{test\PYZus{}set} \PY{o}{=} \PY{n}{split\PYZus{}train\PYZus{}test\PYZus{}by\PYZus{}id}\PY{p}{(}\PY{n}{data\PYZus{}housing\PYZus{}with\PYZus{}id}\PY{p}{,} \PY{l+m+mf}{0.2}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{index}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{14}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{train\PYZus{}set}\PY{o}{.}\PY{n}{head}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\prompt{Out}{outcolor}{14}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+   index  longitude  latitude  housing\_median\_age  total\_rooms  \textbackslash{}
+0      0    -122.23     37.88                41.0        880.0
+1      1    -122.22     37.86                21.0       7099.0
+2      2    -122.24     37.85                52.0       1467.0
+3      3    -122.25     37.85                52.0       1274.0
+6      6    -122.25     37.84                52.0       2535.0
+
+   total\_bedrooms  population  households  median\_income  median\_house\_value  \textbackslash{}
+0           129.0       322.0       126.0         8.3252            452600.0
+1          1106.0      2401.0      1138.0         8.3014            358500.0
+2           190.0       496.0       177.0         7.2574            352100.0
+3           235.0       558.0       219.0         5.6431            341300.0
+6           489.0      1094.0       514.0         3.6591            299200.0
+
+  ocean\_proximity
+0        NEAR BAY
+1        NEAR BAY
+2        NEAR BAY
+3        NEAR BAY
+6        NEAR BAY
+\end{Verbatim}
+\end{tcolorbox}
+        
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{15}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{train\PYZus{}set}\PY{o}{.}\PY{n}{tail}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\prompt{Out}{outcolor}{15}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+       index  longitude  latitude  housing\_median\_age  total\_rooms  \textbackslash{}
+20634  20634    -121.56     39.27                28.0       2332.0
+20635  20635    -121.09     39.48                25.0       1665.0
+20636  20636    -121.21     39.49                18.0        697.0
+20638  20638    -121.32     39.43                18.0       1860.0
+20639  20639    -121.24     39.37                16.0       2785.0
+
+       total\_bedrooms  population  households  median\_income  \textbackslash{}
+20634           395.0      1041.0       344.0         3.7125
+20635           374.0       845.0       330.0         1.5603
+20636           150.0       356.0       114.0         2.5568
+20638           409.0       741.0       349.0         1.8672
+20639           616.0      1387.0       530.0         2.3886
+
+       median\_house\_value ocean\_proximity
+20634            116800.0          INLAND
+20635             78100.0          INLAND
+20636             77100.0          INLAND
+20638             84700.0          INLAND
+20639             89400.0          INLAND
+\end{Verbatim}
+\end{tcolorbox}
+        
+    \hypertarget{ux521bux5efaux7279ux5f81ux6570ux636eux5217}{%
+\subsection{4.创建特征数据列}\label{ux521bux5efaux7279ux5f81ux6570ux636eux5217}}
+
+\begin{itemize}
+\tightlist
+\item
+  基于行索引作为标识，不能删除和中间插入数据，只能末尾插入，否则行索引会变
+\item
+  寻找稳定特征来创建唯一标识符
+
+  \begin{enumerate}
+  \def\labelenumi{\arabic{enumi}.}
+  \tightlist
+  \item
+    创建一组特征数据
+  \end{enumerate}
+\end{itemize}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{16}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{c+c1}{\PYZsh{} 使用经纬度创建一组特征数据 \PYZsq{}id\PYZsq{}}
+\PY{n}{data\PYZus{}housing\PYZus{}with\PYZus{}id}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{id}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]} \PY{o}{=} \PY{n}{data\PYZus{}housing}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{longitude}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]} \PY{o}{*} \PY{l+m+mi}{1000} \PY{o}{+} \PY{n}{data\PYZus{}housing}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{latitude}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}
+\PY{n}{data\PYZus{}housing\PYZus{}with\PYZus{}id}\PY{o}{.}\PY{n}{head}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\prompt{Out}{outcolor}{16}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+   index  longitude  latitude  housing\_median\_age  total\_rooms  \textbackslash{}
+0      0    -122.23     37.88                41.0        880.0
+1      1    -122.22     37.86                21.0       7099.0
+2      2    -122.24     37.85                52.0       1467.0
+3      3    -122.25     37.85                52.0       1274.0
+4      4    -122.25     37.85                52.0       1627.0
+
+   total\_bedrooms  population  households  median\_income  median\_house\_value  \textbackslash{}
+0           129.0       322.0       126.0         8.3252            452600.0
+1          1106.0      2401.0      1138.0         8.3014            358500.0
+2           190.0       496.0       177.0         7.2574            352100.0
+3           235.0       558.0       219.0         5.6431            341300.0
+4           280.0       565.0       259.0         3.8462            342200.0
+
+  ocean\_proximity         id
+0        NEAR BAY -122192.12
+1        NEAR BAY -122182.14
+2        NEAR BAY -122202.15
+3        NEAR BAY -122212.15
+4        NEAR BAY -122212.15
+\end{Verbatim}
+\end{tcolorbox}
+        
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{17}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{c+c1}{\PYZsh{} 通过特征id标识，分割数据}
+\PY{n}{train\PYZus{}set}\PY{p}{,} \PY{n}{test\PYZus{}set} \PY{o}{=} \PY{n}{split\PYZus{}train\PYZus{}test\PYZus{}by\PYZus{}id}\PY{p}{(}\PY{n}{data\PYZus{}housing\PYZus{}with\PYZus{}id}\PY{p}{,} \PY{l+m+mf}{0.2}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{id}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{18}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{train\PYZus{}set}\PY{o}{.}\PY{n}{head}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\prompt{Out}{outcolor}{18}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+   index  longitude  latitude  housing\_median\_age  total\_rooms  \textbackslash{}
+0      0    -122.23     37.88                41.0        880.0
+1      1    -122.22     37.86                21.0       7099.0
+2      2    -122.24     37.85                52.0       1467.0
+3      3    -122.25     37.85                52.0       1274.0
+4      4    -122.25     37.85                52.0       1627.0
+
+   total\_bedrooms  population  households  median\_income  median\_house\_value  \textbackslash{}
+0           129.0       322.0       126.0         8.3252            452600.0
+1          1106.0      2401.0      1138.0         8.3014            358500.0
+2           190.0       496.0       177.0         7.2574            352100.0
+3           235.0       558.0       219.0         5.6431            341300.0
+4           280.0       565.0       259.0         3.8462            342200.0
+
+  ocean\_proximity         id
+0        NEAR BAY -122192.12
+1        NEAR BAY -122182.14
+2        NEAR BAY -122202.15
+3        NEAR BAY -122212.15
+4        NEAR BAY -122212.15
+\end{Verbatim}
+\end{tcolorbox}
+        
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{19}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{train\PYZus{}set}\PY{o}{.}\PY{n}{tail}\PY{p}{(}\PY{l+m+mi}{100}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\prompt{Out}{outcolor}{19}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+       index  longitude  latitude  housing\_median\_age  total\_rooms  \textbackslash{}
+20519  20519    -121.53     38.58                33.0       4988.0
+20520  20520    -121.53     38.58                35.0       1316.0
+20521  20521    -121.53     38.57                34.0       3395.0
+20522  20522    -121.54     38.54                36.0       1672.0
+20525  20525    -121.56     38.44                43.0       1485.0
+{\ldots}      {\ldots}        {\ldots}       {\ldots}                 {\ldots}          {\ldots}
+20634  20634    -121.56     39.27                28.0       2332.0
+20635  20635    -121.09     39.48                25.0       1665.0
+20637  20637    -121.22     39.43                17.0       2254.0
+20638  20638    -121.32     39.43                18.0       1860.0
+20639  20639    -121.24     39.37                16.0       2785.0
+
+       total\_bedrooms  population  households  median\_income  \textbackslash{}
+20519          1169.0      2414.0      1075.0         1.9728
+20520           321.0       732.0       336.0         2.1213
+20521           592.0      1518.0       627.0         4.0833
+20522           302.0       969.0       337.0         3.0536
+20525           270.0       653.0       251.0         3.0000
+{\ldots}               {\ldots}         {\ldots}         {\ldots}            {\ldots}
+20634           395.0      1041.0       344.0         3.7125
+20635           374.0       845.0       330.0         1.5603
+20637           485.0      1007.0       433.0         1.7000
+20638           409.0       741.0       349.0         1.8672
+20639           616.0      1387.0       530.0         2.3886
+
+       median\_house\_value ocean\_proximity         id
+20519             76400.0          INLAND -121491.42
+20520             79200.0          INLAND -121491.42
+20521            118500.0          INLAND -121491.43
+20522             73100.0          INLAND -121501.46
+20525            141700.0          INLAND -121521.56
+{\ldots}                   {\ldots}             {\ldots}        {\ldots}
+20634            116800.0          INLAND -121520.73
+20635             78100.0          INLAND -121050.52
+20637             92300.0          INLAND -121180.57
+20638             84700.0          INLAND -121280.57
+20639             89400.0          INLAND -121200.63
+
+[100 rows x 12 columns]
+\end{Verbatim}
+\end{tcolorbox}
+        
+    \hypertarget{ux901aux8fc7sklearnux5206ux5272ux6570ux636e}{%
+\subsection{5.通过sklearn分割数据}\label{ux901aux8fc7sklearnux5206ux5272ux6570ux636e}}
+
+\begin{itemize}
+\tightlist
+\item
+  sklearn只适用于数据不变的数据集
+\end{itemize}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{20}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{k+kn}{from} \PY{n+nn}{sklearn}\PY{n+nn}{.}\PY{n+nn}{model\PYZus{}selection} \PY{k+kn}{import} \PY{n}{train\PYZus{}test\PYZus{}split}
+\PY{c+c1}{\PYZsh{} test\PYZus{}size：分割比例  random\PYZus{}state：相当于随机种子号}
+\PY{n}{train\PYZus{}set}\PY{p}{,} \PY{n}{test\PYZus{}set} \PY{o}{=} \PY{n}{train\PYZus{}test\PYZus{}split}\PY{p}{(}\PY{n}{data\PYZus{}housing}\PY{p}{,} \PY{n}{test\PYZus{}size} \PY{o}{=} \PY{l+m+mf}{0.2}\PY{p}{,} \PY{n}{random\PYZus{}state} \PY{o}{=} \PY{l+m+mi}{42}\PY{p}{)}
+\PY{n}{train\PYZus{}set}\PY{o}{.}\PY{n}{head}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\prompt{Out}{outcolor}{20}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+       longitude  latitude  housing\_median\_age  total\_rooms  total\_bedrooms  \textbackslash{}
+14196    -117.03     32.71                33.0       3126.0           627.0
+8267     -118.16     33.77                49.0       3382.0           787.0
+17445    -120.48     34.66                 4.0       1897.0           331.0
+14265    -117.11     32.69                36.0       1421.0           367.0
+2271     -119.80     36.78                43.0       2382.0           431.0
+
+       population  households  median\_income  median\_house\_value  \textbackslash{}
+14196      2300.0       623.0         3.2596            103000.0
+8267       1314.0       756.0         3.8125            382100.0
+17445       915.0       336.0         4.1563            172600.0
+14265      1418.0       355.0         1.9425             93400.0
+2271        874.0       380.0         3.5542             96500.0
+
+      ocean\_proximity
+14196      NEAR OCEAN
+8267       NEAR OCEAN
+17445      NEAR OCEAN
+14265      NEAR OCEAN
+2271           INLAND
+\end{Verbatim}
+\end{tcolorbox}
+        
+    \hypertarget{ux4eceux6570ux636eux53efux89c6ux5316ux4e2dux63a2ux7d22ux6570ux636e}{%
+\subsection{从数据可视化中探索数据}\label{ux4eceux6570ux636eux53efux89c6ux5316ux4e2dux63a2ux7d22ux6570ux636e}}
+
+\#\#\# 分层采样 1. 创建一个收入类别属性 2. 每一层数据量适中 3.
+收入中位数除以1.5，限制收入类别数量，使用ceil取整，得到离散类别，将大于5的列合并为类别5
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{21}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{data\PYZus{}housing}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{income\PYZus{}cat}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{ceil}\PY{p}{(}\PY{n}{data\PYZus{}housing}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{median\PYZus{}income}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]} \PY{o}{/} \PY{l+m+mf}{1.5}\PY{p}{)}
+\PY{n}{data\PYZus{}housing}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{income\PYZus{}cat}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{o}{.}\PY{n}{head}\PY{p}{(}\PY{l+m+mi}{20}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\prompt{Out}{outcolor}{21}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+0     6.0
+1     6.0
+2     5.0
+3     4.0
+4     3.0
+5     3.0
+6     3.0
+7     3.0
+8     2.0
+9     3.0
+10    3.0
+11    3.0
+12    3.0
+13    2.0
+14    2.0
+15    2.0
+16    2.0
+17    2.0
+18    2.0
+19    2.0
+Name: income\_cat, dtype: float64
+\end{Verbatim}
+\end{tcolorbox}
+        
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{22}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{c+c1}{\PYZsh{} 1.使用where将大于5的值替换成5}
+\PY{n}{data\PYZus{}housing}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{income\PYZus{}cat}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{o}{.}\PY{n}{where}\PY{p}{(}\PY{n}{data\PYZus{}housing}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{income\PYZus{}cat}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]} \PY{o}{\PYZlt{}} \PY{l+m+mi}{5}\PY{p}{,} \PY{l+m+mf}{5.0}\PY{p}{,} \PY{n}{inplace} \PY{o}{=} \PY{k+kc}{True}\PY{p}{)}
+\PY{n}{data\PYZus{}housing}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{income\PYZus{}cat}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{o}{.}\PY{n}{head}\PY{p}{(}\PY{l+m+mi}{20}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\prompt{Out}{outcolor}{22}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+0     5.0
+1     5.0
+2     5.0
+3     4.0
+4     3.0
+5     3.0
+6     3.0
+7     3.0
+8     2.0
+9     3.0
+10    3.0
+11    3.0
+12    3.0
+13    2.0
+14    2.0
+15    2.0
+16    2.0
+17    2.0
+18    2.0
+19    2.0
+Name: income\_cat, dtype: float64
+\end{Verbatim}
+\end{tcolorbox}
+        
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{23}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{c+c1}{\PYZsh{} 2.把连续值转换成类别标签}
+\PY{n}{data\PYZus{}housing}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{income\PYZus{}cat}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]} \PY{o}{=} \PY{n}{pd}\PY{o}{.}\PY{n}{cut}\PY{p}{(}\PY{n}{data\PYZus{}housing}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{median\PYZus{}income}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{,} \PY{n}{bins} \PY{o}{=} \PY{p}{[}\PY{l+m+mf}{0.0}\PY{p}{,} \PY{l+m+mf}{1.5}\PY{p}{,} \PY{l+m+mf}{3.0}\PY{p}{,} \PY{l+m+mf}{4.5}\PY{p}{,} \PY{l+m+mf}{6.0}\PY{p}{,} \PY{n}{np}\PY{o}{.}\PY{n}{inf}\PY{p}{]}\PY{p}{,} \PY{n}{labels} \PY{o}{=} \PY{p}{[}\PY{l+m+mi}{1}\PY{p}{,} \PY{l+m+mi}{2}\PY{p}{,} \PY{l+m+mi}{3}\PY{p}{,} \PY{l+m+mi}{4}\PY{p}{,} \PY{l+m+mi}{5}\PY{p}{]}\PY{p}{)}
+\PY{n}{data\PYZus{}housing}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{income\PYZus{}cat}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{o}{.}\PY{n}{head}\PY{p}{(}\PY{l+m+mi}{20}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\prompt{Out}{outcolor}{23}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+0     5
+1     5
+2     5
+3     4
+4     3
+5     3
+6     3
+7     3
+8     2
+9     3
+10    3
+11    3
+12    3
+13    2
+14    2
+15    2
+16    2
+17    2
+18    2
+19    2
+Name: income\_cat, dtype: category
+Categories (5, int64): [1 < 2 < 3 < 4 < 5]
+\end{Verbatim}
+\end{tcolorbox}
+        
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{24}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{c+c1}{\PYZsh{} 统计不同类别有多少}
+\PY{n}{data\PYZus{}housing}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{income\PYZus{}cat}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{o}{.}\PY{n}{hist}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\prompt{Out}{outcolor}{24}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+<matplotlib.axes.\_subplots.AxesSubplot at 0x23bff0f9ac8>
+\end{Verbatim}
+\end{tcolorbox}
+        
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{特征工程_files/特征工程_30_1.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    \hypertarget{sklearnux5206ux5c42}{%
+\subsection{sklearn分层}\label{sklearnux5206ux5c42}}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{25}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{c+c1}{\PYZsh{} sklearn分层}
+\PY{k+kn}{from} \PY{n+nn}{sklearn}\PY{n+nn}{.}\PY{n+nn}{model\PYZus{}selection} \PY{k+kn}{import} \PY{n}{StratifiedShuffleSplit}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{26}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{c+c1}{\PYZsh{} 创建一个split对象。n\PYZus{}splits=1将数据分1份2：8，默认n\PYZus{}splits=10将数据分10份2：8}
+\PY{n}{split} \PY{o}{=} \PY{n}{StratifiedShuffleSplit}\PY{p}{(}\PY{n}{n\PYZus{}splits}\PY{o}{=}\PY{l+m+mi}{2}\PY{p}{,} \PY{n}{test\PYZus{}size} \PY{o}{=} \PY{l+m+mf}{0.2}\PY{p}{,} \PY{n}{random\PYZus{}state} \PY{o}{=} \PY{l+m+mi}{42}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{27}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{c+c1}{\PYZsh{} split(data, column) 以column分层， n\PYZus{}splits为n，循环进行n次}
+\PY{k}{for} \PY{n}{train\PYZus{}index}\PY{p}{,} \PY{n}{test\PYZus{}index} \PY{o+ow}{in} \PY{n}{split}\PY{o}{.}\PY{n}{split}\PY{p}{(}\PY{n}{data\PYZus{}housing}\PY{p}{,} \PY{n}{data\PYZus{}housing}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{income\PYZus{}cat}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{)}\PY{p}{:}
+    \PY{n}{strat\PYZus{}train\PYZus{}set} \PY{o}{=} \PY{n}{data\PYZus{}housing}\PY{o}{.}\PY{n}{loc}\PY{p}{[}\PY{n}{train\PYZus{}index}\PY{p}{]}
+    \PY{n}{strat\PYZus{}test\PYZus{}set} \PY{o}{=} \PY{n}{data\PYZus{}housing}\PY{o}{.}\PY{n}{loc}\PY{p}{[}\PY{n}{test\PYZus{}index}\PY{p}{]}
+    \PY{n+nb}{print}\PY{p}{(}\PY{n}{strat\PYZus{}train\PYZus{}set}\PY{o}{.}\PY{n}{shape}\PY{p}{,} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{ }\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{strat\PYZus{}test\PYZus{}set}\PY{o}{.}\PY{n}{shape}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+(16512, 11)   (4128, 11)
+(16512, 11)   (4128, 11)
+    \end{Verbatim}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{28}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{strat\PYZus{}train\PYZus{}set}\PY{o}{.}\PY{n}{shape}
+\end{Verbatim}
+\end{tcolorbox}
+
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\prompt{Out}{outcolor}{28}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+(16512, 11)
+\end{Verbatim}
+\end{tcolorbox}
+        
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{29}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{strat\PYZus{}train\PYZus{}set}\PY{o}{.}\PY{n}{head}\PY{p}{(}\PY{l+m+mi}{20}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\prompt{Out}{outcolor}{29}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+       longitude  latitude  housing\_median\_age  total\_rooms  total\_bedrooms  \textbackslash{}
+5288     -118.47     34.05                27.0       4401.0          1033.0
+12865    -121.34     38.69                17.0       1968.0           364.0
+9174     -118.52     34.39                21.0       5477.0          1275.0
+17247    -119.70     34.43                52.0       1364.0           460.0
+14138    -117.07     32.74                37.0       1042.0           205.0
+5722     -118.23     34.18                43.0       1708.0           280.0
+18559    -122.06     36.96                52.0         65.0            17.0
+18488    -121.59     36.97                16.0        865.0           123.0
+9796     -121.88     36.49                28.0       2830.0           458.0
+19705    -121.66     39.09                27.0       2098.0           372.0
+19422    -121.04     37.70                52.0        349.0            59.0
+10767    -117.90     33.63                28.0       2370.0           352.0
+5227     -118.25     33.93                42.0        819.0           233.0
+20336    -118.96     34.23                14.0      15207.0          2924.0
+12284    -116.81     33.90                17.0       2009.0           469.0
+19497    -121.00     37.66                43.0       2039.0           331.0
+1828     -122.31     37.92                12.0       1895.0           600.0
+4443     -118.21     34.09                37.0       1822.0           498.0
+19911    -119.31     36.32                44.0       2032.0           308.0
+3357     -120.65     40.42                39.0       3240.0           652.0
+
+       population  households  median\_income  median\_house\_value  \textbackslash{}
+5288       1725.0       962.0         4.1750            500001.0
+12865       996.0       331.0         3.7031            114300.0
+9174       3384.0      1222.0         3.6625            228100.0
+17247       804.0       400.0         2.3750            293800.0
+14138       589.0       208.0         2.6629            116900.0
+5722        768.0       276.0         6.2070            457400.0
+18559        24.0        10.0         4.5000            258300.0
+18488       403.0       130.0         5.7396            308700.0
+9796        898.0       370.0         5.8142            500001.0
+19705      1090.0       333.0         4.4500             96200.0
+19422       121.0        40.0         3.3036            197500.0
+10767       832.0       347.0         7.1148            500001.0
+5227        899.0       228.0         1.1346             85400.0
+20336      6301.0      2829.0         3.9699            217000.0
+12284       820.0       381.0         1.3286             81800.0
+19497       875.0       342.0         3.9844            152000.0
+1828        983.0       519.0         2.5000            195800.0
+4443       1961.0       506.0         1.9881            159200.0
+19911       791.0       336.0         4.0298            109000.0
+3357       1467.0       621.0         2.1875             64300.0
+
+      ocean\_proximity income\_cat
+5288        <1H OCEAN          3
+12865          INLAND          3
+9174        <1H OCEAN          3
+17247       <1H OCEAN          2
+14138      NEAR OCEAN          2
+5722        <1H OCEAN          5
+18559      NEAR OCEAN          3
+18488          INLAND          4
+9796       NEAR OCEAN          4
+19705          INLAND          3
+19422          INLAND          3
+10767       <1H OCEAN          5
+5227        <1H OCEAN          1
+20336       <1H OCEAN          3
+12284          INLAND          1
+19497          INLAND          3
+1828         NEAR BAY          2
+4443        <1H OCEAN          2
+19911          INLAND          3
+3357           INLAND          2
+\end{Verbatim}
+\end{tcolorbox}
+        
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{30}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{c+c1}{\PYZsh{} 查看测试集的分层}
+\PY{n}{strat\PYZus{}train\PYZus{}set}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{income\PYZus{}cat}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{o}{.}\PY{n}{hist}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\prompt{Out}{outcolor}{30}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+<matplotlib.axes.\_subplots.AxesSubplot at 0x23bff443288>
+\end{Verbatim}
+\end{tcolorbox}
+        
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{特征工程_files/特征工程_37_1.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{31}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{c+c1}{\PYZsh{} 查看百分比}
+\PY{n}{strat\PYZus{}train\PYZus{}set}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{income\PYZus{}cat}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{o}{.}\PY{n}{value\PYZus{}counts}\PY{p}{(}\PY{p}{)}\PY{o}{/}\PY{n+nb}{len}\PY{p}{(}\PY{n}{strat\PYZus{}train\PYZus{}set}\PY{p}{)} \PY{c+c1}{\PYZsh{} 分层抽样测试集合}
+\end{Verbatim}
+\end{tcolorbox}
+
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\prompt{Out}{outcolor}{31}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+3    0.350594
+2    0.318859
+4    0.176296
+5    0.114402
+1    0.039850
+Name: income\_cat, dtype: float64
+\end{Verbatim}
+\end{tcolorbox}
+        
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{32}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{data\PYZus{}housing}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{income\PYZus{}cat}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{o}{.}\PY{n}{value\PYZus{}counts}\PY{p}{(}\PY{p}{)} \PY{o}{/} \PY{n+nb}{len}\PY{p}{(}\PY{n}{data\PYZus{}housing}\PY{p}{)}  \PY{c+c1}{\PYZsh{} 与完整数据集合对比}
+\end{Verbatim}
+\end{tcolorbox}
+
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\prompt{Out}{outcolor}{32}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+3    0.350581
+2    0.318847
+4    0.176308
+5    0.114438
+1    0.039826
+Name: income\_cat, dtype: float64
+\end{Verbatim}
+\end{tcolorbox}
+        
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{33}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{k}{def} \PY{n+nf}{income\PYZus{}cat\PYZus{}proportions}\PY{p}{(}\PY{n}{data}\PY{p}{)}\PY{p}{:}
+    \PY{k}{return} \PY{n}{data}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{income\PYZus{}cat}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{o}{.}\PY{n}{value\PYZus{}counts}\PY{p}{(}\PY{p}{)} \PY{o}{/} \PY{n+nb}{len}\PY{p}{(}\PY{n}{data}\PY{p}{)}
+
+\PY{n}{train\PYZus{}set}\PY{p}{,} \PY{n}{test\PYZus{}set} \PY{o}{=} \PY{n}{train\PYZus{}test\PYZus{}split}\PY{p}{(}\PY{n}{data\PYZus{}housing}\PY{p}{,} \PY{n}{test\PYZus{}size} \PY{o}{=} \PY{l+m+mf}{0.2}\PY{p}{,} \PY{n}{random\PYZus{}state}\PY{o}{=}\PY{l+m+mi}{42}\PY{p}{)}
+
+\PY{n}{compare\PYZus{}props} \PY{o}{=} \PY{n}{pd}\PY{o}{.}\PY{n}{DataFrame}\PY{p}{(}\PY{p}{\PYZob{}}
+    \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{全部数据}\PY{l+s+s2}{\PYZdq{}}\PY{p}{:} \PY{n}{income\PYZus{}cat\PYZus{}proportions}\PY{p}{(}\PY{n}{data\PYZus{}housing}\PY{p}{)}\PY{p}{,}
+    \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{分层抽样}\PY{l+s+s2}{\PYZdq{}}\PY{p}{:} \PY{n}{income\PYZus{}cat\PYZus{}proportions}\PY{p}{(}\PY{n}{strat\PYZus{}test\PYZus{}set}\PY{p}{)}\PY{p}{,}
+    \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{随机抽样}\PY{l+s+s2}{\PYZdq{}}\PY{p}{:} \PY{n}{income\PYZus{}cat\PYZus{}proportions}\PY{p}{(}\PY{n}{test\PYZus{}set}\PY{p}{)}\PY{p}{,}
+\PY{p}{\PYZcb{}}\PY{p}{)}\PY{o}{.}\PY{n}{sort\PYZus{}index}\PY{p}{(}\PY{p}{)}
+\PY{n}{compare\PYZus{}props}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{随机. }\PY{l+s+si}{\PYZpc{}e}\PY{l+s+s2}{rror}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]} \PY{o}{=} \PY{l+m+mi}{100} \PY{o}{*} \PY{n}{compare\PYZus{}props}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{随机抽样}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]} \PY{o}{/} \PY{n}{compare\PYZus{}props}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{全部数据}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]} \PY{o}{\PYZhy{}} \PY{l+m+mi}{100}
+\PY{n}{compare\PYZus{}props}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{分层. }\PY{l+s+si}{\PYZpc{}e}\PY{l+s+s2}{rror}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]} \PY{o}{=} \PY{l+m+mi}{100} \PY{o}{*} \PY{n}{compare\PYZus{}props}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{分层抽样}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]} \PY{o}{/} \PY{n}{compare\PYZus{}props}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{全部数据}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]} \PY{o}{\PYZhy{}} \PY{l+m+mi}{100}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{34}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{compare\PYZus{}props}
+\end{Verbatim}
+\end{tcolorbox}
+
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\prompt{Out}{outcolor}{34}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+       全部数据      分层抽样      随机抽样  随机. \%error  分层. \%error
+1  0.039826  0.039729  0.040213    0.973236   -0.243309
+2  0.318847  0.318798  0.324370    1.732260   -0.015195
+3  0.350581  0.350533  0.358527    2.266446   -0.013820
+4  0.176308  0.176357  0.167393   -5.056334    0.027480
+5  0.114438  0.114583  0.109496   -4.318374    0.127011
+\end{Verbatim}
+\end{tcolorbox}
+        
+    \hypertarget{ux5c06ux5730ux7406ux6570ux636eux53efux89c6ux5316}{%
+\subsection{将地理数据可视化}\label{ux5c06ux5730ux7406ux6570ux636eux53efux89c6ux5316}}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{35}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{data\PYZus{}housing}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{kind}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{scatter}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{x}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{longitude}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{y}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{latitude}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\prompt{Out}{outcolor}{35}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+<matplotlib.axes.\_subplots.AxesSubplot at 0x23bff0f6248>
+\end{Verbatim}
+\end{tcolorbox}
+        
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{特征工程_files/特征工程_43_1.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{36}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{data\PYZus{}housing}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{kind}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{scatter}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{x}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{longitude}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{y}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{latitude}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{n}{alpha}\PY{o}{=}\PY{l+m+mf}{0.1}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\prompt{Out}{outcolor}{36}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+<matplotlib.axes.\_subplots.AxesSubplot at 0x23bfed5a608>
+\end{Verbatim}
+\end{tcolorbox}
+        
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{特征工程_files/特征工程_44_1.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{37}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{c+c1}{\PYZsh{} alpha为透明度}
+\PY{c+c1}{\PYZsh{} s为size，根据\PYZdq{}population\PYZdq{}设置大小}
+\PY{c+c1}{\PYZsh{} cmap为颜色图，根据c=\PYZdq{}median\PYZus{}house\PYZus{}value\PYZdq{}设置颜色渐变，jet为渐变类型}
+\PY{n}{data\PYZus{}housing}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{kind}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{scatter}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{x}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{longitude}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{y}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{latitude}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{n}{alpha}\PY{o}{=}\PY{l+m+mf}{0.4}\PY{p}{,}
+                 \PY{n}{s}\PY{o}{=}\PY{n}{data\PYZus{}housing}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{population}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{o}{/}\PY{l+m+mi}{100}\PY{p}{,} \PY{n}{label}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{population}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{figsize}\PY{o}{=}\PY{p}{(}\PY{l+m+mi}{10}\PY{p}{,} \PY{l+m+mi}{7}\PY{p}{)}\PY{p}{,}
+                  \PY{n}{c}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{median\PYZus{}house\PYZus{}value}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{cmap}\PY{o}{=}\PY{n}{plt}\PY{o}{.}\PY{n}{get\PYZus{}cmap}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{jet}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}\PY{p}{,} \PY{n}{colorbar}\PY{o}{=}\PY{k+kc}{True}\PY{p}{,}
+                  \PY{n}{sharex}\PY{o}{=}\PY{k+kc}{False}
+                 \PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\prompt{Out}{outcolor}{37}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+<matplotlib.axes.\_subplots.AxesSubplot at 0x23bff182788>
+\end{Verbatim}
+\end{tcolorbox}
+        
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{特征工程_files/特征工程_45_1.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{38}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{k+kn}{import} \PY{n+nn}{matplotlib}\PY{n+nn}{.}\PY{n+nn}{image} \PY{k}{as} \PY{n+nn}{mpimg}
+
+\PY{c+c1}{\PYZsh{}\PYZsh{}\PYZsh{} 1.绘制散点图}
+\PY{c+c1}{\PYZsh{} alpha为透明度}
+\PY{c+c1}{\PYZsh{} s为size，根据\PYZdq{}population\PYZdq{}设置大小}
+\PY{c+c1}{\PYZsh{} cmap为颜色图，根据c=\PYZdq{}median\PYZus{}house\PYZus{}value\PYZdq{}设置颜色渐变，jet为渐变类型}
+\PY{c+c1}{\PYZsh{} colorbar=True为显示颜色条}
+\PY{n}{data\PYZus{}housing}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{kind}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{scatter}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{x}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{longitude}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{y}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{latitude}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{n}{alpha}\PY{o}{=}\PY{l+m+mf}{0.4}\PY{p}{,}
+                 \PY{n}{s}\PY{o}{=}\PY{n}{data\PYZus{}housing}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{population}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{o}{/}\PY{l+m+mi}{100}\PY{p}{,} \PY{n}{label}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{population}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{figsize}\PY{o}{=}\PY{p}{(}\PY{l+m+mi}{10}\PY{p}{,} \PY{l+m+mi}{7}\PY{p}{)}\PY{p}{,}
+                  \PY{n}{c}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{median\PYZus{}house\PYZus{}value}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{cmap}\PY{o}{=}\PY{n}{plt}\PY{o}{.}\PY{n}{get\PYZus{}cmap}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{jet}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}\PY{p}{,} \PY{n}{colorbar}\PY{o}{=}\PY{k+kc}{False}\PY{p}{,}
+                  \PY{n}{sharex}\PY{o}{=}\PY{k+kc}{False}
+                 \PY{p}{)}
+
+\PY{c+c1}{\PYZsh{}\PYZsh{}\PYZsh{} 2.添加地理背景图}
+\PY{n}{california\PYZus{}img} \PY{o}{=} \PY{n}{mpimg}\PY{o}{.}\PY{n}{imread}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{./california.png}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+\PY{c+c1}{\PYZsh{} extent为（X起点，X终点，Y起点，Y终点）}
+\PY{n}{plt}\PY{o}{.}\PY{n}{imshow}\PY{p}{(}\PY{n}{california\PYZus{}img}\PY{p}{,} \PY{n}{extent}\PY{o}{=}\PY{p}{[}\PY{o}{\PYZhy{}}\PY{l+m+mf}{124.55}\PY{p}{,} \PY{o}{\PYZhy{}}\PY{l+m+mf}{113.80}\PY{p}{,} \PY{l+m+mf}{32.45}\PY{p}{,} \PY{l+m+mf}{42.05}\PY{p}{]}\PY{p}{,} \PY{n}{alpha}\PY{o}{=}\PY{l+m+mf}{0.5}\PY{p}{,}
+          \PY{n}{cmap}\PY{o}{=}\PY{n}{plt}\PY{o}{.}\PY{n}{get\PYZus{}cmap}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{jet}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}\PY{p}{)}
+
+\PY{c+c1}{\PYZsh{}\PYZsh{}\PYZsh{} 3.构建价格渐变条}
+\PY{n}{prices} \PY{o}{=} \PY{n}{data\PYZus{}housing}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{median\PYZus{}house\PYZus{}value}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]}  \PY{c+c1}{\PYZsh{} 使用价格中位数列}
+\PY{n}{tick\PYZus{}values} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{linspace}\PY{p}{(}\PY{n}{prices}\PY{o}{.}\PY{n}{min}\PY{p}{(}\PY{p}{)}\PY{p}{,} \PY{n}{prices}\PY{o}{.}\PY{n}{max}\PY{p}{(}\PY{p}{)}\PY{p}{,} \PY{l+m+mi}{11}\PY{p}{)}  \PY{c+c1}{\PYZsh{} 将价格分为一个等差列表}
+\PY{n}{cbar} \PY{o}{=} \PY{n}{plt}\PY{o}{.}\PY{n}{colorbar}\PY{p}{(}\PY{p}{)}
+\PY{c+c1}{\PYZsh{} 使用等差列表构建一个label}
+\PY{n}{cbar}\PY{o}{.}\PY{n}{ax}\PY{o}{.}\PY{n}{set\PYZus{}yticklabels}\PY{p}{(}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{\PYZdl{}}\PY{l+s+si}{\PYZpc{}d}\PY{l+s+s2}{k}\PY{l+s+s2}{\PYZdq{}}\PY{o}{\PYZpc{}}\PY{p}{(}\PY{n+nb}{round}\PY{p}{(}\PY{n}{v}\PY{o}{/}\PY{l+m+mi}{1000}\PY{p}{)}\PY{p}{)} \PY{k}{for} \PY{n}{v} \PY{o+ow}{in} \PY{n}{tick\PYZus{}values}\PY{p}{]}\PY{p}{,} \PY{n}{fontsize}\PY{o}{=}\PY{l+m+mi}{14}\PY{p}{)}  \PY{c+c1}{\PYZsh{} round()返回四舍五入的小数}
+\PY{n}{cbar}\PY{o}{.}\PY{n}{set\PYZus{}label}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Median House Value}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{fontsize}\PY{o}{=}\PY{l+m+mi}{16}\PY{p}{)}
+
+\PY{c+c1}{\PYZsh{}\PYZsh{}\PYZsh{} 4.显示图片}
+\PY{n}{plt}\PY{o}{.}\PY{n}{ylabel}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Latitude}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{fontsize}\PY{o}{=}\PY{l+m+mi}{14}\PY{p}{)}
+\PY{n}{plt}\PY{o}{.}\PY{n}{xlabel}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Longitude}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{fontsize}\PY{o}{=}\PY{l+m+mi}{14}\PY{p}{)}
+\PY{n}{plt}\PY{o}{.}\PY{n}{legend}\PY{p}{(}\PY{n}{fontsize}\PY{o}{=}\PY{l+m+mi}{16}\PY{p}{)}
+\PY{n}{plt}\PY{o}{.}\PY{n}{show}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{特征工程_files/特征工程_46_0.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    \hypertarget{ux5bfbux627eux7279ux5f81ux76f8ux5173ux6027}{%
+\subsection{寻找特征相关性}\label{ux5bfbux627eux7279ux5f81ux76f8ux5173ux6027}}
+
+    \hypertarget{ux76aeux5c14ux900aux76f8ux5173ux7cfbux6570}{%
+\paragraph{皮尔逊相关系数}\label{ux76aeux5c14ux900aux76f8ux5173ux7cfbux6570}}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{39}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{c+c1}{\PYZsh{} corr() 计算出每对特征之间的相关系数，成为皮尔逊相关系数}
+\PY{c+c1}{\PYZsh{} 皮尔逊相关系数：\PYZhy{}1 \PYZti{} 0 \PYZti{} 1    负相关\PYZti{}不相关\PYZti{}正相关}
+\PY{n}{corr\PYZus{}matrix} \PY{o}{=} \PY{n}{data\PYZus{}housing}\PY{o}{.}\PY{n}{corr}\PY{p}{(}\PY{p}{)}
+\PY{n}{corr\PYZus{}matrix}
+\end{Verbatim}
+\end{tcolorbox}
+
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\prompt{Out}{outcolor}{39}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+                    longitude  latitude  housing\_median\_age  total\_rooms  \textbackslash{}
+longitude            1.000000 -0.924664           -0.108197     0.044568
+latitude            -0.924664  1.000000            0.011173    -0.036100
+housing\_median\_age  -0.108197  0.011173            1.000000    -0.361262
+total\_rooms          0.044568 -0.036100           -0.361262     1.000000
+total\_bedrooms       0.069608 -0.066983           -0.320451     0.930380
+population           0.099773 -0.108785           -0.296244     0.857126
+households           0.055310 -0.071035           -0.302916     0.918484
+median\_income       -0.015176 -0.079809           -0.119034     0.198050
+median\_house\_value  -0.045967 -0.144160            0.105623     0.134153
+
+                    total\_bedrooms  population  households  median\_income  \textbackslash{}
+longitude                 0.069608    0.099773    0.055310      -0.015176
+latitude                 -0.066983   -0.108785   -0.071035      -0.079809
+housing\_median\_age       -0.320451   -0.296244   -0.302916      -0.119034
+total\_rooms               0.930380    0.857126    0.918484       0.198050
+total\_bedrooms            1.000000    0.877747    0.979728      -0.007723
+population                0.877747    1.000000    0.907222       0.004834
+households                0.979728    0.907222    1.000000       0.013033
+median\_income            -0.007723    0.004834    0.013033       1.000000
+median\_house\_value        0.049686   -0.024650    0.065843       0.688075
+
+                    median\_house\_value
+longitude                    -0.045967
+latitude                     -0.144160
+housing\_median\_age            0.105623
+total\_rooms                   0.134153
+total\_bedrooms                0.049686
+population                   -0.024650
+households                    0.065843
+median\_income                 0.688075
+median\_house\_value            1.000000
+\end{Verbatim}
+\end{tcolorbox}
+        
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{40}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{corr\PYZus{}matrix}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{median\PYZus{}house\PYZus{}value}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{o}{.}\PY{n}{sort\PYZus{}values}\PY{p}{(}\PY{n}{ascending} \PY{o}{=} \PY{k+kc}{False}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\prompt{Out}{outcolor}{40}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+median\_house\_value    1.000000
+median\_income         0.688075
+total\_rooms           0.134153
+housing\_median\_age    0.105623
+households            0.065843
+total\_bedrooms        0.049686
+population           -0.024650
+longitude            -0.045967
+latitude             -0.144160
+Name: median\_house\_value, dtype: float64
+\end{Verbatim}
+\end{tcolorbox}
+        
+    \hypertarget{ux7ed8ux5236ux7279ux5f81ux76f8ux5173ux6027}{%
+\paragraph{绘制特征相关性}\label{ux7ed8ux5236ux7279ux5f81ux76f8ux5173ux6027}}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{41}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{c+c1}{\PYZsh{} 使用pandas scatter\PYZus{}matrix 函数，可以绘制特征之间的相关性}
+\PY{k+kn}{from} \PY{n+nn}{pandas}\PY{n+nn}{.}\PY{n+nn}{plotting} \PY{k+kn}{import} \PY{n}{scatter\PYZus{}matrix}
+
+\PY{n}{attributes} \PY{o}{=} \PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{median\PYZus{}house\PYZus{}value}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{median\PYZus{}income}\PY{l+s+s1}{\PYZsq{}} \PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{total\PYZus{}rooms}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{housing\PYZus{}median\PYZus{}age}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}
+\PY{n}{scatter\PYZus{}matrix}\PY{p}{(}\PY{n}{data\PYZus{}housing}\PY{p}{[}\PY{n}{attributes}\PY{p}{]}\PY{p}{,} \PY{n}{figsize} \PY{o}{=} \PY{p}{(}\PY{l+m+mi}{12}\PY{p}{,} \PY{l+m+mi}{8}\PY{p}{)}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\prompt{Out}{outcolor}{41}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+array([[<matplotlib.axes.\_subplots.AxesSubplot object at 0x0000023BFF355848>,
+        <matplotlib.axes.\_subplots.AxesSubplot object at 0x0000023BFF11D948>,
+        <matplotlib.axes.\_subplots.AxesSubplot object at 0x0000023BFEFA41C8>,
+        <matplotlib.axes.\_subplots.AxesSubplot object at 0x0000023BFF032B88>],
+       [<matplotlib.axes.\_subplots.AxesSubplot object at 0x0000023BFF4C7908>,
+        <matplotlib.axes.\_subplots.AxesSubplot object at 0x0000023BFEF37A08>,
+        <matplotlib.axes.\_subplots.AxesSubplot object at 0x0000023BFF47CAC8>,
+        <matplotlib.axes.\_subplots.AxesSubplot object at 0x0000023BFEE6FBC8>],
+       [<matplotlib.axes.\_subplots.AxesSubplot object at 0x0000023BFEE5E7C8>,
+        <matplotlib.axes.\_subplots.AxesSubplot object at 0x0000023BFEEE0988>,
+        <matplotlib.axes.\_subplots.AxesSubplot object at 0x0000023BFEDF1F08>,
+        <matplotlib.axes.\_subplots.AxesSubplot object at 0x0000023BFEDC3FC8>],
+       [<matplotlib.axes.\_subplots.AxesSubplot object at 0x0000023BFEE3A148>,
+        <matplotlib.axes.\_subplots.AxesSubplot object at 0x0000023B80307248>,
+        <matplotlib.axes.\_subplots.AxesSubplot object at 0x0000023B8033F348>,
+        <matplotlib.axes.\_subplots.AxesSubplot object at 0x0000023B80376488>]],
+      dtype=object)
+\end{Verbatim}
+\end{tcolorbox}
+        
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{特征工程_files/特征工程_52_1.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{42}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{data\PYZus{}housing}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{kind} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{scatter}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{n}{x}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{median\PYZus{}income}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{y} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{median\PYZus{}house\PYZus{}value}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{alpha} \PY{o}{=} \PY{l+m+mf}{0.1}\PY{p}{)}
+\PY{n}{plt}\PY{o}{.}\PY{n}{axis}\PY{p}{(}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{,} \PY{l+m+mi}{16}\PY{p}{,} \PY{l+m+mi}{0}\PY{p}{,} \PY{l+m+mi}{550000}\PY{p}{]}\PY{p}{)}
+\PY{c+c1}{\PYZsh{} 50W直线为人为设置的上限，45w，35W，28W也有虚线，可能是异常值，后期处理删除异常值}
+\end{Verbatim}
+\end{tcolorbox}
+
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\prompt{Out}{outcolor}{42}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+[0, 16, 0, 550000]
+\end{Verbatim}
+\end{tcolorbox}
+        
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{特征工程_files/特征工程_53_1.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    \hypertarget{ux4e0dux540cux7279ux5f81ux7684ux7ec4ux5408ux76f8ux5173ux6027}{%
+\paragraph{不同特征的组合相关性}\label{ux4e0dux540cux7279ux5f81ux7684ux7ec4ux5408ux76f8ux5173ux6027}}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{43}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{data\PYZus{}housing}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{rooms\PYZus{}per\PYZus{}household}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]} \PY{o}{=} \PY{n}{data\PYZus{}housing}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{total\PYZus{}rooms}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{o}{/}\PY{n}{data\PYZus{}housing}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{households}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}
+\PY{n}{data\PYZus{}housing}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{bedrooms\PYZus{}per\PYZus{}room}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]} \PY{o}{=} \PY{n}{data\PYZus{}housing}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{total\PYZus{}bedrooms}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{o}{/}\PY{n}{data\PYZus{}housing}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{total\PYZus{}rooms}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}
+\PY{n}{data\PYZus{}housing}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{population\PYZus{}per\PYZus{}household}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]} \PY{o}{=} \PY{n}{data\PYZus{}housing}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{population}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{o}{/}\PY{n}{data\PYZus{}housing}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{households}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{44}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{corr\PYZus{}matrix} \PY{o}{=} \PY{n}{data\PYZus{}housing}\PY{o}{.}\PY{n}{corr}\PY{p}{(}\PY{p}{)}
+\PY{n}{corr\PYZus{}matrix}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{median\PYZus{}house\PYZus{}value}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{o}{.}\PY{n}{sort\PYZus{}values}\PY{p}{(}\PY{n}{ascending} \PY{o}{=} \PY{k+kc}{False}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\prompt{Out}{outcolor}{44}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+median\_house\_value          1.000000
+median\_income               0.688075
+rooms\_per\_household         0.151948
+total\_rooms                 0.134153
+housing\_median\_age          0.105623
+households                  0.065843
+total\_bedrooms              0.049686
+population\_per\_household   -0.023737
+population                 -0.024650
+longitude                  -0.045967
+latitude                   -0.144160
+bedrooms\_per\_room          -0.255880
+Name: median\_house\_value, dtype: float64
+\end{Verbatim}
+\end{tcolorbox}
+        
+    \hypertarget{ux673aux5668ux5b66ux4e60ux7b97ux6cd5ux7684ux6570ux636eux51c6ux5907}{%
+\section{机器学习算法的数据准备}\label{ux673aux5668ux5b66ux4e60ux7b97ux6cd5ux7684ux6570ux636eux51c6ux5907}}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{45}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{c+c1}{\PYZsh{} 得到一个分层抽样代表全局数据集的 训练集和测试集}
+\PY{n}{strat\PYZus{}train\PYZus{}set}\PY{o}{.}\PY{n}{head}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\prompt{Out}{outcolor}{45}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+       longitude  latitude  housing\_median\_age  total\_rooms  total\_bedrooms  \textbackslash{}
+5288     -118.47     34.05                27.0       4401.0          1033.0
+12865    -121.34     38.69                17.0       1968.0           364.0
+9174     -118.52     34.39                21.0       5477.0          1275.0
+17247    -119.70     34.43                52.0       1364.0           460.0
+14138    -117.07     32.74                37.0       1042.0           205.0
+
+       population  households  median\_income  median\_house\_value  \textbackslash{}
+5288       1725.0       962.0         4.1750            500001.0
+12865       996.0       331.0         3.7031            114300.0
+9174       3384.0      1222.0         3.6625            228100.0
+17247       804.0       400.0         2.3750            293800.0
+14138       589.0       208.0         2.6629            116900.0
+
+      ocean\_proximity income\_cat
+5288        <1H OCEAN          3
+12865          INLAND          3
+9174        <1H OCEAN          3
+17247       <1H OCEAN          2
+14138      NEAR OCEAN          2
+\end{Verbatim}
+\end{tcolorbox}
+        
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{46}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{c+c1}{\PYZsh{} 将数据集的数据和标签分开}
+\PY{n}{housing\PYZus{}labels} \PY{o}{=} \PY{n}{strat\PYZus{}train\PYZus{}set}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{median\PYZus{}house\PYZus{}value}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{o}{.}\PY{n}{copy}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{47}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{housing} \PY{o}{=} \PY{n}{strat\PYZus{}train\PYZus{}set}\PY{o}{.}\PY{n}{drop}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{median\PYZus{}house\PYZus{}value}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{axis} \PY{o}{=} \PY{l+m+mi}{1}\PY{p}{)}
+\PY{n}{housing}\PY{o}{.}\PY{n}{head}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\prompt{Out}{outcolor}{47}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+       longitude  latitude  housing\_median\_age  total\_rooms  total\_bedrooms  \textbackslash{}
+5288     -118.47     34.05                27.0       4401.0          1033.0
+12865    -121.34     38.69                17.0       1968.0           364.0
+9174     -118.52     34.39                21.0       5477.0          1275.0
+17247    -119.70     34.43                52.0       1364.0           460.0
+14138    -117.07     32.74                37.0       1042.0           205.0
+
+       population  households  median\_income ocean\_proximity income\_cat
+5288       1725.0       962.0         4.1750       <1H OCEAN          3
+12865       996.0       331.0         3.7031          INLAND          3
+9174       3384.0      1222.0         3.6625       <1H OCEAN          3
+17247       804.0       400.0         2.3750       <1H OCEAN          2
+14138       589.0       208.0         2.6629      NEAR OCEAN          2
+\end{Verbatim}
+\end{tcolorbox}
+        
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{48}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{housing}\PY{o}{.}\PY{n}{info}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+<class 'pandas.core.frame.DataFrame'>
+Int64Index: 16512 entries, 5288 to 18453
+Data columns (total 10 columns):
+longitude             16512 non-null float64
+latitude              16512 non-null float64
+housing\_median\_age    16512 non-null float64
+total\_rooms           16512 non-null float64
+total\_bedrooms        16348 non-null float64
+population            16512 non-null float64
+households            16512 non-null float64
+median\_income         16512 non-null float64
+ocean\_proximity       16512 non-null object
+income\_cat            16512 non-null category
+dtypes: category(1), float64(8), object(1)
+memory usage: 1.3+ MB
+    \end{Verbatim}
+
+    \hypertarget{ux6570ux636eux6e05ux6d17}{%
+\subsection{数据清洗}\label{ux6570ux636eux6e05ux6d17}}
+
+\begin{itemize}
+\tightlist
+\item
+  大多数机器学习算法无法在缺失的特征上工作，所以创建一些函数复制
+\item
+  total\_bedrooms有缺失，可以放弃这些区域或放弃这个属性
+\item
+  最好将缺失值设置为某个值（0，平均值或者中位数都可以）
+\end{itemize}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{49}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{c+c1}{\PYZsh{} isnull() 会返回一个包含True\PYZbs{}False的列，any可以将其取出，axis=1按列取出}
+\PY{n}{rows} \PY{o}{=} \PY{n}{housing}\PY{p}{[}\PY{n}{housing}\PY{o}{.}\PY{n}{isnull}\PY{p}{(}\PY{p}{)}\PY{o}{.}\PY{n}{any}\PY{p}{(}\PY{n}{axis} \PY{o}{=} \PY{l+m+mi}{1}\PY{p}{)}\PY{p}{]}
+\PY{n}{rows}\PY{o}{.}\PY{n}{head}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\prompt{Out}{outcolor}{49}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+       longitude  latitude  housing\_median\_age  total\_rooms  total\_bedrooms  \textbackslash{}
+19890    -119.15     36.29                18.0       1435.0             NaN
+15607    -116.66     32.79                13.0        843.0             NaN
+15479    -117.14     33.16                16.0       1660.0             NaN
+10495    -117.66     33.51                18.0       2626.0             NaN
+19060    -122.41     38.16                37.0       1549.0             NaN
+
+       population  households  median\_income ocean\_proximity income\_cat
+19890       657.0       254.0         2.4281          INLAND          2
+15607       918.0       152.0         6.2152       <1H OCEAN          5
+15479       733.0       214.0         5.6874       <1H OCEAN          4
+10495      1302.0       522.0         4.0167       <1H OCEAN          3
+19060       863.0       275.0         2.7457        NEAR BAY          2
+\end{Verbatim}
+\end{tcolorbox}
+        
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{50}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{c+c1}{\PYZsh{} \PYZsh{} 去除bedrooms为空的列}
+\PY{c+c1}{\PYZsh{} rows.dropna(subset = [\PYZsq{}total\PYZus{}bedrooms\PYZsq{}])}
+\PY{c+c1}{\PYZsh{} \PYZsh{} 放弃这个属性}
+\PY{c+c1}{\PYZsh{} rows.drop(\PYZsq{}total\PYZus{}bedrooms\PYZsq{}, axis = 1)}
+
+\PY{c+c1}{\PYZsh{} 指定值}
+\PY{c+c1}{\PYZsh{} 创建一个imputer实例，指定你要用属性中的中位数替换该属性的缺失值}
+\PY{k+kn}{from} \PY{n+nn}{sklearn}\PY{n+nn}{.}\PY{n+nn}{impute} \PY{k+kn}{import} \PY{n}{SimpleImputer}
+
+\PY{n}{imputer} \PY{o}{=} \PY{n}{SimpleImputer}\PY{p}{(}\PY{n}{strategy} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{median}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+
+\PY{n}{housing\PYZus{}num} \PY{o}{=} \PY{n}{housing}\PY{o}{.}\PY{n}{drop}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{ocean\PYZus{}proximity}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{axis} \PY{o}{=} \PY{l+m+mi}{1}\PY{p}{)}  \PY{c+c1}{\PYZsh{} 删除非数字的列}
+
+\PY{c+c1}{\PYZsh{} 使用fit()方法将imputer实例适配到训练集}
+\PY{n}{imputer}\PY{o}{.}\PY{n}{fit}\PY{p}{(}\PY{n}{housing\PYZus{}num}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\prompt{Out}{outcolor}{50}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+SimpleImputer(add\_indicator=False, copy=True, fill\_value=None,
+              missing\_values=nan, strategy='median', verbose=0)
+\end{Verbatim}
+\end{tcolorbox}
+        
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{51}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{c+c1}{\PYZsh{} 查看到9个特征的中位数}
+\PY{n}{imputer}\PY{o}{.}\PY{n}{statistics\PYZus{}}
+\end{Verbatim}
+\end{tcolorbox}
+
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\prompt{Out}{outcolor}{51}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+array([-118.49  ,   34.26  ,   29.    , 2123.5   ,  434.    , 1166.    ,
+        409.    ,    3.5341,    3.    ])
+\end{Verbatim}
+\end{tcolorbox}
+        
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{52}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{c+c1}{\PYZsh{} 查看数据源的中位数}
+\PY{n}{housing\PYZus{}num}\PY{o}{.}\PY{n}{median}\PY{p}{(}\PY{p}{)}\PY{o}{.}\PY{n}{values}
+\end{Verbatim}
+\end{tcolorbox}
+
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\prompt{Out}{outcolor}{52}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+array([-118.49  ,   34.26  ,   29.    , 2123.5   ,  434.    , 1166.    ,
+        409.    ,    3.5341,    3.    ])
+\end{Verbatim}
+\end{tcolorbox}
+        
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{53}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{c+c1}{\PYZsh{} 转换数据集}
+\PY{n}{X} \PY{o}{=} \PY{n}{imputer}\PY{o}{.}\PY{n}{transform}\PY{p}{(}\PY{n}{housing\PYZus{}num}\PY{p}{)}
+\PY{n}{X}
+\end{Verbatim}
+\end{tcolorbox}
+
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\prompt{Out}{outcolor}{53}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+array([[-118.47  ,   34.05  ,   27.    , {\ldots},  962.    ,    4.175 ,
+           3.    ],
+       [-121.34  ,   38.69  ,   17.    , {\ldots},  331.    ,    3.7031,
+           3.    ],
+       [-118.52  ,   34.39  ,   21.    , {\ldots}, 1222.    ,    3.6625,
+           3.    ],
+       {\ldots},
+       [-118.27  ,   33.94  ,   43.    , {\ldots},  340.    ,    1.6625,
+           2.    ],
+       [-122.21  ,   37.78  ,   43.    , {\ldots},  407.    ,    1.7188,
+           2.    ],
+       [-121.78  ,   37.22  ,   18.    , {\ldots},  402.    ,    5.0958,
+           4.    ]])
+\end{Verbatim}
+\end{tcolorbox}
+        
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{54}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{c+c1}{\PYZsh{} 将X转为DataFrame}
+\PY{n}{housing\PYZus{}tr} \PY{o}{=} \PY{n}{pd}\PY{o}{.}\PY{n}{DataFrame}\PY{p}{(}\PY{n}{X}\PY{p}{,} \PY{n}{columns} \PY{o}{=} \PY{n}{housing\PYZus{}num}\PY{o}{.}\PY{n}{columns}\PY{p}{,} \PY{n}{index} \PY{o}{=} \PY{n}{housing}\PY{o}{.}\PY{n}{index}\PY{p}{)}
+\PY{n}{housing\PYZus{}tr}\PY{o}{.}\PY{n}{head}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\prompt{Out}{outcolor}{54}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+       longitude  latitude  housing\_median\_age  total\_rooms  total\_bedrooms  \textbackslash{}
+5288     -118.47     34.05                27.0       4401.0          1033.0
+12865    -121.34     38.69                17.0       1968.0           364.0
+9174     -118.52     34.39                21.0       5477.0          1275.0
+17247    -119.70     34.43                52.0       1364.0           460.0
+14138    -117.07     32.74                37.0       1042.0           205.0
+
+       population  households  median\_income  income\_cat
+5288       1725.0       962.0         4.1750         3.0
+12865       996.0       331.0         3.7031         3.0
+9174       3384.0      1222.0         3.6625         3.0
+17247       804.0       400.0         2.3750         2.0
+14138       589.0       208.0         2.6629         2.0
+\end{Verbatim}
+\end{tcolorbox}
+        
+    此时会发现 - total\_bedrooms的空值已经被替换为了中位数 -
+非数据集的列被删除了
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{55}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{housing\PYZus{}tr}\PY{o}{.}\PY{n}{info}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+<class 'pandas.core.frame.DataFrame'>
+Int64Index: 16512 entries, 5288 to 18453
+Data columns (total 9 columns):
+longitude             16512 non-null float64
+latitude              16512 non-null float64
+housing\_median\_age    16512 non-null float64
+total\_rooms           16512 non-null float64
+total\_bedrooms        16512 non-null float64
+population            16512 non-null float64
+households            16512 non-null float64
+median\_income         16512 non-null float64
+income\_cat            16512 non-null float64
+dtypes: float64(9)
+memory usage: 1.3 MB
+    \end{Verbatim}
+
+    \hypertarget{scikit-learn}{%
+\subsection{scikit-Learn}\label{scikit-learn}}
+
+\begin{itemize}
+\tightlist
+\item
+  一致性
+
+  \begin{enumerate}
+  \def\labelenumi{\arabic{enumi}.}
+  \tightlist
+  \item
+    估算器：各种机器学习算法，均可执行fit()执行估算器
+  \item
+    转换器
+  \end{enumerate}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    LabelBinarizer
+  \item
+    transform() 执行转换数据集
+  \item
+    fit\_transform() 先估算，再转换
+  \end{itemize}
+
+  \begin{enumerate}
+  \def\labelenumi{\arabic{enumi}.}
+  \setcounter{enumi}{2}
+  \tightlist
+  \item
+    预测器
+  \end{enumerate}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    predict() 对给定的心数据集进行预测
+  \item
+    score() 评估测试集的预测质量
+  \end{itemize}
+\item
+  检查
+
+  \begin{itemize}
+  \tightlist
+  \item
+    imputer.strategy\_ 学习参数通过公共实例变量访问
+  \end{itemize}
+\end{itemize}
+
+    \hypertarget{ux5904ux7406ux6587ux672cux548cux5206ux7c7bux5c5eux6027ux8f6cux6362ux5668}{%
+\subsection{处理文本和分类属性------转换器}\label{ux5904ux7406ux6587ux672cux548cux5206ux7c7bux5c5eux6027ux8f6cux6362ux5668}}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{120}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{housing\PYZus{}cat} \PY{o}{=} \PY{n}{housing}\PY{p}{[}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{ocean\PYZus{}proximity}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{]} \PY{c+c1}{\PYZsh{} DataFrame}
+\PY{n}{housing\PYZus{}cat}\PY{o}{.}\PY{n}{head}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\prompt{Out}{outcolor}{120}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+      ocean\_proximity
+5288        <1H OCEAN
+12865          INLAND
+9174        <1H OCEAN
+17247       <1H OCEAN
+14138      NEAR OCEAN
+\end{Verbatim}
+\end{tcolorbox}
+        
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{57}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{c+c1}{\PYZsh{} 查看不同类别值的数量}
+\PY{n}{housing}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{ocean\PYZus{}proximity}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{o}{.}\PY{n}{hist}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\prompt{Out}{outcolor}{57}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+<matplotlib.axes.\_subplots.AxesSubplot at 0x23b84f11fc8>
+\end{Verbatim}
+\end{tcolorbox}
+        
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{特征工程_files/特征工程_74_1.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{58}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{c+c1}{\PYZsh{} 查看不同类别值的数量}
+\PY{n}{housing}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{ocean\PYZus{}proximity}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{o}{.}\PY{n}{value\PYZus{}counts}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\prompt{Out}{outcolor}{58}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+<1H OCEAN     7307
+INLAND        5249
+NEAR OCEAN    2143
+NEAR BAY      1810
+ISLAND           3
+Name: ocean\_proximity, dtype: int64
+\end{Verbatim}
+\end{tcolorbox}
+        
+    \hypertarget{labelencoderux6587ux672cux8f6cux6570ux5b57ux5206ux7c7b}{%
+\subsubsection{LabelEncoder------文本转数字分类}\label{labelencoderux6587ux672cux8f6cux6570ux5b57ux5206ux7c7b}}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{121}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{c+c1}{\PYZsh{} 将文本转换为对应的数字分类，使用LabelEncoder}
+\PY{k+kn}{from} \PY{n+nn}{sklearn} \PY{k+kn}{import} \PY{n}{preprocessing}
+\PY{n}{encoder} \PY{o}{=} \PY{n}{preprocessing}\PY{o}{.}\PY{n}{LabelEncoder}\PY{p}{(}\PY{p}{)} \PY{c+c1}{\PYZsh{} 创建一个LabelEncoder()对象}
+\PY{n}{housing\PYZus{}cat} \PY{o}{=} \PY{n}{housing}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{ocean\PYZus{}proximity}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]} \PY{c+c1}{\PYZsh{} 取文本列}
+\PY{n}{housing\PYZus{}cat\PYZus{}encoder} \PY{o}{=} \PY{n}{encoder}\PY{o}{.}\PY{n}{fit\PYZus{}transform}\PY{p}{(}\PY{n}{housing\PYZus{}cat}\PY{p}{)} \PY{c+c1}{\PYZsh{} fit\PYZus{}transform}
+\PY{n}{housing\PYZus{}cat\PYZus{}encoder} 
+\end{Verbatim}
+\end{tcolorbox}
+
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\prompt{Out}{outcolor}{121}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+array([0, 1, 0, {\ldots}, 0, 3, 0])
+\end{Verbatim}
+\end{tcolorbox}
+        
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{60}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{encoder}\PY{o}{.}\PY{n}{classes\PYZus{}}  \PY{c+c1}{\PYZsh{} 返回编码器中所有类别,已经排除了重复项}
+\end{Verbatim}
+\end{tcolorbox}
+
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\prompt{Out}{outcolor}{60}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+array(['<1H OCEAN', 'INLAND', 'ISLAND', 'NEAR BAY', 'NEAR OCEAN'],
+      dtype=object)
+\end{Verbatim}
+\end{tcolorbox}
+        
+    \hypertarget{onehotencoderux6570ux5b57ux5206ux7c7bux8f6cux72ecux70edux7f16ux7801}{%
+\subsubsection{OneHotEncoder------数字分类转独热编码}\label{onehotencoderux6570ux5b57ux5206ux7c7bux8f6cux72ecux70edux7f16ux7801}}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{61}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{c+c1}{\PYZsh{} 取OneHotEncoder}
+\PY{n}{encoder} \PY{o}{=} \PY{n}{preprocessing}\PY{o}{.}\PY{n}{OneHotEncoder}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{62}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{housing\PYZus{}cat\PYZus{}encoder}\PY{o}{.}\PY{n}{reshape}\PY{p}{(}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{,} \PY{l+m+mi}{1}\PY{p}{)} \PY{c+c1}{\PYZsh{} 数组转矩阵}
+\end{Verbatim}
+\end{tcolorbox}
+
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\prompt{Out}{outcolor}{62}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+array([[0],
+       [1],
+       [0],
+       {\ldots},
+       [0],
+       [3],
+       [0]])
+\end{Verbatim}
+\end{tcolorbox}
+        
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{63}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{housing\PYZus{}cat\PYZus{}hot} \PY{o}{=} \PY{n}{encoder}\PY{o}{.}\PY{n}{fit\PYZus{}transform}\PY{p}{(}\PY{n}{housing\PYZus{}cat\PYZus{}encoder}\PY{o}{.}\PY{n}{reshape}\PY{p}{(}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{,} \PY{l+m+mi}{1}\PY{p}{)}\PY{p}{)}
+\PY{n}{housing\PYZus{}cat\PYZus{}hot}  \PY{c+c1}{\PYZsh{} 稀疏矩阵}
+\end{Verbatim}
+\end{tcolorbox}
+
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\prompt{Out}{outcolor}{63}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+<16512x5 sparse matrix of type '<class 'numpy.float64'>'
+        with 16512 stored elements in Compressed Sparse Row format>
+\end{Verbatim}
+\end{tcolorbox}
+        
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{64}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{housing\PYZus{}cat\PYZus{}hot}\PY{o}{.}\PY{n}{toarray}\PY{p}{(}\PY{p}{)}  \PY{c+c1}{\PYZsh{} 稀疏矩阵转numpy.array}
+\end{Verbatim}
+\end{tcolorbox}
+
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\prompt{Out}{outcolor}{64}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+array([[1., 0., 0., 0., 0.],
+       [0., 1., 0., 0., 0.],
+       [1., 0., 0., 0., 0.],
+       {\ldots},
+       [1., 0., 0., 0., 0.],
+       [0., 0., 0., 1., 0.],
+       [1., 0., 0., 0., 0.]])
+\end{Verbatim}
+\end{tcolorbox}
+        
+    \hypertarget{labelbinarizerux4e00ux6b21ux5b8cux6210ux4e24ux4e2aux8f6cux6362-ux6587ux672cux6574ux6570ux7c7bux578b-ux72ecux70edux7c7bux578b}{%
+\subsubsection{LabelBinarizer------一次完成两个转换
+文本--整数类型-独热类型}\label{labelbinarizerux4e00ux6b21ux5b8cux6210ux4e24ux4e2aux8f6cux6362-ux6587ux672cux6574ux6570ux7c7bux578b-ux72ecux70edux7c7bux578b}}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{112}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{k+kn}{from} \PY{n+nn}{sklearn}\PY{n+nn}{.}\PY{n+nn}{preprocessing} \PY{k+kn}{import} \PY{n}{LabelBinarizer}
+\PY{n}{encoder} \PY{o}{=} \PY{n}{preprocessing}\PY{o}{.}\PY{n}{LabelBinarizer}\PY{p}{(}\PY{p}{)}
+\PY{n}{housing\PYZus{}cat\PYZus{}1hot} \PY{o}{=} \PY{n}{encoder}\PY{o}{.}\PY{n}{fit\PYZus{}transform}\PY{p}{(}\PY{n}{housing\PYZus{}cat}\PY{p}{)}
+\PY{n}{housing\PYZus{}cat\PYZus{}1hot}
+\end{Verbatim}
+\end{tcolorbox}
+
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\prompt{Out}{outcolor}{112}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+array([[1, 0, 0, 0, 0],
+       [0, 1, 0, 0, 0],
+       [1, 0, 0, 0, 0],
+       {\ldots},
+       [1, 0, 0, 0, 0],
+       [0, 0, 0, 1, 0],
+       [1, 0, 0, 0, 0]])
+\end{Verbatim}
+\end{tcolorbox}
+        
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{110}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{c+c1}{\PYZsh{} 输出稀疏矩阵}
+\PY{n}{encoder} \PY{o}{=} \PY{n}{preprocessing}\PY{o}{.}\PY{n}{LabelBinarizer}\PY{p}{(}\PY{n}{sparse\PYZus{}output} \PY{o}{=} \PY{k+kc}{True}\PY{p}{)}
+\PY{n}{housing\PYZus{}cat\PYZus{}1hot} \PY{o}{=} \PY{n}{encoder}\PY{o}{.}\PY{n}{fit\PYZus{}transform}\PY{p}{(}\PY{n}{housing\PYZus{}cat\PYZus{}encoder}\PY{o}{.}\PY{n}{reshape}\PY{p}{(}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{,} \PY{l+m+mi}{1}\PY{p}{)}\PY{p}{)}
+\PY{n}{housing\PYZus{}cat\PYZus{}1hot}  \PY{c+c1}{\PYZsh{} 稀疏矩阵}
+\end{Verbatim}
+\end{tcolorbox}
+
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\prompt{Out}{outcolor}{110}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+<16512x5 sparse matrix of type '<class 'numpy.int32'>'
+        with 16512 stored elements in Compressed Sparse Row format>
+\end{Verbatim}
+\end{tcolorbox}
+        
+    \hypertarget{ux81eaux5b9aux4e49ux8f6cux6362ux5668}{%
+\subsection{自定义转换器}\label{ux81eaux5b9aux4e49ux8f6cux6362ux5668}}
+
+\begin{itemize}
+\tightlist
+\item
+  重写fit()和transfrom()
+\end{itemize}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{122}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{c+c1}{\PYZsh{} 至少继承这两个类}
+\PY{k+kn}{from} \PY{n+nn}{sklearn}\PY{n+nn}{.}\PY{n+nn}{base} \PY{k+kn}{import} \PY{n}{BaseEstimator}\PY{p}{,} \PY{n}{TransformerMixin}
+
+\PY{c+c1}{\PYZsh{} 列表生成式}
+\PY{n}{rooms\PYZus{}ix}\PY{p}{,} \PY{n}{bedrooms\PYZus{}ix}\PY{p}{,} \PY{n}{population\PYZus{}ix}\PY{p}{,} \PY{n}{household\PYZus{}ix} \PY{o}{=} \PY{p}{[}\PY{n+nb}{list}\PY{p}{(}\PY{n}{housing}\PY{o}{.}\PY{n}{columns}\PY{p}{)}\PY{o}{.}\PY{n}{index}\PY{p}{(}\PY{n}{col}\PY{p}{)} \PY{k}{for} \PY{n}{col} \PY{o+ow}{in} \PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{total\PYZus{}rooms}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{total\PYZus{}bedrooms}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{population}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{households}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}\PY{p}{]}
+\PY{n}{rooms\PYZus{}ix}\PY{p}{,} \PY{n}{bedrooms\PYZus{}ix}\PY{p}{,} \PY{n}{population\PYZus{}ix}\PY{p}{,} \PY{n}{household\PYZus{}ix} 
+\PY{c+c1}{\PYZsh{} 继承BaseEstimator, TransformerMixin，重写fit()和transfrom()}
+\PY{c+c1}{\PYZsh{} 不同特征的组合}
+\PY{k}{class} \PY{n+nc}{CombinedAttributesAdder}\PY{p}{(}\PY{n}{BaseEstimator}\PY{p}{,} \PY{n}{TransformerMixin}\PY{p}{)}\PY{p}{:}
+    \PY{k}{def} \PY{n+nf+fm}{\PYZus{}\PYZus{}init\PYZus{}\PYZus{}}\PY{p}{(}\PY{n+nb+bp}{self}\PY{p}{,} \PY{n}{add\PYZus{}bedrooms\PYZus{}per\PYZus{}room} \PY{o}{=} \PY{k+kc}{True}\PY{p}{)}\PY{p}{:}
+        \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{add\PYZus{}bedrooms\PYZus{}per\PYZus{}room} \PY{o}{=} \PY{n}{add\PYZus{}bedrooms\PYZus{}per\PYZus{}room}
+    \PY{k}{def} \PY{n+nf}{fit}\PY{p}{(}\PY{n+nb+bp}{self}\PY{p}{,} \PY{n}{X}\PY{p}{,} \PY{n}{y} \PY{o}{=} \PY{k+kc}{None}\PY{p}{)}\PY{p}{:}
+        \PY{k}{return} \PY{n+nb+bp}{self}
+    \PY{k}{def} \PY{n+nf}{transform}\PY{p}{(}\PY{n+nb+bp}{self}\PY{p}{,} \PY{n}{X}\PY{p}{,} \PY{n}{y} \PY{o}{=} \PY{k+kc}{None}\PY{p}{)}\PY{p}{:}
+        \PY{n}{rooms\PYZus{}per\PYZus{}household} \PY{o}{=} \PY{n}{X}\PY{p}{[}\PY{p}{:}\PY{p}{,} \PY{n}{rooms\PYZus{}ix}\PY{p}{]} \PY{o}{/} \PY{n}{X}\PY{p}{[}\PY{p}{:}\PY{p}{,} \PY{n}{household\PYZus{}ix}\PY{p}{]}
+        \PY{n}{population\PYZus{}per\PYZus{}household} \PY{o}{=} \PY{n}{X}\PY{p}{[}\PY{p}{:}\PY{p}{,} \PY{n}{population\PYZus{}ix}\PY{p}{]} \PY{o}{/} \PY{n}{X}\PY{p}{[}\PY{p}{:}\PY{p}{,} \PY{n}{household\PYZus{}ix}\PY{p}{]}
+        \PY{k}{if} \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{add\PYZus{}bedrooms\PYZus{}per\PYZus{}room}\PY{p}{:}
+            \PY{n}{bedrooms\PYZus{}per\PYZus{}room} \PY{o}{=} \PY{n}{X}\PY{p}{[}\PY{p}{:}\PY{p}{,} \PY{n}{bedrooms\PYZus{}ix}\PY{p}{]} \PY{o}{/} \PY{n}{X}\PY{p}{[}\PY{p}{:}\PY{p}{,} \PY{n}{rooms\PYZus{}ix}\PY{p}{]}
+            \PY{k}{return} \PY{n}{np}\PY{o}{.}\PY{n}{c\PYZus{}}\PY{p}{[}\PY{n}{X}\PY{p}{,} \PY{n}{rooms\PYZus{}per\PYZus{}household}\PY{p}{,}\PY{n}{population\PYZus{}per\PYZus{}household}\PY{p}{,} \PY{n}{bedrooms\PYZus{}per\PYZus{}room}\PY{p}{]}
+        \PY{k}{else}\PY{p}{:}
+            \PY{k}{return} \PY{n}{np}\PY{o}{.}\PY{n}{c\PYZus{}}\PY{p}{[}\PY{n}{X}\PY{p}{,} \PY{n}{rooms\PYZus{}per\PYZus{}household}\PY{p}{,}\PY{n}{population\PYZus{}per\PYZus{}household}\PY{p}{]}
+        
+        
+        
+\PY{n}{attr\PYZus{}adder} \PY{o}{=} \PY{n}{CombinedAttributesAdder}\PY{p}{(}\PY{n}{add\PYZus{}bedrooms\PYZus{}per\PYZus{}room} \PY{o}{=} \PY{k+kc}{False}\PY{p}{)}
+\PY{n}{housing\PYZus{}extra\PYZus{}attribs} \PY{o}{=} \PY{n}{attr\PYZus{}adder}\PY{o}{.}\PY{n}{transform}\PY{p}{(}\PY{n}{housing}\PY{o}{.}\PY{n}{values}\PY{p}{)}  \PY{c+c1}{\PYZsh{} 传入numpy矩阵}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{68}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{housing\PYZus{}extra\PYZus{}attribs}
+\end{Verbatim}
+\end{tcolorbox}
+
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\prompt{Out}{outcolor}{68}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+array([[-118.47, 34.05, 27.0, {\ldots}, 3, 4.574844074844075,
+        1.793139293139293],
+       [-121.34, 38.69, 17.0, {\ldots}, 3, 5.945619335347432,
+        3.009063444108761],
+       [-118.52, 34.39, 21.0, {\ldots}, 3, 4.481996726677577,
+        2.769230769230769],
+       {\ldots},
+       [-118.27, 33.94, 43.0, {\ldots}, 2, 3.85, 3.476470588235294],
+       [-122.21, 37.78, 43.0, {\ldots}, 2, 4.181818181818182,
+        3.0147420147420148],
+       [-121.78, 37.22, 18.0, {\ldots}, 4, 5.291044776119403,
+        3.8482587064676617]], dtype=object)
+\end{Verbatim}
+\end{tcolorbox}
+        
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{69}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{housing\PYZus{}tr} \PY{o}{=} \PY{n}{pd}\PY{o}{.}\PY{n}{DataFrame}\PY{p}{(}\PY{n}{housing\PYZus{}extra\PYZus{}attribs}\PY{p}{)}  \PY{c+c1}{\PYZsh{} 转DataFrame}
+\PY{n}{housing\PYZus{}tr}\PY{o}{.}\PY{n}{head}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\prompt{Out}{outcolor}{69}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+        0      1   2     3     4     5     6       7           8  9       10  \textbackslash{}
+0 -118.47  34.05  27  4401  1033  1725   962   4.175   <1H OCEAN  3  4.57484
+1 -121.34  38.69  17  1968   364   996   331  3.7031      INLAND  3  5.94562
+2 -118.52  34.39  21  5477  1275  3384  1222  3.6625   <1H OCEAN  3    4.482
+3  -119.7  34.43  52  1364   460   804   400   2.375   <1H OCEAN  2     3.41
+4 -117.07  32.74  37  1042   205   589   208  2.6629  NEAR OCEAN  2  5.00962
+
+        11
+0  1.79314
+1  3.00906
+2  2.76923
+3     2.01
+4  2.83173
+\end{Verbatim}
+\end{tcolorbox}
+        
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{70}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{c+c1}{\PYZsh{} 转DataFrame}
+\PY{n}{housing\PYZus{}extra\PYZus{}attribs} \PY{o}{=} \PY{n}{pd}\PY{o}{.}\PY{n}{DataFrame}\PY{p}{(}
+    \PY{n}{housing\PYZus{}extra\PYZus{}attribs}\PY{p}{,}
+    \PY{n}{columns}\PY{o}{=}\PY{n+nb}{list}\PY{p}{(}\PY{n}{housing}\PY{o}{.}\PY{n}{columns}\PY{p}{)}\PY{o}{+}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{rooms\PYZus{}per\PYZus{}household}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{population\PYZus{}per\PYZus{}household}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]}\PY{p}{,}
+    \PY{n}{index}\PY{o}{=}\PY{n}{housing}\PY{o}{.}\PY{n}{index}\PY{p}{)}
+\PY{n}{housing\PYZus{}extra\PYZus{}attribs}\PY{o}{.}\PY{n}{head}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\prompt{Out}{outcolor}{70}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+      longitude latitude housing\_median\_age total\_rooms total\_bedrooms  \textbackslash{}
+5288    -118.47    34.05                 27        4401           1033
+12865   -121.34    38.69                 17        1968            364
+9174    -118.52    34.39                 21        5477           1275
+17247    -119.7    34.43                 52        1364            460
+14138   -117.07    32.74                 37        1042            205
+
+      population households median\_income ocean\_proximity income\_cat  \textbackslash{}
+5288        1725        962         4.175       <1H OCEAN          3
+12865        996        331        3.7031          INLAND          3
+9174        3384       1222        3.6625       <1H OCEAN          3
+17247        804        400         2.375       <1H OCEAN          2
+14138        589        208        2.6629      NEAR OCEAN          2
+
+      rooms\_per\_household population\_per\_household
+5288              4.57484                  1.79314
+12865             5.94562                  3.00906
+9174                4.482                  2.76923
+17247                3.41                     2.01
+14138             5.00962                  2.83173
+\end{Verbatim}
+\end{tcolorbox}
+        
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{71}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{housing\PYZus{}extra\PYZus{}attribs}\PY{o}{.}\PY{n}{sample}\PY{p}{(}\PY{l+m+mi}{20}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\prompt{Out}{outcolor}{71}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+      longitude latitude housing\_median\_age total\_rooms total\_bedrooms  \textbackslash{}
+12630    -121.5    38.49                 29        3606            690
+4951    -118.31    34.02                 41        1046            216
+8186     -118.1    33.79                 36        3359            596
+17801   -121.79    37.38                 22        3650            527
+11244      -118    33.81                 22        2642            640
+10046   -120.99    39.22                 16        1497            275
+15894   -122.39    37.73                 52        1070            224
+9127    -118.08    34.58                 12        3851            857
+16368   -121.31    38.01                 22        2101            514
+11041   -117.81    33.82                 22        2898            335
+19187   -122.66    38.45                 26        2081            339
+1176    -121.55     39.5                 26        3215            827
+15719   -122.44    37.78                 39        1181            310
+11632   -118.03    33.82                 20        2662            464
+8568    -118.42     33.9                 29        1929            523
+20615   -121.54    39.08                 23        1076            216
+20452   -118.81    34.28                 20        3678            684
+1841    -122.29    37.91                 46        2085            346
+11296   -117.92    33.79                 26        2737            614
+17532   -121.89    37.34                 20        1106            494
+
+      population households median\_income ocean\_proximity income\_cat  \textbackslash{}
+12630       2317        696        2.7368          INLAND          2
+4951         727        201        1.6667       <1H OCEAN          2
+8186        1522        565        5.1805       <1H OCEAN          4
+17801       1637        520        5.3774       <1H OCEAN          4
+11244       1702        588        3.5268       <1H OCEAN          3
+10046        737        243        2.8942          INLAND          2
+15894        567        207        2.8603        NEAR BAY          2
+9127        2169        811        3.0101          INLAND          3
+16368       1304        511        2.8348          INLAND          2
+11041       1057        324       10.8111       <1H OCEAN          5
+19187        906        323        4.4375       <1H OCEAN          3
+1176        2041        737        1.0585          INLAND          1
+15719        901        281        1.4866        NEAR BAY          1
+11632       1275        472        6.0162       <1H OCEAN          5
+8568         686        455        5.5347       <1H OCEAN          4
+20615        724        197        2.3598          INLAND          2
+20452       1882        694        4.1607       <1H OCEAN          3
+1841         748        354        4.0536        NEAR BAY          3
+11296       1877        606        2.8622       <1H OCEAN          2
+17532        851        448        0.8894       <1H OCEAN          1
+
+      rooms\_per\_household population\_per\_household
+12630             5.18103                  3.32902
+4951              5.20398                  3.61692
+8186              5.94513                  2.69381
+17801             7.01923                  3.14808
+11244              4.4932                  2.89456
+10046             6.16049                  3.03292
+15894             5.16908                  2.73913
+9127              4.74846                  2.67448
+16368             4.11155                  2.55186
+11041             8.94444                  3.26235
+19187             6.44272                  2.80495
+1176              4.36228                  2.76934
+15719             4.20285                  3.20641
+11632             5.63983                  2.70127
+8568              4.23956                  1.50769
+20615             5.46193                  3.67513
+20452             5.29971                  2.71182
+1841              5.88983                  2.11299
+11296              4.5165                  3.09736
+17532             2.46875                  1.89955
+\end{Verbatim}
+\end{tcolorbox}
+        
+    \hypertarget{ux7279ux5f81ux7f29ux653e}{%
+\subsection{特征缩放}\label{ux7279ux5f81ux7f29ux653e}}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{72}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{c+c1}{\PYZsh{} 最重要也是最需要应用在数据上的转换器，就是特征缩放，输入数值属性有很大的比例差异，会导致机器学习算法性能表现不佳}
+\PY{c+c1}{\PYZsh{} 房间总数 范围6到39320，收入中位数范围0到15}
+\PY{c+c1}{\PYZsh{} 目标值通常不需要缩放}
+\PY{c+c1}{\PYZsh{} 同比缩放所有属性，2种方法 最小\PYZhy{}最大缩放和标准化}
+\PY{c+c1}{\PYZsh{} 最小\PYZhy{}最大缩放，又叫归一化，将值重新缩放到0到1之间，将值减去最小值并除以最大值和最小值差，如果你不希望是0到1，可以调整超参数feature\PYZus{}range}
+\PY{c+c1}{\PYZsh{} 标准化 减去平均值 ，所以标准化均值总是0，然后除以方差，结果的分布具备单位方差，不同于归一化，标准化不将值绑定到特定范围，受异常值影响小}
+\PY{c+c1}{\PYZsh{} 缩放器仅用来拟合训练集，不是完成的数据集}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \hypertarget{ux8f6cux6362ux6d41ux6c34ux7ebf}{%
+\subsection{转换流水线}\label{ux8f6cux6362ux6d41ux6c34ux7ebf}}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{73}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{c+c1}{\PYZsh{} 许多数据转换的步骤需要以正确的顺序来执行， PipeLine来支持这样的转换}
+\PY{c+c1}{\PYZsh{} pipline构造函数会通过一系列名称/估算器的配对来定义步骤的序列，必须是转换器，必须有fit\PYZus{}fransform()方法}
+\PY{c+c1}{\PYZsh{} 调用流水线的fit方法时，会在所有转换器上按照顺序依次调用fit\PYZus{}transform()，将一个调用的输出作为参数传递给下一个调用方法，直到传递到最终}
+\PY{c+c1}{\PYZsh{} 估算器，只会调用fit方法}
+\PY{k+kn}{from} \PY{n+nn}{sklearn}\PY{n+nn}{.}\PY{n+nn}{pipeline} \PY{k+kn}{import} \PY{n}{Pipeline}
+\PY{k+kn}{from} \PY{n+nn}{sklearn}\PY{n+nn}{.}\PY{n+nn}{preprocessing} \PY{k+kn}{import} \PY{n}{StandardScaler}
+
+\PY{n}{num\PYZus{}pipeline} \PY{o}{=} \PY{n}{Pipeline}\PY{p}{(}\PY{p}{[}
+        \PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{imputer}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{SimpleImputer}\PY{p}{(}\PY{n}{strategy}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{median}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}\PY{p}{)}\PY{p}{,}
+        \PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{attribs\PYZus{}adder}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{CombinedAttributesAdder}\PY{p}{(}\PY{p}{)}\PY{p}{)}\PY{p}{,}
+        \PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{std\PYZus{}scaler}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{StandardScaler}\PY{p}{(}\PY{p}{)}\PY{p}{)}
+    \PY{p}{]}\PY{p}{)}
+
+\PY{n}{housing\PYZus{}num\PYZus{}tr} \PY{o}{=} \PY{n}{num\PYZus{}pipeline}\PY{o}{.}\PY{n}{fit\PYZus{}transform}\PY{p}{(}\PY{n}{housing\PYZus{}num}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{74}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{housing\PYZus{}num}\PY{o}{.}\PY{n}{head}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\prompt{Out}{outcolor}{74}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+       longitude  latitude  housing\_median\_age  total\_rooms  total\_bedrooms  \textbackslash{}
+5288     -118.47     34.05                27.0       4401.0          1033.0
+12865    -121.34     38.69                17.0       1968.0           364.0
+9174     -118.52     34.39                21.0       5477.0          1275.0
+17247    -119.70     34.43                52.0       1364.0           460.0
+14138    -117.07     32.74                37.0       1042.0           205.0
+
+       population  households  median\_income income\_cat
+5288       1725.0       962.0         4.1750          3
+12865       996.0       331.0         3.7031          3
+9174       3384.0      1222.0         3.6625          3
+17247       804.0       400.0         2.3750          2
+14138       589.0       208.0         2.6629          2
+\end{Verbatim}
+\end{tcolorbox}
+        
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{75}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{c+c1}{\PYZsh{} dataFrame \PYZhy{}\PYZgt{} series \PYZhy{}\PYZgt{} ndarray}
+\PY{k}{class} \PY{n+nc}{DataFrameSelector}\PY{p}{(}\PY{n}{BaseEstimator}\PY{p}{,} \PY{n}{TransformerMixin}\PY{p}{)}\PY{p}{:}
+    \PY{k}{def} \PY{n+nf+fm}{\PYZus{}\PYZus{}init\PYZus{}\PYZus{}}\PY{p}{(}\PY{n+nb+bp}{self}\PY{p}{,} \PY{n}{attribute\PYZus{}names}\PY{p}{)}\PY{p}{:}
+        \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{attribute\PYZus{}names} \PY{o}{=} \PY{n}{attribute\PYZus{}names}
+    \PY{k}{def} \PY{n+nf}{fit}\PY{p}{(}\PY{n+nb+bp}{self}\PY{p}{,} \PY{n}{X}\PY{p}{,} \PY{n}{y}\PY{o}{=}\PY{k+kc}{None}\PY{p}{)}\PY{p}{:}
+        \PY{k}{return} \PY{n+nb+bp}{self}
+    \PY{k}{def} \PY{n+nf}{transform}\PY{p}{(}\PY{n+nb+bp}{self}\PY{p}{,} \PY{n}{X}\PY{p}{)}\PY{p}{:}
+        \PY{k}{return} \PY{n}{X}\PY{p}{[}\PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{attribute\PYZus{}names}\PY{p}{]}\PY{o}{.}\PY{n}{values} \PY{c+c1}{\PYZsh{} 取DataFrame的数组}
+    
+\PY{n}{num\PYZus{}attribs} \PY{o}{=}\PY{n+nb}{list}\PY{p}{(}\PY{n}{housing\PYZus{}num}\PY{p}{)} 
+
+\PY{n}{num\PYZus{}pipeline} \PY{o}{=} \PY{n}{Pipeline}\PY{p}{(}\PY{p}{[}
+        \PY{c+c1}{\PYZsh{} dataFrame \PYZhy{}\PYZgt{} series \PYZhy{}\PYZgt{} ndarray}
+        \PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{selector}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{DataFrameSelector}\PY{p}{(}\PY{n}{num\PYZus{}attribs}\PY{p}{)}\PY{p}{)}\PY{p}{,} 
+        \PY{c+c1}{\PYZsh{} imputer使用中位数补全缺失值}
+        \PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{imputer}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{SimpleImputer}\PY{p}{(}\PY{n}{strategy}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{median}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}\PY{p}{)}\PY{p}{,}
+        \PY{c+c1}{\PYZsh{} 合成两个新的属性}
+        \PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{attribs\PYZus{}adder}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{CombinedAttributesAdder}\PY{p}{(}\PY{p}{)}\PY{p}{)}\PY{p}{,}
+        \PY{c+c1}{\PYZsh{} 标准化缩放}
+        \PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{std\PYZus{}scaler}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{StandardScaler}\PY{p}{(}\PY{p}{)}\PY{p}{)}\PY{p}{,}
+    \PY{p}{]}\PY{p}{)}
+
+\PY{k+kn}{from} \PY{n+nn}{sklearn}\PY{n+nn}{.}\PY{n+nn}{base} \PY{k+kn}{import} \PY{n}{TransformerMixin} 
+\PY{k}{class} \PY{n+nc}{MyLabelBinarizer}\PY{p}{(}\PY{n}{TransformerMixin}\PY{p}{)}\PY{p}{:}
+    \PY{k}{def} \PY{n+nf+fm}{\PYZus{}\PYZus{}init\PYZus{}\PYZus{}}\PY{p}{(}\PY{n+nb+bp}{self}\PY{p}{,} \PY{o}{*}\PY{n}{args}\PY{p}{,} \PY{o}{*}\PY{o}{*}\PY{n}{kwargs}\PY{p}{)}\PY{p}{:}
+        \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{encoder} \PY{o}{=} \PY{n}{LabelBinarizer}\PY{p}{(}\PY{o}{*}\PY{n}{args}\PY{p}{,} \PY{o}{*}\PY{o}{*}\PY{n}{kwargs}\PY{p}{)}
+    \PY{k}{def} \PY{n+nf}{fit}\PY{p}{(}\PY{n+nb+bp}{self}\PY{p}{,} \PY{n}{x}\PY{p}{,} \PY{n}{y}\PY{o}{=}\PY{l+m+mi}{0}\PY{p}{)}\PY{p}{:}
+        \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{encoder}\PY{o}{.}\PY{n}{fit}\PY{p}{(}\PY{n}{x}\PY{p}{)}
+        \PY{k}{return} \PY{n+nb+bp}{self}
+    \PY{k}{def} \PY{n+nf}{transform}\PY{p}{(}\PY{n+nb+bp}{self}\PY{p}{,} \PY{n}{x}\PY{p}{,} \PY{n}{y}\PY{o}{=}\PY{l+m+mi}{0}\PY{p}{)}\PY{p}{:}
+        \PY{k}{return} \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{encoder}\PY{o}{.}\PY{n}{transform}\PY{p}{(}\PY{n}{x}\PY{p}{)}
+    
+\PY{n}{cat\PYZus{}attribs} \PY{o}{=} \PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{ocean\PYZus{}proximity}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]} \PY{c+c1}{\PYZsh{} 文本列的名字}
+\PY{k+kn}{from} \PY{n+nn}{sklearn}\PY{n+nn}{.}\PY{n+nn}{preprocessing} \PY{k+kn}{import} \PY{n}{LabelBinarizer}
+
+\PY{n}{cat\PYZus{}pipeline} \PY{o}{=} \PY{n}{Pipeline}\PY{p}{(}\PY{p}{[}
+        \PY{c+c1}{\PYZsh{} dataFrame \PYZhy{}\PYZgt{} series \PYZhy{}\PYZgt{} ndarray}
+        \PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{selector}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{DataFrameSelector}\PY{p}{(}\PY{n}{cat\PYZus{}attribs}\PY{p}{)}\PY{p}{)}\PY{p}{,}               
+        \PY{c+c1}{\PYZsh{} LabelBinarizer一次完成两个转换 文本\PYZhy{}\PYZhy{}整数类型\PYZhy{}独热类型}
+        \PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{LabelBinarizer}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{MyLabelBinarizer}\PY{p}{(}\PY{p}{)}\PY{p}{)}\PY{p}{,}
+    \PY{p}{]}\PY{p}{)}
+
+\PY{c+c1}{\PYZsh{} housing.head()}
+
+\PY{k+kn}{from} \PY{n+nn}{sklearn}\PY{n+nn}{.}\PY{n+nn}{pipeline} \PY{k+kn}{import} \PY{n}{FeatureUnion}
+
+\PY{n}{full\PYZus{}pipeline} \PY{o}{=} \PY{n}{FeatureUnion}\PY{p}{(}\PY{n}{transformer\PYZus{}list}\PY{o}{=}\PY{p}{[}
+        \PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{num\PYZus{}pipline}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{num\PYZus{}pipeline}\PY{p}{,}\PY{p}{)}\PY{p}{,}
+        \PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{cat\PYZus{}pipline}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{cat\PYZus{}pipeline}\PY{p}{)}\PY{p}{,}
+    \PY{p}{]}\PY{p}{)}
+
+\PY{n}{housing\PYZus{}prepared} \PY{o}{=} \PY{n}{full\PYZus{}pipeline}\PY{o}{.}\PY{n}{fit\PYZus{}transform}\PY{p}{(}\PY{n}{housing}\PY{p}{)}
+
+\PY{n}{housing\PYZus{}prepared} \PY{o}{=} \PY{n}{pd}\PY{o}{.}\PY{n}{DataFrame}\PY{p}{(}\PY{n}{housing\PYZus{}prepared}\PY{p}{)}
+\PY{n}{housing\PYZus{}prepared}\PY{o}{.}\PY{n}{head}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\prompt{Out}{outcolor}{75}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+          0         1         2         3         4         5         6  \textbackslash{}
+0  0.548975 -0.740274 -0.131568  0.807803  1.176384  0.260890  1.196810
+1 -0.882976  1.431585 -0.926752 -0.307191 -0.411955 -0.376057 -0.439373
+2  0.524028 -0.581129 -0.608678  1.300912  1.750940  1.710403  1.870989
+3 -0.064718 -0.562406  1.856394 -0.583992 -0.184032 -0.543812 -0.260456
+4  1.247487 -1.353449  0.663617 -0.731558 -0.789453 -0.731664 -0.758311
+
+          7         8         9        10        11   12   13   14   15   16
+0  0.157434 -0.006202 -0.336208 -0.116551  0.331966  1.0  0.0  0.0  0.0  0.0
+1 -0.089132 -0.006202  0.203144 -0.005195 -0.456304  0.0  1.0  0.0  0.0  0.0
+2 -0.110346 -0.006202 -0.372741 -0.027159  0.301428  1.0  0.0  0.0  0.0  0.0
+3 -0.783062 -0.954456 -0.794534 -0.096691  1.956094  1.0  0.0  0.0  0.0  0.0
+4 -0.632635 -0.954456 -0.165141 -0.021436 -0.269729  0.0  0.0  0.0  0.0  1.0
+\end{Verbatim}
+\end{tcolorbox}
+        
+    \hypertarget{ux9009ux62e9ux548cux8badux7ec3ux6a21ux578b}{%
+\subsection{选择和训练模型}\label{ux9009ux62e9ux548cux8badux7ec3ux6a21ux578b}}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{76}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{housing\PYZus{}labels}
+\end{Verbatim}
+\end{tcolorbox}
+
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\prompt{Out}{outcolor}{76}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+5288     500001.0
+12865    114300.0
+9174     228100.0
+17247    293800.0
+14138    116900.0
+           {\ldots}
+641      264700.0
+9958     304800.0
+5196      88700.0
+245      126800.0
+18453    217100.0
+Name: median\_house\_value, Length: 16512, dtype: float64
+\end{Verbatim}
+\end{tcolorbox}
+        
+    \hypertarget{ux7ebfux6027ux56deux5f52}{%
+\subsection{线性回归}\label{ux7ebfux6027ux56deux5f52}}
+
+    \hypertarget{ux521bux5efaux4e00ux4e2aux7ebfux6027ux56deux5f52ux9884ux6d4bux5bf9ux8c61-ux5e76ux4f7fux7528fitux81eaux9002ux5e94}{%
+\paragraph{1. 创建一个线性回归预测对象
+并使用fit自适应}\label{ux521bux5efaux4e00ux4e2aux7ebfux6027ux56deux5f52ux9884ux6d4bux5bf9ux8c61-ux5e76ux4f7fux7528fitux81eaux9002ux5e94}}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{77}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{c+c1}{\PYZsh{} 训练模型和评估训练集}
+\PY{k+kn}{from} \PY{n+nn}{sklearn}\PY{n+nn}{.}\PY{n+nn}{linear\PYZus{}model} \PY{k+kn}{import} \PY{n}{LinearRegression}
+\PY{n}{lin\PYZus{}reg} \PY{o}{=} \PY{n}{LinearRegression}\PY{p}{(}\PY{p}{)} \PY{c+c1}{\PYZsh{} 估算器}
+\PY{n}{lin\PYZus{}reg}\PY{o}{.}\PY{n}{fit}\PY{p}{(}\PY{n}{housing\PYZus{}prepared}\PY{p}{,} \PY{n}{housing\PYZus{}labels}\PY{p}{)} \PY{c+c1}{\PYZsh{} 传入数据和数据列}
+\end{Verbatim}
+\end{tcolorbox}
+
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\prompt{Out}{outcolor}{77}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+LinearRegression(copy\_X=True, fit\_intercept=True, n\_jobs=None, normalize=False)
+\end{Verbatim}
+\end{tcolorbox}
+        
+    \hypertarget{ux4f7fux7528ux5c11ux91cfux6570ux636eux8fdbux884cux9884ux6d4b}{%
+\paragraph{2.
+使用少量数据进行预测}\label{ux4f7fux7528ux5c11ux91cfux6570ux636eux8fdbux884cux9884ux6d4b}}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{78}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{c+c1}{\PYZsh{} 预测数据}
+\PY{n}{some\PYZus{}data} \PY{o}{=} \PY{n}{housing}\PY{o}{.}\PY{n}{iloc}\PY{p}{[}\PY{p}{:}\PY{l+m+mi}{5}\PY{p}{]}
+\PY{n}{some\PYZus{}labels} \PY{o}{=} \PY{n}{housing\PYZus{}labels}\PY{o}{.}\PY{n}{iloc}\PY{p}{[}\PY{p}{:}\PY{l+m+mi}{5}\PY{p}{]}
+
+\PY{n}{some\PYZus{}data\PYZus{}prepared} \PY{o}{=} \PY{n}{full\PYZus{}pipeline}\PY{o}{.}\PY{n}{transform}\PY{p}{(}\PY{n}{some\PYZus{}data}\PY{p}{)}
+
+\PY{n+nb}{print}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Predictions:}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{lin\PYZus{}reg}\PY{o}{.}\PY{n}{predict}\PY{p}{(}\PY{n}{some\PYZus{}data\PYZus{}prepared}\PY{p}{)}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+Predictions: [286799.195644   122918.09851162 222641.70343038 246153.22245923
+ 174899.32872953]
+    \end{Verbatim}
+
+    \hypertarget{ux5747ux65b9ux8befux5dee}{%
+\subsubsection{均方误差}\label{ux5747ux65b9ux8befux5dee}}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{79}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{c+c1}{\PYZsh{} 均方误差(MSE, mean squared error)}
+\PY{k+kn}{from} \PY{n+nn}{sklearn}\PY{n+nn}{.}\PY{n+nn}{metrics} \PY{k+kn}{import} \PY{n}{mean\PYZus{}squared\PYZus{}error}
+
+\PY{c+c1}{\PYZsh{} 预测数据}
+\PY{n}{housing\PYZus{}predictions} \PY{o}{=} \PY{n}{lin\PYZus{}reg}\PY{o}{.}\PY{n}{predict}\PY{p}{(}\PY{n}{housing\PYZus{}prepared}\PY{p}{)}
+\PY{c+c1}{\PYZsh{} 均方误差(MSE, mean squared error)}
+\PY{n}{lin\PYZus{}mse} \PY{o}{=} \PY{n}{mean\PYZus{}squared\PYZus{}error}\PY{p}{(}\PY{n}{housing\PYZus{}labels}\PY{p}{,} \PY{n}{housing\PYZus{}predictions}\PY{p}{)}
+\PY{n}{lin\PYZus{}mse}
+\PY{n}{lin\PYZus{}rmse} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{sqrt}\PY{p}{(}\PY{n}{lin\PYZus{}mse}\PY{p}{)}
+\PY{n}{lin\PYZus{}rmse}
+
+\PY{c+c1}{\PYZsh{} 大多数地区的房屋中位数 在120000到265000美元之间，预测误差高达 68628,这是一个典型的模型对训练数据拟合不足的案例，}
+\PY{c+c1}{\PYZsh{} 原因可能是特征无法提供足够的信息来做出更好的预测，或者模型本身不够强大，}
+\PY{c+c1}{\PYZsh{} 1. 选择强大的模型，2 为算法提供更好的特征，3.减少对模型的限制等方法，}
+
+\PY{c+c1}{\PYZsh{} 决策树可以找到复杂的非线性关系}
+\end{Verbatim}
+\end{tcolorbox}
+
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\prompt{Out}{outcolor}{79}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+67839.68172049934
+\end{Verbatim}
+\end{tcolorbox}
+        
+    \hypertarget{ux51b3ux7b56ux6811}{%
+\subsection{决策树}\label{ux51b3ux7b56ux6811}}
+
+    \hypertarget{ux521bux5efaux51b3ux7b56ux6811ux5bf9ux8c61-ux5e76ux4f7fux7528fitux81eaux9002ux5e94}{%
+\paragraph{1. 创建决策树对象
+并使用fit自适应}\label{ux521bux5efaux51b3ux7b56ux6811ux5bf9ux8c61-ux5e76ux4f7fux7528fitux81eaux9002ux5e94}}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{80}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{k+kn}{from} \PY{n+nn}{sklearn}\PY{n+nn}{.}\PY{n+nn}{tree} \PY{k+kn}{import} \PY{n}{DecisionTreeRegressor}
+\PY{c+c1}{\PYZsh{} 创建一个决策树对象}
+\PY{n}{tree\PYZus{}reg} \PY{o}{=} \PY{n}{DecisionTreeRegressor}\PY{p}{(}\PY{n}{random\PYZus{}state}\PY{o}{=}\PY{l+m+mi}{42}\PY{p}{)}
+\PY{c+c1}{\PYZsh{} 取数据和数据列 fit自适应}
+\PY{n}{tree\PYZus{}reg}\PY{o}{.}\PY{n}{fit}\PY{p}{(}\PY{n}{housing\PYZus{}prepared}\PY{p}{,} \PY{n}{housing\PYZus{}labels}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\prompt{Out}{outcolor}{80}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+DecisionTreeRegressor(ccp\_alpha=0.0, criterion='mse', max\_depth=None,
+                      max\_features=None, max\_leaf\_nodes=None,
+                      min\_impurity\_decrease=0.0, min\_impurity\_split=None,
+                      min\_samples\_leaf=1, min\_samples\_split=2,
+                      min\_weight\_fraction\_leaf=0.0, presort='deprecated',
+                      random\_state=42, splitter='best')
+\end{Verbatim}
+\end{tcolorbox}
+        
+    \hypertarget{ux9884ux6d4bux6570ux636eux5e76ux9a8cux8bc1ux9884ux6d4bux7684ux5747ux65b9ux8befux5dee}{%
+\paragraph{2.
+预测数据，并验证预测的均方误差}\label{ux9884ux6d4bux6570ux636eux5e76ux9a8cux8bc1ux9884ux6d4bux7684ux5747ux65b9ux8befux5dee}}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{81}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{c+c1}{\PYZsh{} 预测数据}
+\PY{n}{housing\PYZus{}predictions} \PY{o}{=} \PY{n}{tree\PYZus{}reg}\PY{o}{.}\PY{n}{predict}\PY{p}{(}\PY{n}{housing\PYZus{}prepared}\PY{p}{)}
+\PY{c+c1}{\PYZsh{} 均方误差(MSE, mean squared error)}
+\PY{n}{tree\PYZus{}mse} \PY{o}{=} \PY{n}{mean\PYZus{}squared\PYZus{}error}\PY{p}{(}\PY{n}{housing\PYZus{}labels}\PY{p}{,} \PY{n}{housing\PYZus{}predictions}\PY{p}{)}
+\PY{n}{tree\PYZus{}rmse} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{sqrt}\PY{p}{(}\PY{n}{tree\PYZus{}mse}\PY{p}{)}
+\PY{n}{tree\PYZus{}rmse}
+\end{Verbatim}
+\end{tcolorbox}
+
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\prompt{Out}{outcolor}{81}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+0.0
+\end{Verbatim}
+\end{tcolorbox}
+        
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{82}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+ \PY{c+c1}{\PYZsh{} 完美，也可能是这个模型对数据严重过度拟合了，如何确认？轻易不要启动测试集，拿训练集中的一部分用于训练，另一部分用于模型的验证}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \hypertarget{ux4ea4ux53c9ux9a8cux8bc1ux66f4ux597dux7684ux8fdbux884cux8bc4ux4f30ux9884ux6d4b}{%
+\subsection{交叉验证------更好的进行评估预测}\label{ux4ea4ux53c9ux9a8cux8bc1ux66f4ux597dux7684ux8fdbux884cux8bc4ux4f30ux9884ux6d4b}}
+
+    \hypertarget{ux51b3ux7b56ux6811ux7684ux4ea4ux53c9ux9a8cux8bc1}{%
+\subsubsection{决策树的交叉验证}\label{ux51b3ux7b56ux6811ux7684ux4ea4ux53c9ux9a8cux8bc1}}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{83}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{c+c1}{\PYZsh{} 使用train\PYZus{}test\PYZus{}split函数将训练集分为较小的训练集和验证集，然后根据这些较小的训练集来训练模型，并对其进行评估}
+\PY{c+c1}{\PYZsh{} sklearn的交叉验证，将训练集随机分割成10个不同的子集，每个子集称为一个折叠，对模型进行10次训练和评估，每次挑选1个折叠进行评估，另外9个进行训练}
+\PY{k+kn}{from} \PY{n+nn}{sklearn}\PY{n+nn}{.}\PY{n+nn}{model\PYZus{}selection} \PY{k+kn}{import} \PY{n}{cross\PYZus{}val\PYZus{}score}
+\PY{c+c1}{\PYZsh{} neg\PYZus{}mean\PYZus{}squared\PYZus{}error‘ 也就是 均方差回归损失 该统计参数是预测数据和原始数据对应点误差的平方和的均值}
+
+\PY{c+c1}{\PYZsh{} 决策树交叉验证}
+\PY{c+c1}{\PYZsh{} tree\PYZus{}reg决策树模型对象，测试集和测试集标签，scoring评估算法\PYZhy{}neg\PYZus{}mean\PYZus{}squared\PYZus{}error均方差评估算法，cv交叉验证次数}
+\PY{n}{scores} \PY{o}{=} \PY{n}{cross\PYZus{}val\PYZus{}score}\PY{p}{(}\PY{n}{tree\PYZus{}reg}\PY{p}{,} \PY{n}{housing\PYZus{}prepared}\PY{p}{,} \PY{n}{housing\PYZus{}labels}\PY{p}{,}
+                         \PY{n}{scoring}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{neg\PYZus{}mean\PYZus{}squared\PYZus{}error}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{cv}\PY{o}{=}\PY{l+m+mi}{10}\PY{p}{)}
+\PY{n}{tree\PYZus{}rmse\PYZus{}scores} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{sqrt}\PY{p}{(}\PY{o}{\PYZhy{}}\PY{n}{scores}\PY{p}{)} \PY{c+c1}{\PYZsh{} 平方根得到的是负值，需要取反}
+\PY{n}{tree\PYZus{}rmse\PYZus{}scores}
+\end{Verbatim}
+\end{tcolorbox}
+
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\prompt{Out}{outcolor}{83}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+array([71627.92164456, 73493.35335647, 68087.25081095, 66063.46397032,
+       73560.70411398, 70528.06580062, 65964.58500517, 69211.60778723,
+       66606.62921511, 72269.3260234 ])
+\end{Verbatim}
+\end{tcolorbox}
+        
+    \hypertarget{display_scores-ux8f93ux51faux9a8cux8bc1ux503cux5e73ux5747ux9a8cux8bc1ux503cux9a8cux8bc1ux503cux7684ux6ce2ux52a8}{%
+\subsubsection{display\_scores
+输出验证值、平均验证值、验证值的波动}\label{display_scores-ux8f93ux51faux9a8cux8bc1ux503cux5e73ux5747ux9a8cux8bc1ux503cux9a8cux8bc1ux503cux7684ux6ce2ux52a8}}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{84}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{c+c1}{\PYZsh{} 输出验证}
+\PY{k}{def} \PY{n+nf}{display\PYZus{}scores}\PY{p}{(}\PY{n}{scores}\PY{p}{)}\PY{p}{:}
+    \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Scores:}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{scores}\PY{p}{)}  \PY{c+c1}{\PYZsh{} 输出验证值}
+    \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Mean:}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{scores}\PY{o}{.}\PY{n}{mean}\PY{p}{(}\PY{p}{)}\PY{p}{)}  \PY{c+c1}{\PYZsh{} 输出平均验证值}
+    \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Standard deviation:}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{scores}\PY{o}{.}\PY{n}{std}\PY{p}{(}\PY{p}{)}\PY{p}{)}  \PY{c+c1}{\PYZsh{} 输出验证值的波动}
+
+\PY{n}{display\PYZus{}scores}\PY{p}{(}\PY{n}{tree\PYZus{}rmse\PYZus{}scores}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+Scores: [71627.92164456 73493.35335647 68087.25081095 66063.46397032
+ 73560.70411398 70528.06580062 65964.58500517 69211.60778723
+ 66606.62921511 72269.3260234 ]
+Mean: 69741.29077278195
+Standard deviation: 2826.086992779198
+    \end{Verbatim}
+
+    \hypertarget{ux7ebfux6027ux56deux5f52ux7684ux4ea4ux53c9ux9a8cux8bc1}{%
+\subsubsection{线性回归的交叉验证}\label{ux7ebfux6027ux56deux5f52ux7684ux4ea4ux53c9ux9a8cux8bc1}}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{85}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{c+c1}{\PYZsh{} 线性 交叉验证}
+\PY{n}{lin\PYZus{}scores} \PY{o}{=} \PY{n}{cross\PYZus{}val\PYZus{}score}\PY{p}{(}\PY{n}{lin\PYZus{}reg}\PY{p}{,} \PY{n}{housing\PYZus{}prepared}\PY{p}{,} \PY{n}{housing\PYZus{}labels}\PY{p}{,}
+                             \PY{n}{scoring}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{neg\PYZus{}mean\PYZus{}squared\PYZus{}error}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{cv}\PY{o}{=}\PY{l+m+mi}{10}\PY{p}{)}
+\PY{n}{lin\PYZus{}rmse\PYZus{}scores} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{sqrt}\PY{p}{(}\PY{o}{\PYZhy{}}\PY{n}{lin\PYZus{}scores}\PY{p}{)}
+\PY{n}{display\PYZus{}scores}\PY{p}{(}\PY{n}{lin\PYZus{}rmse\PYZus{}scores}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+Scores: [66173.64137099 71052.24844005 67580.25757791 67279.07810014
+ 74543.15436276 69444.5339994  67780.89653745 65077.9510503
+ 64890.46533845 67490.64445917]
+Mean: 68131.28712366273
+Standard deviation: 2767.488539093263
+    \end{Verbatim}
+
+    \hypertarget{ux968fux673aux68eeux6797}{%
+\subsection{随机森林}\label{ux968fux673aux68eeux6797}}
+
+    \hypertarget{ux521bux5efaux968fux673aux68eeux6797ux5bf9ux8c61-ux5e76ux4f7fux7528fitux81eaux9002ux5e94}{%
+\paragraph{1. 创建随机森林对象
+并使用fit自适应}\label{ux521bux5efaux968fux673aux68eeux6797ux5bf9ux8c61-ux5e76ux4f7fux7528fitux81eaux9002ux5e94}}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{86}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{k+kn}{from} \PY{n+nn}{sklearn}\PY{n+nn}{.}\PY{n+nn}{ensemble} \PY{k+kn}{import} \PY{n}{RandomForestRegressor}
+
+\PY{c+c1}{\PYZsh{} 创建一个随机森林对象}
+\PY{n}{forest\PYZus{}reg} \PY{o}{=} \PY{n}{RandomForestRegressor}\PY{p}{(}\PY{n}{n\PYZus{}estimators}\PY{o}{=}\PY{l+m+mi}{10}\PY{p}{,} \PY{n}{random\PYZus{}state}\PY{o}{=}\PY{l+m+mi}{42}\PY{p}{)}
+\PY{c+c1}{\PYZsh{} 取数据和数据列 fit自适应}
+\PY{n}{forest\PYZus{}reg}\PY{o}{.}\PY{n}{fit}\PY{p}{(}\PY{n}{housing\PYZus{}prepared}\PY{p}{,} \PY{n}{housing\PYZus{}labels}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\prompt{Out}{outcolor}{86}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+RandomForestRegressor(bootstrap=True, ccp\_alpha=0.0, criterion='mse',
+                      max\_depth=None, max\_features='auto', max\_leaf\_nodes=None,
+                      max\_samples=None, min\_impurity\_decrease=0.0,
+                      min\_impurity\_split=None, min\_samples\_leaf=1,
+                      min\_samples\_split=2, min\_weight\_fraction\_leaf=0.0,
+                      n\_estimators=10, n\_jobs=None, oob\_score=False,
+                      random\_state=42, verbose=0, warm\_start=False)
+\end{Verbatim}
+\end{tcolorbox}
+        
+    \hypertarget{ux9884ux6d4bux6570ux636eux5e76ux9a8cux8bc1ux9884ux6d4bux7684ux5747ux65b9ux8befux5dee}{%
+\paragraph{2.
+预测数据，并验证预测的均方误差}\label{ux9884ux6d4bux6570ux636eux5e76ux9a8cux8bc1ux9884ux6d4bux7684ux5747ux65b9ux8befux5dee}}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{88}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{c+c1}{\PYZsh{} 预测数据}
+\PY{n}{housing\PYZus{}predictions} \PY{o}{=} \PY{n}{forest\PYZus{}reg}\PY{o}{.}\PY{n}{predict}\PY{p}{(}\PY{n}{housing\PYZus{}prepared}\PY{p}{)}
+\PY{c+c1}{\PYZsh{} 均方误差(MSE, mean squared error)}
+\PY{n}{forest\PYZus{}mse} \PY{o}{=} \PY{n}{mean\PYZus{}squared\PYZus{}error}\PY{p}{(}\PY{n}{housing\PYZus{}labels}\PY{p}{,} \PY{n}{housing\PYZus{}predictions}\PY{p}{)}
+\PY{n}{forest\PYZus{}rmse} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{sqrt}\PY{p}{(}\PY{n}{forest\PYZus{}mse}\PY{p}{)}
+\PY{n}{forest\PYZus{}rmse}
+\end{Verbatim}
+\end{tcolorbox}
+
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\prompt{Out}{outcolor}{88}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+22352.70889226364
+\end{Verbatim}
+\end{tcolorbox}
+        
+    \hypertarget{ux4f7fux7528ux4ea4ux53c9ux9a8cux8bc1ux6765ux8bc4ux4f30}{%
+\paragraph{3.
+使用交叉验证来评估}\label{ux4f7fux7528ux4ea4ux53c9ux9a8cux8bc1ux6765ux8bc4ux4f30}}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{89}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{c+c1}{\PYZsh{} 随机森林的交叉验证}
+\PY{k+kn}{from} \PY{n+nn}{sklearn}\PY{n+nn}{.}\PY{n+nn}{model\PYZus{}selection} \PY{k+kn}{import} \PY{n}{cross\PYZus{}val\PYZus{}score}
+
+\PY{n}{forest\PYZus{}scores} \PY{o}{=} \PY{n}{cross\PYZus{}val\PYZus{}score}\PY{p}{(}\PY{n}{forest\PYZus{}reg}\PY{p}{,} \PY{n}{housing\PYZus{}prepared}\PY{p}{,} \PY{n}{housing\PYZus{}labels}\PY{p}{,}
+                                \PY{n}{scoring}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{neg\PYZus{}mean\PYZus{}squared\PYZus{}error}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{cv}\PY{o}{=}\PY{l+m+mi}{10}\PY{p}{)}
+\PY{n}{forest\PYZus{}rmse\PYZus{}scores} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{sqrt}\PY{p}{(}\PY{o}{\PYZhy{}}\PY{n}{forest\PYZus{}scores}\PY{p}{)}
+\PY{n}{display\PYZus{}scores}\PY{p}{(}\PY{n}{forest\PYZus{}rmse\PYZus{}scores}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+Scores: [51987.84730523 54832.44874275 51080.86922731 50189.02875471
+ 53648.34965171 52843.14158323 51640.25146871 51889.54716536
+ 50299.55037764 52509.92755343]
+Mean: 52092.09618300701
+Standard deviation: 1370.5339431649338
+    \end{Verbatim}
+
+    \hypertarget{ux6a21ux578bux8c03ux53c2ux548cux7f51ux683cux641cux7d22}{%
+\subsection{模型调参和网格搜索}\label{ux6a21ux578bux8c03ux53c2ux548cux7f51ux683cux641cux7d22}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  手动调整超参数，找到很好的组合很困难
+\item
+  使用GridSearchCV替你进行搜索，告诉它，进行试验的超参数是什么，和需要尝试的值，它会使用交叉验证评估所有超参数的可能组合
+\end{enumerate}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{90}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{k+kn}{from} \PY{n+nn}{sklearn}\PY{n+nn}{.}\PY{n+nn}{model\PYZus{}selection} \PY{k+kn}{import} \PY{n}{GridSearchCV}
+
+\PY{n}{param\PYZus{}grid} \PY{o}{=} \PY{p}{[}
+    \PY{p}{\PYZob{}}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{n\PYZus{}estimators}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{p}{[}\PY{l+m+mi}{3}\PY{p}{,} \PY{l+m+mi}{10}\PY{p}{,} \PY{l+m+mi}{30}\PY{p}{]}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{max\PYZus{}features}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{p}{[}\PY{l+m+mi}{2}\PY{p}{,} \PY{l+m+mi}{4}\PY{p}{,} \PY{l+m+mi}{6}\PY{p}{,} \PY{l+m+mi}{8}\PY{p}{]}\PY{p}{\PYZcb{}}\PY{p}{,} \PY{c+c1}{\PYZsh{} 3 * 4 = 12 种组合}
+    \PY{p}{\PYZob{}}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{bootstrap}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{p}{[}\PY{k+kc}{False}\PY{p}{]}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{n\PYZus{}estimators}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{p}{[}\PY{l+m+mi}{3}\PY{p}{,} \PY{l+m+mi}{10}\PY{p}{]}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{max\PYZus{}features}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{p}{[}\PY{l+m+mi}{2}\PY{p}{,} \PY{l+m+mi}{3}\PY{p}{,} \PY{l+m+mi}{4}\PY{p}{]}\PY{p}{\PYZcb{}}\PY{p}{,} \PY{c+c1}{\PYZsh{} 2 * 3 = 6 种组合}
+  \PY{p}{]}
+
+\PY{n}{forest\PYZus{}reg} \PY{o}{=} \PY{n}{RandomForestRegressor}\PY{p}{(}\PY{n}{random\PYZus{}state}\PY{o}{=}\PY{l+m+mi}{42}\PY{p}{)}  \PY{c+c1}{\PYZsh{} 随机森林回归}
+\PY{n}{grid\PYZus{}search} \PY{o}{=} \PY{n}{GridSearchCV}\PY{p}{(}\PY{n}{forest\PYZus{}reg}\PY{p}{,} \PY{n}{param\PYZus{}grid}\PY{p}{,} \PY{n}{cv}\PY{o}{=}\PY{l+m+mi}{5}\PY{p}{,}
+                           \PY{n}{scoring}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{neg\PYZus{}mean\PYZus{}squared\PYZus{}error}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{return\PYZus{}train\PYZus{}score}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}
+\PY{n}{grid\PYZus{}search}\PY{o}{.}\PY{n}{fit}\PY{p}{(}\PY{n}{housing\PYZus{}prepared}\PY{p}{,} \PY{n}{housing\PYZus{}labels}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\prompt{Out}{outcolor}{90}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+GridSearchCV(cv=5, error\_score=nan,
+             estimator=RandomForestRegressor(bootstrap=True, ccp\_alpha=0.0,
+                                             criterion='mse', max\_depth=None,
+                                             max\_features='auto',
+                                             max\_leaf\_nodes=None,
+                                             max\_samples=None,
+                                             min\_impurity\_decrease=0.0,
+                                             min\_impurity\_split=None,
+                                             min\_samples\_leaf=1,
+                                             min\_samples\_split=2,
+                                             min\_weight\_fraction\_leaf=0.0,
+                                             n\_estimators=100, n\_jobs=None,
+                                             oob\_score=False, random\_state=42,
+                                             verbose=0, warm\_start=False),
+             iid='deprecated', n\_jobs=None,
+             param\_grid=[\{'max\_features': [2, 4, 6, 8],
+                          'n\_estimators': [3, 10, 30]\},
+                         \{'bootstrap': [False], 'max\_features': [2, 3, 4],
+                          'n\_estimators': [3, 10]\}],
+             pre\_dispatch='2*n\_jobs', refit=True, return\_train\_score=True,
+             scoring='neg\_mean\_squared\_error', verbose=0)
+\end{Verbatim}
+\end{tcolorbox}
+        
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{91}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{c+c1}{\PYZsh{} 输出最好的参数}
+\PY{n}{grid\PYZus{}search}\PY{o}{.}\PY{n}{best\PYZus{}params\PYZus{}}
+\end{Verbatim}
+\end{tcolorbox}
+
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\prompt{Out}{outcolor}{91}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\{'max\_features': 6, 'n\_estimators': 30\}
+\end{Verbatim}
+\end{tcolorbox}
+        
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{92}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{c+c1}{\PYZsh{} 输出最好的估算器}
+\PY{n}{grid\PYZus{}search}\PY{o}{.}\PY{n}{best\PYZus{}estimator\PYZus{}}
+\end{Verbatim}
+\end{tcolorbox}
+
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\prompt{Out}{outcolor}{92}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+RandomForestRegressor(bootstrap=True, ccp\_alpha=0.0, criterion='mse',
+                      max\_depth=None, max\_features=6, max\_leaf\_nodes=None,
+                      max\_samples=None, min\_impurity\_decrease=0.0,
+                      min\_impurity\_split=None, min\_samples\_leaf=1,
+                      min\_samples\_split=2, min\_weight\_fraction\_leaf=0.0,
+                      n\_estimators=30, n\_jobs=None, oob\_score=False,
+                      random\_state=42, verbose=0, warm\_start=False)
+\end{Verbatim}
+\end{tcolorbox}
+        
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{93}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{c+c1}{\PYZsh{} 输出18种组合的验证结果}
+\PY{n}{cvres} \PY{o}{=} \PY{n}{grid\PYZus{}search}\PY{o}{.}\PY{n}{cv\PYZus{}results\PYZus{}}
+\PY{k}{for} \PY{n}{mean\PYZus{}score}\PY{p}{,} \PY{n}{params} \PY{o+ow}{in} \PY{n+nb}{zip}\PY{p}{(}\PY{n}{cvres}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{mean\PYZus{}test\PYZus{}score}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]}\PY{p}{,} \PY{n}{cvres}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{params}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]}\PY{p}{)}\PY{p}{:}
+    \PY{n+nb}{print}\PY{p}{(}\PY{n}{np}\PY{o}{.}\PY{n}{sqrt}\PY{p}{(}\PY{o}{\PYZhy{}}\PY{n}{mean\PYZus{}score}\PY{p}{)}\PY{p}{,} \PY{n}{params}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+63851.160237887176 \{'max\_features': 2, 'n\_estimators': 3\}
+55551.02838972032 \{'max\_features': 2, 'n\_estimators': 10\}
+52662.41018371984 \{'max\_features': 2, 'n\_estimators': 30\}
+60377.04243720946 \{'max\_features': 4, 'n\_estimators': 3\}
+53506.29857019163 \{'max\_features': 4, 'n\_estimators': 10\}
+50855.95139995473 \{'max\_features': 4, 'n\_estimators': 30\}
+58255.57633989498 \{'max\_features': 6, 'n\_estimators': 3\}
+52157.96552289658 \{'max\_features': 6, 'n\_estimators': 10\}
+50341.09758695334 \{'max\_features': 6, 'n\_estimators': 30\}
+59395.29817637189 \{'max\_features': 8, 'n\_estimators': 3\}
+52506.71176229568 \{'max\_features': 8, 'n\_estimators': 10\}
+50381.98175578956 \{'max\_features': 8, 'n\_estimators': 30\}
+61685.385884779884 \{'bootstrap': False, 'max\_features': 2, 'n\_estimators': 3\}
+54108.082179696845 \{'bootstrap': False, 'max\_features': 2, 'n\_estimators': 10\}
+60302.23023563375 \{'bootstrap': False, 'max\_features': 3, 'n\_estimators': 3\}
+52395.76981294647 \{'bootstrap': False, 'max\_features': 3, 'n\_estimators': 10\}
+58492.78323075625 \{'bootstrap': False, 'max\_features': 4, 'n\_estimators': 3\}
+52050.21236959879 \{'bootstrap': False, 'max\_features': 4, 'n\_estimators': 10\}
+    \end{Verbatim}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{94}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{c+c1}{\PYZsh{} 数据准备步骤也可以当作超参数来处理，网格搜索会自动查找是否添加你不确定的特征，比如是否使用转换器 combinedAttre的超参数add\PYZus{}bedrooms\PYZus{}per\PYZus{}rom}
+\PY{c+c1}{\PYZsh{} 也可是使用它自动寻找处理问题的最佳方法，比如异常值，缺失特征，特征选择等}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \hypertarget{ux968fux673aux641cux7d22}{%
+\subsection{随机搜索}\label{ux968fux673aux641cux7d22}}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{95}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{k+kn}{from} \PY{n+nn}{sklearn}\PY{n+nn}{.}\PY{n+nn}{model\PYZus{}selection} \PY{k+kn}{import} \PY{n}{RandomizedSearchCV}
+\PY{k+kn}{from} \PY{n+nn}{scipy}\PY{n+nn}{.}\PY{n+nn}{stats} \PY{k+kn}{import} \PY{n}{randint}
+
+\PY{n}{param\PYZus{}distribs} \PY{o}{=} \PY{p}{\PYZob{}}
+        \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{n\PYZus{}estimators}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{n}{randint}\PY{p}{(}\PY{n}{low}\PY{o}{=}\PY{l+m+mi}{1}\PY{p}{,} \PY{n}{high}\PY{o}{=}\PY{l+m+mi}{200}\PY{p}{)}\PY{p}{,}
+        \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{max\PYZus{}features}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{n}{randint}\PY{p}{(}\PY{n}{low}\PY{o}{=}\PY{l+m+mi}{1}\PY{p}{,} \PY{n}{high}\PY{o}{=}\PY{l+m+mi}{8}\PY{p}{)}\PY{p}{,}
+    \PY{p}{\PYZcb{}}
+
+\PY{n}{forest\PYZus{}reg} \PY{o}{=} \PY{n}{RandomForestRegressor}\PY{p}{(}\PY{n}{random\PYZus{}state}\PY{o}{=}\PY{l+m+mi}{42}\PY{p}{)}
+\PY{n}{rnd\PYZus{}search} \PY{o}{=} \PY{n}{RandomizedSearchCV}\PY{p}{(}\PY{n}{forest\PYZus{}reg}\PY{p}{,} \PY{n}{param\PYZus{}distributions}\PY{o}{=}\PY{n}{param\PYZus{}distribs}\PY{p}{,}
+                                \PY{n}{n\PYZus{}iter}\PY{o}{=}\PY{l+m+mi}{10}\PY{p}{,} \PY{n}{cv}\PY{o}{=}\PY{l+m+mi}{5}\PY{p}{,} \PY{n}{scoring}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{neg\PYZus{}mean\PYZus{}squared\PYZus{}error}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{random\PYZus{}state}\PY{o}{=}\PY{l+m+mi}{42}\PY{p}{)}
+\PY{n}{rnd\PYZus{}search}\PY{o}{.}\PY{n}{fit}\PY{p}{(}\PY{n}{housing\PYZus{}prepared}\PY{p}{,} \PY{n}{housing\PYZus{}labels}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\prompt{Out}{outcolor}{95}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+RandomizedSearchCV(cv=5, error\_score=nan,
+                   estimator=RandomForestRegressor(bootstrap=True,
+                                                   ccp\_alpha=0.0,
+                                                   criterion='mse',
+                                                   max\_depth=None,
+                                                   max\_features='auto',
+                                                   max\_leaf\_nodes=None,
+                                                   max\_samples=None,
+                                                   min\_impurity\_decrease=0.0,
+                                                   min\_impurity\_split=None,
+                                                   min\_samples\_leaf=1,
+                                                   min\_samples\_split=2,
+                                                   min\_weight\_fraction\_leaf=0.0,
+                                                   n\_estimators=100,
+                                                   n\_jobs=None,
+oob\_score=Fals{\ldots}
+                   iid='deprecated', n\_iter=10, n\_jobs=None,
+                   param\_distributions=\{'max\_features':
+<scipy.stats.\_distn\_infrastructure.rv\_frozen object at 0x0000023B84876948>,
+                                        'n\_estimators':
+<scipy.stats.\_distn\_infrastructure.rv\_frozen object at 0x0000023B84886088>\},
+                   pre\_dispatch='2*n\_jobs', random\_state=42, refit=True,
+                   return\_train\_score=False, scoring='neg\_mean\_squared\_error',
+                   verbose=0)
+\end{Verbatim}
+\end{tcolorbox}
+        
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{96}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{cvres} \PY{o}{=} \PY{n}{rnd\PYZus{}search}\PY{o}{.}\PY{n}{cv\PYZus{}results\PYZus{}}
+\PY{k}{for} \PY{n}{mean\PYZus{}score}\PY{p}{,} \PY{n}{params} \PY{o+ow}{in} \PY{n+nb}{zip}\PY{p}{(}\PY{n}{cvres}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{mean\PYZus{}test\PYZus{}score}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]}\PY{p}{,} \PY{n}{cvres}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{params}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]}\PY{p}{)}\PY{p}{:}
+    \PY{n+nb}{print}\PY{p}{(}\PY{n}{np}\PY{o}{.}\PY{n}{sqrt}\PY{p}{(}\PY{o}{\PYZhy{}}\PY{n}{mean\PYZus{}score}\PY{p}{)}\PY{p}{,} \PY{n}{params}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+49429.878017658695 \{'max\_features': 7, 'n\_estimators': 180\}
+51693.13664471228 \{'max\_features': 5, 'n\_estimators': 15\}
+50633.1648206924 \{'max\_features': 3, 'n\_estimators': 72\}
+51317.56932852033 \{'max\_features': 5, 'n\_estimators': 21\}
+49509.913572343365 \{'max\_features': 7, 'n\_estimators': 122\}
+50579.593781990894 \{'max\_features': 3, 'n\_estimators': 75\}
+50541.24887362916 \{'max\_features': 3, 'n\_estimators': 88\}
+49891.34112450202 \{'max\_features': 5, 'n\_estimators': 100\}
+50366.44470237395 \{'max\_features': 3, 'n\_estimators': 150\}
+65269.29200804345 \{'max\_features': 5, 'n\_estimators': 2\}
+    \end{Verbatim}
+
+    \hypertarget{ux5206ux6790ux6700ux4f73ux6a21ux578b}{%
+\subsection{分析最佳模型}\label{ux5206ux6790ux6700ux4f73ux6a21ux578b}}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{97}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{c+c1}{\PYZsh{} 输出最佳估算器里最优的特征值}
+\PY{n}{feature\PYZus{}importances} \PY{o}{=} \PY{n}{grid\PYZus{}search}\PY{o}{.}\PY{n}{best\PYZus{}estimator\PYZus{}}\PY{o}{.}\PY{n}{feature\PYZus{}importances\PYZus{}}
+\PY{n}{feature\PYZus{}importances}
+\end{Verbatim}
+\end{tcolorbox}
+
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\prompt{Out}{outcolor}{97}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+array([6.62529439e-02, 6.03695060e-02, 4.41513588e-02, 1.86235401e-02,
+       1.75334150e-02, 1.78450483e-02, 1.69535923e-02, 2.38691040e-01,
+       1.66701200e-01, 5.41161548e-02, 1.08951989e-01, 5.43083202e-02,
+       1.46716959e-02, 1.13568649e-01, 1.49393679e-04, 2.67238220e-03,
+       4.43977116e-03])
+\end{Verbatim}
+\end{tcolorbox}
+        
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{114}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{c+c1}{\PYZsh{} num\PYZus{}attribs}
+\PY{n}{extra\PYZus{}attribs} \PY{o}{=} \PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{rooms\PYZus{}per\PYZus{}household}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{population\PYZus{}per\PYZus{}household}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{bedrooms\PYZus{}per\PYZus{}room}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]}
+\PY{c+c1}{\PYZsh{} encoder.classes\PYZus{}：array([\PYZsq{}\PYZlt{}1H OCEAN\PYZsq{}, \PYZsq{}INLAND\PYZsq{}, \PYZsq{}ISLAND\PYZsq{}, \PYZsq{}NEAR BAY\PYZsq{}, \PYZsq{}NEAR OCEAN\PYZsq{}],dtype=object)}
+\PY{n}{cat\PYZus{}one\PYZus{}hot\PYZus{}attribs} \PY{o}{=} \PY{n+nb}{list}\PY{p}{(}\PY{n}{encoder}\PY{o}{.}\PY{n}{classes\PYZus{}}\PY{p}{)} 
+\PY{n}{attributes} \PY{o}{=} \PY{n}{num\PYZus{}attribs} \PY{o}{+} \PY{n}{extra\PYZus{}attribs} \PY{o}{+} \PY{n}{cat\PYZus{}one\PYZus{}hot\PYZus{}attribs}
+\PY{c+c1}{\PYZsh{} 最优特征与列打包排序}
+\PY{n+nb}{sorted}\PY{p}{(}\PY{n+nb}{zip}\PY{p}{(}\PY{n}{feature\PYZus{}importances}\PY{p}{,} \PY{n}{attributes}\PY{p}{)}\PY{p}{,} \PY{n}{reverse} \PY{o}{=} \PY{k+kc}{True}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\prompt{Out}{outcolor}{114}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+[(0.23869103994492774, 'median\_income'),
+ (0.16670119958492133, 'income\_cat'),
+ (0.11356864935614602, 'INLAND'),
+ (0.10895198866919581, 'population\_per\_household'),
+ (0.06625294391455755, 'longitude'),
+ (0.06036950601771953, 'latitude'),
+ (0.05430832019926962, 'bedrooms\_per\_room'),
+ (0.05411615480259234, 'rooms\_per\_household'),
+ (0.044151358830570565, 'housing\_median\_age'),
+ (0.018623540113329517, 'total\_rooms'),
+ (0.017845048302505565, 'population'),
+ (0.01753341500142464, 'total\_bedrooms'),
+ (0.01695359231755946, 'households'),
+ (0.014671695912934811, '<1H OCEAN'),
+ (0.004439771155847507, 'NEAR OCEAN'),
+ (0.0026723821979612082, 'NEAR BAY'),
+ (0.00014939367853693025, 'ISLAND')]
+\end{Verbatim}
+\end{tcolorbox}
+        # zip()
+>>>a = [1,2,3]
+>>> b = [4,5,6]
+>>> c = [4,5,6,7,8]
+>>> zipped = zip(a,b)     # 打包为元组的列表
+[(1, 4), (2, 5), (3, 6)]
+>>> zip(a,c)              # 元素个数与最短的列表一致
+[(1, 4), (2, 5), (3, 6)]
+>>> zip(*zipped)          # 与 zip 相反，*zipped 可理解为解压，返回二维矩阵式
+[(1, 2, 3), (4, 5, 6)]
+    \hypertarget{ux901aux8fc7ux6d4bux8bd5ux96c6ux8bc4ux4f30ux7cfbux7edf}{%
+\subsection{通过测试集评估系统}\label{ux901aux8fc7ux6d4bux8bd5ux96c6ux8bc4ux4f30ux7cfbux7edf}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  从测试集中获取预测器和标签
+\item
+  运行full\_pipline来转换数据
+\item
+  在测试集上评估最终模型
+\end{enumerate}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{119}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{final\PYZus{}model} \PY{o}{=} \PY{n}{grid\PYZus{}search}\PY{o}{.}\PY{n}{best\PYZus{}estimator\PYZus{}}  \PY{c+c1}{\PYZsh{} 最优估算器}
+
+\PY{n}{X\PYZus{}test} \PY{o}{=} \PY{n}{strat\PYZus{}test\PYZus{}set}\PY{o}{.}\PY{n}{drop}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{median\PYZus{}house\PYZus{}value}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{axis} \PY{o}{=} \PY{l+m+mi}{1}\PY{p}{)}  \PY{c+c1}{\PYZsh{} 删除标签列}
+\PY{n}{y\PYZus{}test} \PY{o}{=} \PY{n}{strat\PYZus{}test\PYZus{}set}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{median\PYZus{}house\PYZus{}value}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{o}{.}\PY{n}{copy}\PY{p}{(}\PY{p}{)}  \PY{c+c1}{\PYZsh{} 标签列}
+
+\PY{n}{X\PYZus{}test\PYZus{}prepared} \PY{o}{=} \PY{n}{full\PYZus{}pipeline}\PY{o}{.}\PY{n}{transform}\PY{p}{(}\PY{n}{X\PYZus{}test}\PY{p}{)}  \PY{c+c1}{\PYZsh{} transform估算}
+
+\PY{c+c1}{\PYZsh{} df = pd.DataFrame(X\PYZus{}test\PYZus{}prepared)}
+\PY{c+c1}{\PYZsh{} df.head()}
+
+\PY{n}{final\PYZus{}predictions} \PY{o}{=} \PY{n}{final\PYZus{}model}\PY{o}{.}\PY{n}{predict}\PY{p}{(}\PY{n}{X\PYZus{}test\PYZus{}prepared}\PY{p}{)}
+
+\PY{n}{final\PYZus{}mse} \PY{o}{=} \PY{n}{mean\PYZus{}squared\PYZus{}error}\PY{p}{(}\PY{n}{y\PYZus{}test}\PY{p}{,} \PY{n}{final\PYZus{}predictions}\PY{p}{)}
+\PY{n}{final\PYZus{}rmse} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{sqrt}\PY{p}{(}\PY{n}{final\PYZus{}mse}\PY{p}{)}
+\PY{n}{final\PYZus{}rmse}
+\end{Verbatim}
+\end{tcolorbox}
+
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\prompt{Out}{outcolor}{119}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+50527.33631320635
+\end{Verbatim}
+\end{tcolorbox}
+        
+    \hypertarget{ux9879ux76eeux542fux52a8ux9636ux6bb5}{%
+\subsection{项目启动阶段}\label{ux9879ux76eeux542fux52a8ux9636ux6bb5}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  展示解决方案 学习了什么
+\item
+  什么有用
+\item
+  什么没有用
+\item
+  基于什么假设
+\item
+  以及系统的限制有哪些
+\item
+  制作漂亮的演示文稿，例如收入中位数是预测房价的首要指标
+\end{enumerate}
+
+\hypertarget{ux542fux52a8ux76d1ux63a7ux548cux7ef4ux62a4ux7cfbux7edf}{%
+\subsection{启动，监控和维护系统}\label{ux542fux52a8ux76d1ux63a7ux548cux7ef4ux62a4ux7cfbux7edf}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  为生产环境做好准备，将生产数据源接入系统
+\item
+  编写监控代码，定期检查系统的实时性能，性能下降时触发警报，系统崩溃和性能退化
+\item
+  时间推移，模型会渐渐腐坏，定期使用新数据训练模型
+\end{enumerate}
+
+\hypertarget{ux8bc4ux4f30ux7cfbux7edfux6027ux80fd}{%
+\subsection{评估系统性能}\label{ux8bc4ux4f30ux7cfbux7edfux6027ux80fd}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  需要对系统的预测结果进行抽样评估，需要人工分析，分析师可能是专家，平台工作人员，都需要将人工评估的流水线接入你的系统
+\item
+  评估输入系统的数据质量
+\item
+  使用新鲜数据定期训练你的模型，最多6个月
+\end{enumerate}
+
+\hypertarget{ux603bux7ed3}{%
+\subsection{总结}\label{ux603bux7ed3}}
+
+\begin{verbatim}
+本周主要学习 数据准备，构建监控工作，建立人工评估流水线，自动化定期训练模型上，熟悉整个机器学习流程，
+\end{verbatim}
+
+\hypertarget{ux5efaux8bae}{%
+\subsection{建议}\label{ux5efaux8bae}}
+
+\begin{verbatim}
+选择一个数据集，尝试从A到Z的整个过程，从竞赛网站上，选择一个数据集，一个明确目标，以及可以一起分享经验的同伴
+https://www.kaggle.com/
+\end{verbatim}
+
+    
+
+
+    % Add a bibliography block to the postdoc
+    
+    
+    
+\end{document}
