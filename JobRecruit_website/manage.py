@@ -2,7 +2,7 @@
 """Django's command-line utility for administrative tasks."""
 import os
 import sys
-
+from multiprocessing import Process
 
 def main():
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'lagou_website.settings')
@@ -16,6 +16,19 @@ def main():
         ) from exc
     execute_from_command_line(sys.argv)
 
+def execute_cmd():
+    print('celery_handler starting')
+    os.system('celery -A celery_tasks.handler worker -l info -P eventlet')
 
 if __name__ == '__main__':
-    main()
+    # main()
+    p_main = Process(target=main)
+    p_celery = Process(target=execute_cmd)
+
+    p_main.start()
+    p_celery.start()
+
+    p_main.join()
+    p_celery.join()
+
+
