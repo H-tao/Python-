@@ -78,18 +78,26 @@ WSGI_APPLICATION = 'lagou_website.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    },
-    'MYSQL':{
+        'ENGINE': 'django.db.backends.mysql',
         'HOST': 'localhost',
         'PORT': 3306,
         'USER': 'root',
         'PASSWORD': '123456',
+        'NAME': 'job_recruit',
+        'CHARSET': 'utf8',
+    },
+    'MYSQL': {
+        'HOST': 'localhost',
+        'PORT': 3306,
+        'USER': 'root',
+        'PASSWORD': '123456',
+        'NAME': 'job_recruit',
         'CHARSET': 'utf8',
     }
 }
 
+# 替换Django认证系统使用的模型类
+AUTH_USER_MODEL = 'user.User'
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
@@ -131,3 +139,32 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
+
+
+''' 邮件服务器配置 '''
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.163.com'
+EMAIL_PORT = 25
+#发送邮件的邮箱
+EMAIL_HOST_USER = 'haitao_plus@163.com'
+#在邮箱中设置的客户端授权密码
+EMAIL_HOST_PASSWORD = 'FXZWIMSBPAHDPTBP'
+#收件人看到的发件人
+EMAIL_FROM = '天天生鲜<haitao_plus@163.com>'
+
+# Django缓存配置
+CACHES = {
+    "default": {
+        "BACKEND": "django_redis.cache.RedisCache",
+        "LOCATION": "redis://127.0.0.1:6379/9",
+        "OPTIONS": {
+            "CLIENT_CLASS": "django_redis.client.DefaultClient",
+        }
+    }
+}
+# session存储的配置
+SESSION_ENGINE = "django.contrib.sessions.backends.cache"
+SESSION_CACHE_ALIAS = "default"
+
+# 配置登录URL地址
+LOGIN_URL = '/user/login'
