@@ -1,22 +1,14 @@
+{% extends 'base.html' %}
 {% load myfilter %}
 {% load staticfiles %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>招聘信息网站</title>
-    <link rel="stylesheet" type="text/css" href="../static/css/pager.css">
-    <link rel="stylesheet" type="text/css" href="../static/css/main.css">
-    <link id="css1" rel="stylesheet" type="text/css" href="../static/css/navbar.css">
-</head>
-<body>
-    <div class="search bar6">
-        <form id="query" action="{% url "jobs" %}" method="GET">
-            <input name="keyword" type="text" placeholder="请输入您要搜索的职位...">
-            <button type="submit"></button>
-        </form>
-    </div>
+{% block title %}招聘信息网站{% endblock title %}
 
+{% block topfiles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/pager.css' %}">
+    <link id="css1" rel="stylesheet" type="text/css" href="{% static 'css/navbar.css' %}">
+{% endblock topfiles %}
+
+{% block body %}
     <div class="page_info">
         <div hidden="hidden">当前关键字：<a id="keyword">{{ keyword }}</a></div>
         <div>职位总数：<a id="total_job_num">{{ job_num }}</a></div>
@@ -78,7 +70,8 @@
         <div id="d" hidden="hidden">{{ d }}</div>
         <div id="t" hidden="hidden">{{ t }}</div>
     </div>
+{% endblock body %}
 
-    <script type="text/javascript" src="../static/js/flush.js"></script>
-</body>
-</html>
+{% block bottomfiles %}
+    <script type="text/javascript" src="{% static 'js/flush.js' %}"></script>
+{% endblock %}

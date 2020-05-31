@@ -1,18 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8" />
-    <title>找工作，上好招聘</title>
-    <link id="css1" rel="stylesheet" type="text/css" href="../static/css/navbar.css">
-</head>
-<body>
-    <div class="search bar6">
-        <form id="query" action="{% url "jobs" %}" method="GET">
-            <input name="keyword" type="text" placeholder="请输入您要搜索的职位...">
-            <button type="submit"></button>
-        </form>
-    </div>
-
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block title %}找工作，上好招聘{% endblock title %}
+{% block topfiles %}
+    <link id="css1" rel="stylesheet" type="text/css" href="{% static 'css/navbar.css' %}">
+{% endblock topfiles %}
+{% block body %}
     <div id="tips" class="tips">
         项目开发中，功能待完善：暂不支持模糊搜索，只支持搜索导航栏已存在的关键词
     </div>
@@ -624,6 +616,7 @@
             </li>
         </ul>
     </div>
-    <script type="text/javascript" src="../static/js/form.js"></script>
-</body>
-</html>
+{% endblock body %}
+{% block bottomfiles %}
+    <script type="text/javascript" src="{% static 'js/form.js' %}"></script>
+{% endblock bottomfiles %}
