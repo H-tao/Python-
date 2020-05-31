@@ -20,8 +20,9 @@ selenium+多进程+多线程+增量式+随机定时+logging
 招聘信息网站，后台包括**200+种岗位**的**200K+条**招聘数据，数据量达**300M+ **
 
 - 前端：JavaScript实现导航栏与分页栏、使用JavaScript和Ajax动态获取更新岗位数据和图表
--	后端：分页查询MySQL数据、使用logging记录访问日志、使用Pandas分析岗位数据、Matplotlib生成岗位图表
+-	后端：分页查询MySQL数据、使用logging记录访问日志、使用Pandas分析岗位数据、Matplotlib生成岗位图表、使用Django的验证系统实现登录/注册/注销功能、使用Celery处理发送激活邮件等延时操作
 
 
+---
 **以上项目仅供个人学习使用，如有侵权请告知删除。**
 
