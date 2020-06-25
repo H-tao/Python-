@@ -15,7 +15,7 @@ from celery_tasks.tasks import send_register_active_email
 from Log.logging import logit
 from DB.MysqlClient import MysqlClient
 from Utils import positions
-import math, re
+import math, re, threading
 
 mysql_client = MysqlClient()
 
@@ -124,7 +124,12 @@ def register_handle(request):
     token = serializer.dumps(info).decode()
 
     # 发邮件
-    send_register_active_email.delay(email, username, token)
+    # send_register_active_email.delay(email, username, token)
+
+    t = threading.Thread(target=send_register_active_email, args=(email, username, token,))
+    t.setDaemon(True)
+    t.start()
+    # send_register_active_email(email, username, token)
 
     # 注册成功，跳转首页
     return redirect(reverse('user:index'))
@@ -187,6 +192,7 @@ class LoginView(View):
 
         # 业务处理：登录校验
         user = authenticate(username=username, password=password)
+        print(user)
         if user is not None:
             # 用户名或密码正确
             if user.is_active:

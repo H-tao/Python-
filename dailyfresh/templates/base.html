@@ -62,22 +62,25 @@
 {# 网站主体内容块 #}
 {% block body %}{% endblock body %}
 
-	<div class="footer">
-		<div class="foot_link">
-			<a href="#">关于我们</a>
-			<span>|</span>
-			<a href="#">联系我们</a>
-			<span>|</span>
-			<a href="#">招聘人才</a>
-			<span>|</span>
-			<a href="#">友情链接</a>		
-		</div>
-		<p>CopyRight © 2016 北京天天生鲜信息技术有限公司 All Rights Reserved</p>
-		<p>电话：010-****888    京ICP备*******8号</p>
-	</div>
-    {# 网页底部html元素块 #}
-    {% block bottom %}{% endblock bottom %}
-    {# 网页底部引入文件块 #}
-	{% block bottomfiles %}{% endblock bottomfiles %}
+{# 网页底部 #}
+<div class="footer">
+    <div class="foot_link">
+        <a href="#">关于我们</a>
+        <span>|</span>
+        <a href="#">联系我们</a>
+        <span>|</span>
+        <a href="#">招聘人才</a>
+        <span>|</span>
+        <a href="#">友情链接</a>
+    </div>
+    <p>CopyRight © 2016 北京天天生鲜信息技术有限公司 All Rights Reserved</p>
+    <p>电话：010-****888    京ICP备*******8号</p>
+</div>
+
+
+{# 网页底部html元素块 #}
+{% block bottom %}{% endblock bottom %}
+{# 网页底部引入文件块 #}
+{% block bottomfiles %}{% endblock bottomfiles %}
 </body>
 </html>

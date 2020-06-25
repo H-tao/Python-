@@ -14,8 +14,8 @@ class All():
     def make_queue(self):
         d = {}
         for big_category, sub_group in self.all_positinos.items():
-            if big_category != '游戏':  # 只爬取设计
-                continue
+            # if big_category != '游戏':  # 只爬取设计
+            #     continue
             d['DB_NAME'] = big_category
             for sub_category, keywords in sub_group.items():
                 d['TABLE_NAME'] = re.sub('/','或',sub_category)

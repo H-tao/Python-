@@ -1,3 +1,5 @@
+# coding=utf-8
+
 from celery import Celery
 from django.conf import settings
 from django.core.mail import send_mail
@@ -11,6 +13,8 @@ django.setup()
 
 # 创建一个Celery类的实例对象, broker指定中间人为redis
 app = Celery("celery_tasks.tasks", broker="redis://127.0.0.1:6379/8")
+app.conf.enable_utc = True
+app.conf.timezone = 'Asia/Shanghai'
 
 @app.task
 def send_register_active_email(to_email, username, token):

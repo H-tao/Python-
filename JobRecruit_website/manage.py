@@ -21,14 +21,14 @@ def execute_cmd():
     os.system('celery -A celery_tasks.handler worker -l info -P eventlet')
 
 if __name__ == '__main__':
-    # main()
-    p_main = Process(target=main)
-    p_celery = Process(target=execute_cmd)
-
-    p_main.start()
-    p_celery.start()
-
-    p_main.join()
-    p_celery.join()
+    main()
+    # p_main = Process(target=main)
+    # p_celery = Process(target=execute_cmd)
+    #
+    # p_main.start()
+    # p_celery.start()
+    #
+    # p_main.join()
+    # p_celery.join()
 
 
