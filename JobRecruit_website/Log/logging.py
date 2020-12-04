@@ -19,8 +19,8 @@ def logit():
         def wrapped_function(*args, **kwargs):
             request = args[0]
             response = func(*args, **kwargs)
-            log_info = f'{request.META["REMOTE_ADDR"]} "{request.META["PATH_INFO"]}/{request.META["QUERY_STRING"]} {request.META["SERVER_PROTOCOL"]}" {request.method} {response.status_code} '
-            logger.info(log_info)
+            logger.info(f'Received Request: {request.META["REMOTE_ADDR"]}  {request.method} "{request.META["PATH_INFO"]}'
+                        f' {request.META["QUERY_STRING"]} {request.META["SERVER_PROTOCOL"]}" {response.status_code} {len(response.content)}')
             return response
         return wrapped_function
     return logging_decorator
